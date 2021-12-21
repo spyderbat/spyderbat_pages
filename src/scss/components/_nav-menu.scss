@@ -1,0 +1,46 @@
+.nav {
+  @include flex-v-center;
+
+  &__list {
+    @include flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: rem(50);
+    }
+  }
+
+  &__link {
+    @include h4;
+    @include flex-v-center;
+
+    text-transform: capitalize;
+  }
+
+  &__sing-list {
+    @include flex;
+
+    margin-left: auto;
+  }
+
+  &__sing-link {
+    display: block;
+    border: 1px solid transparent;
+    border-radius: var(--radius-main);
+    padding: rem(20) rem(25);
+    font-weight: 700;
+
+    &--active {
+      border-color: var(--color-yellow-900);
+      color: var(--color-yellow-900);
+    }
+  }
+
+  &__icon {
+    margin-left: 10px;
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+  }
+}

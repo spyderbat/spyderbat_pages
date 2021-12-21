@@ -1,0 +1,12 @@
+.btn {
+  @include body-sec;
+
+  border-radius: var(--radius-main);
+  padding: rem(20);
+  color: var(--color-white);
+
+  &--colored {
+    color: var(--color-black);
+    background-color: var(--color-yellow-900);
+  }
+}
