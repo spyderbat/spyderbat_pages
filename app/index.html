@@ -17,84 +17,87 @@
 
 <body>
   <div class="site-container">
-    <div class="container">
-      <header class="header">
+    <header class="header">
 
-  <nav class="nav">
-    <a class="logo" href="/">
-      <img class="logo__img" src="img/logo.svg" alt="Spyderbat logo" width="185" height="30">
-    </a>
+  <div class="container">
 
-    <ul class="nav__list">
-      <li class="nav__item">
-        <a class="nav__link" href="#">
-          Products
+    <nav class="nav">
+      <a class="logo" href="/">
+        <img class="logo__img" src="img/logo.svg" alt="Spyderbat logo" width="185" height="30">
+      </a>
 
-          <svg class="nav__icon">
-            <use xlink:href="img/sprite.svg#arrow-down-circle"></use>
-          </svg>
-        </a>
-      </li>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="#">
+            Products
 
-      <li class="nav__item">
-        <a class="nav__link" href="#">
-          Solutions
+            <svg class="nav__icon">
+              <use xlink:href="img/sprite.svg#arrow-down-circle"></use>
+            </svg>
+          </a>
+        </li>
 
-          <svg class="nav__icon">
-            <use xlink:href="img/sprite.svg#arrow-down-circle"></use>
-          </svg>
-        </a>
-      </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">
+            Solutions
 
-      <li class="nav__item">
-        <a class="nav__link" href="#">
-          Company
+            <svg class="nav__icon">
+              <use xlink:href="img/sprite.svg#arrow-down-circle"></use>
+            </svg>
+          </a>
+        </li>
 
-          <svg class="nav__icon">
-            <use xlink:href="img/sprite.svg#arrow-down-circle"></use>
-          </svg>
-        </a>
-      </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">
+            Company
 
-      <li class="nav__item">
-        <a class="nav__link" href="#">
-          Pricing
-        </a>
-      </li>
+            <svg class="nav__icon">
+              <use xlink:href="img/sprite.svg#arrow-down-circle"></use>
+            </svg>
+          </a>
+        </li>
 
-      <li class="nav__item">
-        <a class="nav__link" href="#">
-          Blog
-        </a>
-      </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">
+            Pricing
+          </a>
+        </li>
 
-      <li class="nav__item">
-        <a class="nav__link" href="#">
-          Resources
-        </a>
-      </li>
-    </ul>
+        <li class="nav__item">
+          <a class="nav__link" href="#">
+            Blog
+          </a>
+        </li>
 
-    <ul class="nav__sing-list">
-      <li class="nav__sing-item">
-        <a class="nav__sing-link" href="#">
-          Sing in
-        </a>
-      </li>
-      
-      <li class="nav__sing-item">
-        <a class="nav__sing-link nav__sing-link--active" href="#">
-          Sing up
-        </a>
-      </li>
-    </ul>
+        <li class="nav__item">
+          <a class="nav__link" href="#">
+            Resources
+          </a>
+        </li>
+      </ul>
 
-  </nav>
+      <ul class="nav__sing-list">
+        <li class="nav__sing-item">
+          <a class="nav__sing-link" href="#">
+            Sign in
+          </a>
+        </li>
 
+        <li class="nav__sing-item">
+          <a class="nav__sing-link nav__sing-link--active" href="#">
+            Sign up
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
 </header>
 
 
-      <section class="hero">
+    <main class="main">
+      <div class="container">
+        <section class="hero ">
 
   <div class="hero__inner">
     <span class="slogan">
@@ -102,13 +105,11 @@
     </span>
 
     <h1 class="title">
-      Linux Runtime Security
+      linux runtime security
     </h1>
 
     <p class="text">
-      Secure your Linux VM&nbsp;and Container environments
-      with observability, detection, investigation, and response capabilities integrating with your whole development
-      lifecycle.
+      Secure your Linux VM and Container environments with observability, detection, investigation, and response capabilities integrating with your whole development lifecycle.
     </p>
 
     <div class="hero__btns">
@@ -116,12 +117,7 @@
         Book a demo
       </button>
 
-      <button class="btn" type="button">
-        Watch the video
-        <svg class="btn__icon">
-          <use xlink:href="img/sprite.svg#play-circle"></use>
-        </svg>
-      </button>
+      <button class='btn' type='button'>Watch the video<svg class='btn__icon'><use xlink:href='img/sprite.svg#play-circle'></use></svg></button>
     </div>
   </div>
 
@@ -130,13 +126,394 @@
   </div>
 </section>
 
+<div class="scroll-block">
+  Scroll down to see more
+</div>
 
 
-      <footer class="footer">
-  <div class="container"></div>
+        <section class="platform bottom">
+  <div class="platform__inner">
+    <h2 class="title-sec">
+      The Spyderbat Platform
+    </h2>
+
+    <p class="text">
+      Cloud-native environments are challenging to monitor and secure.
+      Spyderbat instantly identifies security threats and service outages,
+      compressing your investigation time with automated root cause analysis.
+    </p>
+
+    <button class="platform__btn btn btn--colored" type="button">
+      Start free
+    </button>
+
+    <ul class="platform__list">
+      <li class="platform__item platform__item--secure">
+        <h3 class="platform__title title-block">
+          Secure
+        </h3>
+
+        <p class="platform__text text">
+          Runtime visibility to MITRE
+          ATT&CK techniques and how
+          they are connected
+        </p>
+      </li>
+
+      <li class="platform__item platform__item--validate">
+        <h3 class="platform__title title-block">
+          Validate
+        </h3>
+
+        <p class="platform__text text">
+          System and application
+          changes with immediate root
+          cause of misconfiguratons
+        </p>
+      </li>
+
+      <li class="platform__item platform__item--obser">
+        <h3 class="platform__title title-block">
+          Observability
+        </h3>
+
+        <p class="platform__text text">
+          Immediately answer the who,
+          what, when, and why
+        </p>
+      </li>
+
+      <li class="platform__item platform__item--result">
+        <h3 class="platform__title title-block">
+          Fast results
+        </h3>
+
+        <p class="platform__text text">
+          Setup and see value in less
+          than 10 minutes
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="platform__image">
+    <img class="platform__image-img" src="img/home/diagram.png" alt="Cloud-native environments" width="640"
+      height="790">
+  </div>
+</section>
+
+        <section class="platform platform--reverse bottom">
+  <div class="platform__inner platform__inner--reverse">
+    <h2 class="title-sec">
+      Defend the flag challenges (DFC)
+    </h2>
+
+    <p class="text">
+      Experience Spyderbat in our gamified format with previously
+      captured scenarios
+    </p>
+
+    <button class="platform__btn btn btn--colored" type="button">
+      Start free
+    </button>
+
+    <ul class="platform__list">
+      <li class="platform__item platform__item--play">
+        <h3 class="platform__title title-block">
+          Just play
+        </h3>
+
+        <p class="platform__text text">
+          Nothing to install or setup.
+          Use the Spyderbat platform
+          to examine previously
+          captured scenarios.
+        </p>
+      </li>
+
+      <li class="platform__item platform__item--real">
+        <h3 class="platform__title title-block">
+          Real-world scenarios
+        </h3>
+
+        <p class="platform__text text">
+          Traces are captured from real
+          Linux systems using actual
+          attack techniques and
+          application stacks
+        </p>
+      </li>
+
+      <li class="platform__item platform__item--flag">
+        <h3 class="platform__title title-block">
+          Fresh challenges
+        </h3>
+
+        <p class="platform__text text">
+          New challenges added
+          regularly
+        </p>
+      </li>
+
+      <li class="platform__item platform__item--skills">
+        <h3 class="platform__title title-block">
+          Grow your skills
+        </h3>
+
+        <p class="platform__text text">
+          Test your Linux skills with
+          gamified traces from real
+          attacks and misconfigurations
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="platform__image platform__image--reverse">
+    <img class="platform__image-img" src="img/home/flag.png" alt="Defend the flag challenges (DFC)" width="760"
+      height="760">
+  </div>
+</section>
+
+
+        <section class="home__problems bottom">
+
+  <h2 class="title-sec title-sec--center">
+    Problems addressed by the Spyderbat Platform
+  </h2>
+
+
+  <ul class="page-list">
+
+    <li class="page-list__item box-item page-list__item--misco">
+
+  <h3 class="page-list__title title-block">
+    Misconfigurations
+  </h3>
+
+  <p class="page-list__text text">
+    Whether inadvertent or malicious, partners and employees introduce vulnerabilities leading to data loss. Tracking these issues to root cause is tedious, time- consuming, and often inconclusive.
+  </p>
+
+</li>
+<li class="page-list__item box-item page-list__item--attack">
+
+  <h3 class="page-list__title title-block">
+    External attacks
+  </h3>
+
+  <p class="page-list__text text">
+    Red herring alerts, chased down multiple ambiguous investigation paths within rapidly changing and short-lived work loads, waste time and conceal real, early threat indicators.
+  </p>
+
+</li>
+<li class="page-list__item box-item page-list__item--outages">
+
+  <h3 class="page-list__title title-block">
+    Service outages
+  </h3>
+
+  <p class="page-list__text text">
+    Layers of virtualization and fast-moving workflows obstruct manual investigations when time is of the essence.
+  </p>
+
+</li>
+
+
+  </ul>
+
+</section>
+
+
+        <section class="why-slider bottom">
+
+  <ol class="why-slider__list">
+
+    <li class="why-slider__item">
+      <div class="why-slider__image">
+        <img class="why-slider__picture" src="img/home/slider/first.png" alt="Spyderbat Focus" width="590" height="370">
+      </div>
+
+      <div class="why-slider__content">
+
+        <h2 class="title-sec">
+          Why Spyderbat
+        </h2>
+
+        <p class="text">
+          Spyderbat solves the challenges of manual
+          investigations
+        </p>
+
+        <div class="why-slider__box box-item ">
+
+          <h3 class="title-block">
+            Focus
+          </h3>
+
+          <p class="text">
+            Spyderbat automatically highlights
+            interconnected activity, removing manual
+            effort and extraneous data to immediately
+            expose the root cause.
+          </p>
+
+        </div>
+
+      </div>
+    </li>
+
+  </ol>
+
+</section>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+
+    <ul class="footer__list">
+      <li class="footer__item">
+
+        <h3 class="title-block">
+          Spyderbat products
+        </h3>
+
+        <a class="text" href="#">
+          Attack Tracing & Intercept
+        </a>
+
+        <a class="text" href="#">
+          Defend the Flag
+        </a>
+
+        <a class="text" href="#">
+          Pricing
+        </a>
+
+      </li>
+
+      <li class="footer__item">
+        <h3 class="title-block">
+          Solutions
+        </h3>
+
+        <a class="text" href="#">
+          Alert Triage
+        </a>
+
+        <a class="text" href="#">
+          Security Investigations
+        </a>
+
+        <a class="text" href="#">
+          Observability
+        </a>
+      </li>
+
+      <li class="footer__item">
+        <h3 class="title-block">
+          Use cases
+        </h3>
+
+        <a class="text">
+          Avoid Ransomware
+        </a>
+
+        <a class="text" href="#">
+          Supply Chain Attacks
+        </a>
+      </li>
+
+      <li class="footer__item">
+        <h3 class="title-block">
+          Company
+        </h3>
+
+        <a class="text" href="#">
+          Meet us
+        </a>
+
+        <a class="text" href="#">
+          Careers
+        </a>
+
+        <a class="text" href="#">
+          Blog
+        </a>
+
+        <a class="text" href="#">
+          News
+        </a>
+
+        <a class="text" href="#">
+          Resources
+        </a>
+
+        <a class="text" href="#">
+          Contact us
+        </a>
+
+      </li>
+
+      <li class="footer__item">
+
+        <a class="text" href="#">
+          Follow us in social networks
+        </a>
+
+        <ul class="footer__socials">
+          <li class="footer__social">
+            <a class="footer__social-link" href="#">
+              <span class="sr-only">
+                Visit LinkedIn
+              </span>
+
+              <svg class="footer__social-icon">
+                <use xlink:href="img/sprite.svg#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="footer__social">
+            <a class="footer__social-link" href="#">
+              <span class="sr-only">
+                Visit Twitter
+              </span>
+
+              <svg class="footer__social-icon">
+                <use xlink:href="img/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+      </li>
+    </ul>
+
+
+  </div>
+
+  <div class="footer__rights">
+    <div class="container">
+      <div class="footer__rights-inner">
+        <p class="footer__rights-text text">
+          © SPYDERBAT, Inc., All Rights Reserved
+        </p>
+
+        <p class="footer__rights-text text">
+          Designed by Nextpage
+          <svg class="footer__rights-icon">
+            <use xlink:href="img/sprite.svg#nextpage"></use>
+          </svg>
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>
 
-    </div>
+
   </div>
 
   <script src="js/vendor.js"></script>

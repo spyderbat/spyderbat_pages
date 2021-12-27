@@ -1,0 +1,51 @@
+.why-slider {
+  &__list-container {
+    list-style-type: none;
+  }
+
+  &__item {
+    @include flex-all-sb;
+
+    counter-increment: list;
+  }
+
+  &__image {
+    margin-right: rem(65);
+    width: 100%;
+    max-width: rem(690);
+    text-align: center;
+  }
+
+  &__picture {
+    width: 100%;
+    max-width: rem(590);
+  }
+
+  &__content {
+    margin-right: auto;
+    padding: rem(147) 0 rem(110);
+    width: 100%;
+    max-width: 405px;
+
+    >.text {
+      margin-bottom: 40px;
+      width: 100%;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &__box {
+    padding: rem(36);
+
+    .text {
+      margin-bottom: 0;
+      line-height: 2.1;
+    }
+  }
+
+  .title-block {
+    &::before {
+      content: "0"counter(list) ". ";
+    }
+  }
+}

@@ -4,14 +4,32 @@ headTitle:"Home page"
 
 <body>
   <div class="site-container">
-    <div class="container">
-      @include('html/_header.html')
+    @include('html/_header.html')
 
-      @include('html/_hero.html')
+    <main class="main">
+      <div class="container">
+        @include('html/_hero.html',{
+        addClass:"",
+        slogan:"cut to the chase",
+        title: "linux runtime security",
+        text:"Secure your Linux VM and Container environments with observability, detection, investigation, and response capabilities integrating with your whole development lifecycle.",
+        btnText:"Book a demo",
+        btnWatch:"<button class='btn' type='button'>Watch the video<svg class='btn__icon'><use xlink:href='img/sprite.svg#play-circle'></use></svg></button>",
+        imgHero:"home/hero-laptop.png"
+        })
 
+        @include('html/home/_diagram.html')
 
-      @include('html/_footer.html')
-    </div>
+        @include('html/home/_defend-flag.html')
+
+        @include('html/home/_list-problem.html')
+
+        @include('html/home/_home-slider.html')
+      </div>
+    </main>
+
+    @include('html/_footer.html')
+
   </div>
 
   <script src="js/vendor.js"></script>

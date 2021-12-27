@@ -1,0 +1,82 @@
+.automation {
+  @include flex-s-sb;
+
+  padding-top: rem(102);
+
+  &__inner {
+    padding-bottom: rem(80);
+    width: 100%;
+    max-width: 470px;
+  }
+
+  .slogan {
+    margin-bottom: rem(16);
+  }
+
+  .title-sec {
+    margin-bottom: rem(40);
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+  }
+
+  &__list {
+    @include body;
+
+    margin: 0 rem(70) rem(41) 0;
+    padding-left: rem(40);
+    letter-spacing: 0.03em;
+  }
+
+  &__item {
+    @include flex-v-center;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: rem(-38);
+      width: 18px;
+      height: 18px;
+      background-image: url("../img/sprite.svg#check");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(21);
+    }
+  }
+
+  &__btn {
+    &:first-child {
+      margin-right: rem(35);
+      padding: rem(17) rem(21);
+    }
+
+    &--load {
+      @include body-sec;
+
+      position: relative;
+      letter-spacing: 0.06em;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -32px;
+        bottom: -2px;
+        width: 24px;
+        height: 24px;
+        background-image: url("../img/sprite.svg#download");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__img {
+    transform: translate(12%, 5%);
+  }
+}

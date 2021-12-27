@@ -1,0 +1,138 @@
+.platform {
+  @include flex-all-sb;
+
+  &__inner {
+    width: 100%;
+    max-width: 650px;
+
+    >.text {
+      margin-bottom: rem(25);
+      padding-right: rem(50);
+    }
+
+    &--reverse {
+      max-width: 610px;
+    }
+  }
+
+  &__btn {
+    margin-bottom: rem(59);
+  }
+
+  &__image {
+    z-index: -1;
+    width: 100%;
+    transform: translate(44px, -14px);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 230px);
+    padding-bottom: rem(78);
+    gap: rem(65) rem(135);
+  }
+
+  &__item {
+    position: relative;
+    padding-top: rem(57);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      background-image: url("../img/sprite.svg#secure");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &--secure {
+      &::before {
+        background-image: url("../img/sprite.svg#secure");
+      }
+    }
+
+    &--validate {
+      &::before {
+        background-image: url("../img/sprite.svg#validate");
+      }
+    }
+
+    &--obser {
+      &::before {
+        background-image: url("../img/sprite.svg#obser");
+      }
+    }
+
+    &--result {
+      &::before {
+        background-image: url("../img/sprite.svg#result");
+      }
+    }
+
+    &--play {
+      &::before {
+        background-image: url("../img/sprite.svg#play");
+      }
+    }
+
+    &--real {
+      &::before {
+        background-image: url("../img/sprite.svg#real");
+      }
+    }
+
+    &--flag {
+      &::before {
+        background-image: url("../img/sprite.svg#flag");
+      }
+    }
+
+    &--skills {
+      &::before {
+        background-image: url("../img/sprite.svg#skills");
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 0;
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+
+    .title-sec {
+      text-transform: capitalize;
+    }
+
+    .platform__inner {
+      &--reverse {
+        >.text {
+          margin-bottom: rem(24);
+          padding-right: rem(100);
+          letter-spacing: 0.04em;
+        }
+      }
+    }
+
+    .platform__item {
+      padding-top: rem(58);
+    }
+
+    .platform__list {
+      grid-template-columns: repeat(2, 270px);
+      padding-bottom: rem(10);
+      gap: rem(53) rem(75);
+    }
+
+    .platform__text {
+      padding-right: rem(33);
+      line-height: 2.2;
+      letter-spacing: 0.03em;
+    }
+  }
+}

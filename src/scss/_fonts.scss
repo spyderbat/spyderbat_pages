@@ -1,1 +1,10 @@
-@include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+@include font-face("Satoshi", "../fonts/satoshi/Satoshi-Regular", 400, normal);
+@include font-face("Satoshi", "../fonts/satoshi/Satoshi-Medium", 500, normal);
+@include font-face("Satoshi", "../fonts/satoshi/Satoshi-Bold", 700, normal);
+
+
+@include font-face("Space-Grotesk", "../fonts/spacegrotesk/SpaceGrotesk-Light", 300, normal);
+@include font-face("Space-Grotesk", "../fonts/spacegrotesk/SpaceGrotesk-Regular", 400, normal);
+@include font-face("Space-Grotesk", "../fonts/spacegrotesk/SpaceGrotesk-Medium", 500, normal);
+@include font-face("Space-Grotesk", "../fonts/spacegrotesk/SpaceGrotesk-SemiBold", 600, normal);
+@include font-face("Space-Grotesk", "../fonts/spacegrotesk/SpaceGrotesk-Bold", 700, normal);

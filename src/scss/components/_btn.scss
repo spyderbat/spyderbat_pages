@@ -1,9 +1,12 @@
 .btn {
-  @include body-sec;
+  @include h4;
 
+  display: inline-block;
   border-radius: var(--radius-main);
-  padding: rem(20);
+  padding: rem(17) rem(19);
+  line-height: 1.7;
   color: var(--color-white);
+  letter-spacing: 0.03em;
 
   &--colored {
     color: var(--color-black);

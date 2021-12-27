@@ -1,13 +1,21 @@
 .nav {
   @include flex-v-center;
 
+  position: relative;
+
   &__list {
     @include flex;
+
+    margin-right: 10px;
   }
 
   &__item {
     &:not(:last-child) {
-      margin-right: rem(50);
+      margin-right: rem(52);
+
+      @include for-width(-desktop-med) {
+        margin-right: rem(35);
+      }
     }
   }
 
@@ -15,7 +23,19 @@
     @include h4;
     @include flex-v-center;
 
+    font-weight: 400;
+    letter-spacing: 0;
     text-transform: capitalize;
+  }
+
+  &__sing-item {
+    &:not(:last-child) {
+      margin-right: 15px;
+
+      @include for-width(-desktop-med) {
+        margin-right: rem(10);
+      }
+    }
   }
 
   &__sing-list {
@@ -28,19 +48,29 @@
     display: block;
     border: 1px solid transparent;
     border-radius: var(--radius-main);
-    padding: rem(20) rem(25);
+    padding: rem(14) rem(25);
     font-weight: 700;
+    letter-spacing: 0;
+    white-space: nowrap;
 
     &--active {
       border-color: var(--color-yellow-900);
       color: var(--color-yellow-900);
     }
+
+    @include for-width(-desktop-med) {
+      padding: rem(10) rem(15);
+    }
   }
 
   &__icon {
     margin-left: 10px;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     stroke: currentColor;
+
+    @include for-width(-desktop-sm) {
+      margin-left: 5px;
+    }
   }
 }

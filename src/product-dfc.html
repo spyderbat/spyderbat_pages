@@ -1,0 +1,35 @@
+@include('html/_head.html',{
+headTitle:"The Spyderbat Platform"
+})
+
+<body>
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main dfc">
+      <div class="container">
+        @include('html/_hero.html',{
+        addClass:"hero--platform dfc__item",
+        slogan:"",
+        title: "Defend the Flag Challenges (DFC)",
+        text:"Experience Spyderbat in our free, gamified format on our systems",
+        btnText:"Start now",
+        btnWatch:" ",
+        imgHero:"product-dfc/product-hero.png"
+        })
+
+        @include('html/product-dfc/_list-problem.html')
+
+        @include('html/product-dfc/_mapped.html')
+
+      </div>
+    </main>
+
+    @include('html/_footer.html')
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
