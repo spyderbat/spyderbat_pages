@@ -3,13 +3,48 @@
 
   display: inline-block;
   border-radius: var(--radius-main);
-  padding: rem(17) rem(19);
-  line-height: 1.7;
+  padding: rem(19) rem(20);
+  line-height: 1.4;
+  letter-spacing: 0;
   color: var(--color-white);
-  letter-spacing: 0.03em;
+
+  &:focus {
+    color: var(--color-yellow-700);
+  }
+
+  &:hover {
+    color: var(--color-yellow-700);
+  }
+
+  &:active {
+    color: var(--color-yellow-700);
+  }
+
+  &.disabled {
+    color: var(--color-gray-700);
+  }
 
   &--colored {
     color: var(--color-black);
     background-color: var(--color-yellow-900);
+
+    &:focus {
+      box-shadow: 0 4px 15px rgba(237, 196, 125, 0.35);
+      color: var(--color-black);
+    }
+
+    &:hover {
+      box-shadow: 0 4px 15px rgba(237, 196, 125, 0.35);
+      color: var(--color-black);
+    }
+
+    &:active {
+      color: var(--color-black);
+    }
+
+    &.disabled {
+      color: var(--color-gray-700);
+      background-color: var(--color-gray-500);
+    }
   }
 }

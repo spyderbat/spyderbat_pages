@@ -3,37 +3,59 @@
 
   position: relative;
 
-  &__list {
+  &__sing {
     @include flex;
 
-    margin-right: 10px;
-  }
-
-  &__item {
     &:not(:last-child) {
-      margin-right: rem(52);
+      margin-right: 25px;
 
-      @include for-width(-desktop-med) {
-        margin-right: rem(35);
+      @include for-width(-tablet) {
+        order: 3;
+        margin: 0 auto;
+        padding-top: rem(10);
       }
     }
-  }
 
-  &__link {
-    @include h4;
-    @include flex-v-center;
+    li {
+      &:not(:last-child) {
+        margin-right: rem(49);
 
-    font-weight: 400;
-    letter-spacing: 0;
-    text-transform: capitalize;
-  }
+        @include for-width(-desktop-med) {
+          margin-right: rem(40);
+        }
+      }
+    }
 
-  &__sing-item {
-    &:not(:last-child) {
-      margin-right: 15px;
+    a {
+      @include h4;
+      @include flex-v-center;
 
-      @include for-width(-desktop-med) {
-        margin-right: rem(10);
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: capitalize;
+
+      &:focus {
+        color: var(--color-blue-700);
+
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      &:hover {
+        color: var(--color-blue-700);
+
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      &:active {
+        color: var(--color-blue-700);
+
+        svg {
+          transform: rotate(180deg);
+        }
       }
     }
   }
@@ -42,6 +64,16 @@
     @include flex;
 
     margin-left: auto;
+
+    li {
+      &:not(:last-child) {
+        margin-right: rem(15);
+
+        @include for-width(-desktop-med) {
+          margin-right: rem(10);
+        }
+      }
+    }
   }
 
   &__sing-link {
@@ -49,13 +81,48 @@
     border: 1px solid transparent;
     border-radius: var(--radius-main);
     padding: rem(14) rem(25);
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 0;
     white-space: nowrap;
+
+    &:focus {
+      color: var(--color-yellow-700);
+    }
+
+    &:hover {
+      color: var(--color-yellow-700);
+    }
+
+    &:active {
+      color: var(--color-yellow-700);
+    }
+
+    &.disabled {
+      color: var(--color-gray-700);
+      cursor: auto;
+    }
 
     &--active {
       border-color: var(--color-yellow-900);
       color: var(--color-yellow-900);
+
+      &:focus {
+        color: var(--color-yellow-700);
+      }
+
+      &:hover {
+        color: var(--color-yellow-700);
+      }
+
+      &:active {
+        color: var(--color-yellow-700);
+      }
+
+      &.disabled {
+        border-color: var(--color-gray-700);
+        color: var(--color-gray-700);
+        cursor: auto;
+      }
     }
 
     @include for-width(-desktop-med) {
@@ -63,14 +130,19 @@
     }
   }
 
-  &__icon {
+  svg {
     margin-left: 10px;
     width: 16px;
     height: 16px;
     stroke: currentColor;
+    transition: transform 0.3s linear;
 
     @include for-width(-desktop-sm) {
       margin-left: 5px;
     }
+  }
+
+  @include for-width(-tablet) {
+    flex-wrap: wrap;
   }
 }

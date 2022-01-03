@@ -1,138 +1,48 @@
 .platform {
-  @include flex-all-sb;
+  @include flex-s-sb;
 
-  &__inner {
+  &__content {
     width: 100%;
     max-width: 650px;
-
-    >.text {
-      margin-bottom: rem(25);
-      padding-right: rem(50);
-    }
-
-    &--reverse {
-      max-width: 610px;
-    }
-  }
-
-  &__btn {
-    margin-bottom: rem(59);
-  }
-
-  &__image {
-    z-index: -1;
-    width: 100%;
-    transform: translate(44px, -14px);
-  }
-
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(2, 230px);
-    padding-bottom: rem(78);
-    gap: rem(65) rem(135);
-  }
-
-  &__item {
-    position: relative;
-    padding-top: rem(57);
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 32px;
-      height: 32px;
-      background-image: url("../img/sprite.svg#secure");
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-
-    &--secure {
-      &::before {
-        background-image: url("../img/sprite.svg#secure");
-      }
-    }
-
-    &--validate {
-      &::before {
-        background-image: url("../img/sprite.svg#validate");
-      }
-    }
-
-    &--obser {
-      &::before {
-        background-image: url("../img/sprite.svg#obser");
-      }
-    }
-
-    &--result {
-      &::before {
-        background-image: url("../img/sprite.svg#result");
-      }
-    }
-
-    &--play {
-      &::before {
-        background-image: url("../img/sprite.svg#play");
-      }
-    }
-
-    &--real {
-      &::before {
-        background-image: url("../img/sprite.svg#real");
-      }
-    }
-
-    &--flag {
-      &::before {
-        background-image: url("../img/sprite.svg#flag");
-      }
-    }
-
-    &--skills {
-      &::before {
-        background-image: url("../img/sprite.svg#skills");
-      }
-    }
-  }
-
-  &__text {
-    margin-bottom: 0;
-  }
-
-  &--reverse {
-    flex-direction: row-reverse;
 
     .title-sec {
       text-transform: capitalize;
     }
 
-    .platform__inner {
-      &--reverse {
-        >.text {
-          margin-bottom: rem(24);
-          padding-right: rem(100);
-          letter-spacing: 0.04em;
-        }
+    >.text {
+      margin-bottom: rem(22);
+      max-width: 570px;
+    }
+  }
+
+  &__animation {
+    margin-right: rem(-45);
+  }
+
+  &__content-btn {
+    margin-bottom: rem(60);
+  }
+
+  &--reverse {
+    flex-flow: row-reverse;
+    align-items: center;
+
+    .platform__content {
+      padding-top: rem(50);
+      max-width: 610px;
+
+      >.text {
+        max-width: 530px;
       }
     }
 
-    .platform__item {
-      padding-top: rem(58);
+    .item-list {
+      grid-template-columns: rem(230) rem(250);
+      gap: rem(60) rem(115);
     }
 
-    .platform__list {
-      grid-template-columns: repeat(2, 270px);
-      padding-bottom: rem(10);
-      gap: rem(53) rem(75);
-    }
-
-    .platform__text {
-      padding-right: rem(33);
-      line-height: 2.2;
-      letter-spacing: 0.03em;
+    .platform__picture {
+      margin: rem(-15) rem(-43);
     }
   }
 }

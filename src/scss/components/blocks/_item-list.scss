@@ -1,0 +1,132 @@
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(2, 235px);
+  gap: rem(60) rem(132);
+
+  &__item {
+    position: relative;
+    padding-top: rem(56);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      background-image: url("../img/sprite.svg#secure");
+      background-position: 0 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .text {
+      margin-bottom: 0;
+    }
+
+    &--empty {
+      &::before {
+        display: none;
+      }
+    }
+
+    &--secure {
+      &::before {
+        background-image: url("../img/sprite.svg#secure");
+      }
+    }
+
+    &--validate {
+      &::before {
+        background-image: url("../img/sprite.svg#validate");
+      }
+    }
+
+    &--observability {
+      &::before {
+        background-image: url("../img/sprite.svg#obser");
+      }
+    }
+
+    &--result {
+      &::before {
+        background-image: url("../img/sprite.svg#result");
+      }
+    }
+
+    &--just {
+      &::before {
+        background-image: url("../img/sprite.svg#just");
+      }
+    }
+
+    &--scenarios {
+      &::before {
+        background-image: url("../img/sprite.svg#scenarios");
+      }
+    }
+
+    &--fresh {
+      &::before {
+        background-image: url("../img/sprite.svg#fresh");
+      }
+    }
+
+    &--skills {
+      &::before {
+        background-image: url("../img/sprite.svg#skills");
+      }
+    }
+
+    &--misconf {
+      &::before {
+        background-image: url("../img/sprite.svg#dislike");
+      }
+    }
+
+    &--attacks {
+      &::before {
+        background-image: url("../img/sprite.svg#alert");
+      }
+    }
+
+    &--outages {
+      padding: rem(93) rem(50) rem(35);
+
+      &::before {
+        background-image: url("../img/sprite.svg#shield-done");
+      }
+    }
+
+    &--complete {
+      &::before {
+        background-image: url("../img/sprite.svg#git-pull");
+      }
+    }
+
+    &--fast {
+      &::before {
+        background-image: url("../img/sprite.svg#fast");
+      }
+    }
+
+    &--accurate {
+      &::before {
+        background-image: url("../img/sprite.svg#accurate");
+      }
+    }
+
+    &--avoid {
+      &::before {
+        top: rem(10);
+        background-image: url("../img/sprite.svg#avoid");
+      }
+    }
+
+    &--grow {
+      &::before {
+        background-image: url("../img/sprite.svg#grow");
+      }
+    }
+  }
+}

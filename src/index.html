@@ -8,24 +8,40 @@ headTitle:"Home page"
 
     <main class="main">
       <div class="container">
-        @include('html/_hero.html',{
-        addClass:"",
-        slogan:"cut to the chase",
-        title: "linux runtime security",
-        text:"Secure your Linux VM and Container environments with observability, detection, investigation, and response capabilities integrating with your whole development lifecycle.",
-        btnText:"Book a demo",
-        btnWatch:"<button class='btn' type='button'>Watch the video<svg class='btn__icon'><use xlink:href='img/sprite.svg#play-circle'></use></svg></button>",
-        imgHero:"home/hero-laptop.png"
-        })
+        <section class="hero hero--home">
 
-        @include('html/home/_diagram.html')
+          @include('html/_hero.html',{
+          slogan:"<span class='slogan'>cut to the chase</span>",
+          title:"<h1 class='title'>Linux Runtime Security</h1>",
+          contentBlock:"<p class='text'>Secure your Linux VM and Container environments with observability, detection,investigation, and response capabilities integrating with your whole development <span> lifecycle.</span></p>",
+          btnText:"Book a demo",
+          btnAdd:"<a class='btn' href='#'>Watch the video<svg><use xlink:href='img/sprite.svg#play-circle'></use></svg></a>",
+          imgHero:"<img class='hero__img' src='img/home/hero.png' alt='Spyderbat on laptop' width='1033' height='506'>"
+          })
+        </section>
 
-        @include('html/home/_defend-flag.html')
+        <div class="scroll-block bottom">
+          Scroll down to see more
+        </div>
 
-        @include('html/home/_list-problem.html')
+        <section class="platform bottom">
+          @include('html/home/_platform.html')
+        </section>
 
-        @include('html/home/_home-slider.html')
+        <section class="platform platform--reverse bottom">
+          @include('html/home/_platform-reverse.html')
+        </section>
+
+        <section class="problem page-list bottom">
+          @include('html/home/_problem.html')
+        </section>
+
+        <section class="slider-home bottom">
+          @include('html/home/_slider.html')
+        </section>
+
       </div>
+
     </main>
 
     @include('html/_footer.html')

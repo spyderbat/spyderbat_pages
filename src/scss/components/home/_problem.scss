@@ -1,0 +1,28 @@
+.problem {
+  padding-top: rem(15);
+
+  .item-list {
+    &__item {
+      padding: rem(93) rem(38) rem(35);
+
+      &::before {
+        left: 0;
+        right: 0;
+        top: rem(43);
+        margin: 0 auto;
+      }
+
+      .text {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 320px;
+      }
+
+      &--outages {
+        .text {
+          max-width: 270px;
+        }
+      }
+    }
+  }
+}

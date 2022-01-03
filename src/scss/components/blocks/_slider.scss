@@ -1,0 +1,36 @@
+.slider {
+  position: relative;
+
+  &__item {
+    @include flex-s-sb;
+
+    padding: rem(85) rem(48) rem(80) rem(76);
+
+    .text {
+      max-width: 240px;
+    }
+  }
+
+  &__item-inner {
+    width: 100%;
+
+    &--content {
+      max-width: 460px;
+    }
+
+    &--anim {
+      max-width: 525px;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: rem(32);
+  }
+
+  &__player {
+    &--avoid {
+      height: 540px;
+      transform: translate(-17%, 15%);
+    }
+  }
+}

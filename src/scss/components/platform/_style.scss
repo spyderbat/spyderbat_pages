@@ -1,0 +1,32 @@
+@import "platform";
+@import "assurance";
+
+.slider-platform { 
+  padding-bottom: rem(73);
+}
+
+.download-list {
+  margin-bottom: rem(40);
+  padding-left: rem(40);
+  width: 100%;
+  max-width: 400px;
+
+  &__item {
+    margin-bottom: rem(15);
+  }
+}
+
+.download {
+  &__btn {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -12px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/sprite.svg#download");
+    }
+  }
+}

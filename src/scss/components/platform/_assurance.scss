@@ -1,0 +1,57 @@
+.assurance {
+  @include flex-v-center;
+
+  margin-bottom: rem(290);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 400px;
+    background: var(--color-gradient-dark);
+  }
+
+  &__inner {
+    &:not(:last-child) {
+      margin-right: rem(144);
+    }
+
+    &--content {
+      width: 100%;
+      max-width: 380px;
+    }
+  }
+
+  .page-list {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      text-align: left;
+      transform: translateY(17%);
+      gap: rem(25);
+    }
+
+    &__item {
+      padding: 20px;
+    }
+  }
+
+  .item-list {
+    &__item {
+      padding: rem(30);
+
+      &:nth-last-child(n+3) {
+        .text {
+          max-width: 220px;
+        }
+      }
+
+      &:last-child {
+        .text {
+          padding-right: rem(30);
+        }
+      }
+    }
+  }
+}

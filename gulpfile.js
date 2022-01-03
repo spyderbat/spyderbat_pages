@@ -96,6 +96,8 @@ const images = () => {
   return src([
 		'./src/img/**.jpg',
 		'./src/img/**.png',
+		'./src/img/**.json',
+		'./src/img/*/**.json',
 		'./src/img/**.jpeg',
 		'./src/img/*.svg',
 		'./src/img/**/*.jpg',

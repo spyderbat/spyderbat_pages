@@ -1,4 +1,4 @@
-/* stylelint-disable-next-line at-rule-blacklist */
+/* stylelint-disable at-rule-blacklist */
 body {
   @include flex-column;
 
@@ -8,24 +8,9 @@ body {
   font-family: "Satoshi", sans-serif;
   font-weight: 400;
   line-height: 1.9;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   color: var(--color-white);
   background-color: var(--color-black);
-
-  &::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-    width: 100%;
-    height: 900px;
-    max-width: 900px;
-    background-image: url("../img/bg-cicle.svg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
 }
 
 .site-container {
@@ -40,7 +25,11 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   width: 100%;
-  max-width: 1296px;
+  max-width: 1295px;
+
+  @include for-width(-tablet) {
+    padding: 0 rem(32);
+  }
 }
 
 .logo {
@@ -78,21 +67,23 @@ body {
   clip: rect(0 0 0 0);
 }
 
-.btn-reset {
-  border: none;
-  padding: 0;
-  background: transparent;
-  cursor: pointer;
-}
-
-.list-reset {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.box-item {
+.item-box {
   border: 2px solid var(--color-blue-300);
   border-radius: var(--radius-main);
   background: var(--color-gradient);
+}
+
+.circle-bg {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    width: 690px;
+    height: 100%;
+    background: linear-gradient(247.71deg, rgba(174, 200, 255, 0.3) 0%, rgba(5, 68, 208, 0.3) 40.26%, rgba(255, 255, 255, 0) 122.71%);
+    filter: blur(130.494px);
+  }
 }

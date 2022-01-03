@@ -1,0 +1,138 @@
+.hero {
+  @include flex-s-sb;
+
+  &__content {
+    padding-top: rem(30);
+    width: 100%;
+    max-width: 438px;
+
+    .text {
+      span {
+        position: absolute;
+        padding-left: 4px;
+      }
+    }
+  }
+
+  &__btns {
+    @include flex-v-center;
+
+    .btn {
+      @include flex-v-center;
+
+      &:not(.btn--colored) {
+        &:focus {
+          color: var(--color-blue-700);
+        }
+
+        &:hover {
+          color: var(--color-blue-700);
+        }
+
+        &:active {
+          color: var(--color-blue-700);
+        }
+      }
+
+      &:first-child {
+        margin-right: rem(18);
+      }
+    }
+
+    svg {
+      margin-left: rem(10);
+      width: 24px;
+      height: 24px;
+      fill: transparent;
+      stroke: currentColor;
+    }
+  }
+
+  &--home {
+    margin-bottom: rem(23);
+
+    .hero__picture {
+      margin-right: -17%;
+    }
+  }
+
+  &--platform {
+    align-items: center;
+    margin-bottom: 5px;
+
+    .hero__content {
+      margin-bottom: rem(30);
+      padding-top: 0;
+    }
+
+    .hero__picture {
+      margin-right: -16%;
+      padding-top: rem(20);
+    }
+
+    .text {
+      width: 100%;
+      max-width: 318px;
+    }
+  }
+
+  &--download {
+    margin-bottom: rem(280);
+
+    .hero__content {
+      max-width: 440px;
+    }
+
+    .slogan {
+      margin-bottom: rem(15);
+    }
+
+    .title-sec {
+      margin-bottom: rem(38);
+    }
+
+    .hero__picture {
+      margin-right: rem(-45);
+      padding-top: rem(55);
+    }
+  }
+
+  &--dfc {
+    margin-bottom: rem(122);
+  }
+
+  &--dfc-bottom {
+    align-items: center;
+    padding-bottom: rem(38);
+
+    .hero__content {
+      padding-top: 0;
+      max-width: 484px;
+    }
+
+    .title-sec {
+      margin-right: rem(27);
+    }
+
+    >.text {
+      max-width: 355px;
+    }
+  }
+
+  &--avoid {
+    margin-bottom: rem(145);
+    padding-top: rem(73);
+
+    .hero__content {
+      max-width: 380px;
+    }
+  }
+
+  &--book {
+    align-items: center;
+
+    .hero__content {
+      max-width: 460px;
+    }
+  }
+}

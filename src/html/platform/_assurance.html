@@ -1,0 +1,44 @@
+<div class="assurance__inner assurance__inner--content">
+  <h2 class="assurance__title title-sec">
+    assurance
+  </h2>
+
+  <p class="text">
+    The Spyderbat Platform gives you confidence
+    an issue is fully resolved.
+  </p>
+
+  <a class="btn btn--colored" href="#">
+    Try it yourself
+  </a>
+</div>
+
+<div class="assurance__inner page-list">
+  <ul class="page-list__list item-list">
+    @loop("../blocks/_item-list.html",[{
+    tag:"li",
+    addClass:"item-box",
+    modClass:"empty",
+    itemTitle:"Get the complete picture",
+    itemText:"Fully resolve issues with an immediate picture of all causally-related activity"
+    },{
+    tag:"li",
+    addClass:"item-box",
+    modClass:"empty",
+    itemTitle:"Gain a co-pilot",
+    itemText:"Detailed visibility into how applications interact with Linux and each other"
+    },{
+    tag:"li",
+    addClass:"item-box",
+    modClass:"empty",
+    itemTitle:"Add additional context",
+    itemText:"Personalize traces with contextual feeds and custom analytics"
+    },{
+    tag:"li",
+    addClass:"item-box",
+    modClass:"empty",
+    itemTitle:"Cloud-native",
+    itemText:"Container and cloud visibility from a cloud-native application"
+    }])
+  </ul>
+</div>

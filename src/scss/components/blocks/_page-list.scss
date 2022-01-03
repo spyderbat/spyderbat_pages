@@ -1,0 +1,18 @@
+.page-list {
+  &__title {
+    margin: 0 auto rem(56);
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+  }
+
+  &__list {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 0 rem(30);
+
+    &--platform {
+      margin-bottom: rem(60);
+    }
+  }
+}

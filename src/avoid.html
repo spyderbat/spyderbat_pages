@@ -1,0 +1,75 @@
+@include('html/_head.html',{
+headTitle:"Avoid Ransomware"
+})
+
+<body>
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main avoid">
+      <div class="container">
+        <section class="hero hero--avoid">
+          @include('html/_hero.html',{
+          slogan:"",
+          title:"<h1 class='title'>Spyderbat and Ransomware</h1>",
+          contentBlock:"<p class='text'>Spyderbat 's Attack Tracing & Intercept (ATI) captures attacks early in their lifecycle leveraging existing security controls.</p>",
+          btnText:"Try Spyderbat",
+          btnAdd:"",
+          imgHero:""
+          })
+        </section>
+
+        <div class="scroll-block bottom">
+          Scroll down to see more
+        </div>
+
+        <section class="slider-avoid bottom">
+          <ul class="slider">
+            @loop('html/blocks/_slider-item.html',[{
+            addClass:"",
+            animation:"<lottie-player class='slider__player slider__player--avoid' autoplay loop mode='normal' src='img/animation/avoid-slider-ft.json' width='245' height='540'></lottie-player>"
+            }])
+
+            <li class="slider__progress">
+              <ul class="progress">
+                <li class="progress__item progress__item--active">
+                  1
+                </li>
+
+                <li class="progress__item">
+                  2
+                </li>
+
+                <li class="progress__item">
+                  3
+                </li>
+              </ul>
+          </ul>
+        </section>
+
+        <section class="hero hero--book bottom">
+
+          @include('html/_hero.html',{
+          slogan:"<span class='slogan'>Ready to See Spyderbat in Action?</span>",
+          title:"<h2 class='title-sec'>Organizations can protect themselves from Ransomware</h2>",
+          contentBlock:"<p class='text'>Avoid Ransomware with Spyderbat</p>",
+          btnText:"Try Spyderbat",
+          btnAdd:"<a class='book__btn btn' href='#'>Book a demo</a>",
+          imgHero:"<lottie-player class='hero__img' autoplay loop mode='normal' src='img/animation/avoid-book.json' width='630' height='550'></lottie-player>"
+          })
+
+        </section>
+
+      </div>
+
+    </main>
+
+    @include('html/_footer.html')
+
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

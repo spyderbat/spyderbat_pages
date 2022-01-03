@@ -1,0 +1,38 @@
+.progress {
+  @include flex;
+
+  position: absolute;
+  left: rem(78);
+  bottom: rem(50);
+
+  &__item {
+    @include h3;
+
+    position: relative;
+    border: 2px solid var(--color-blue-300);
+    border-radius: 50%;
+    padding: rem(24) rem(32);
+    font-family: "Space-Grotesk", sans-serif;
+    color: var(--color-white);
+    opacity: 0.5;
+
+    &:not(:last-child) {
+      margin-right: rem(98);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        width: rem(98);
+        height: 1px;
+        background-color: var(--color-blue-300);
+      }
+    }
+
+    &--active {
+      background-color: var(--color-blue-700);
+      opacity: 1;
+    }
+  }
+}
