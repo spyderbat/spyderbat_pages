@@ -5,7 +5,7 @@
       padding: rem(65) 0 0;
 
       .title-sec {
-        margin-bottom: rem(24);
+        margin-bottom: rem(16);
       }
 
       .text {
@@ -17,7 +17,8 @@
       max-height: 540px;
 
       >.text {
-        max-width: 90%;
+        margin-bottom: rem(35);
+        max-width: 100%;
       }
     }
 

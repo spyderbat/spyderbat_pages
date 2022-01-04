@@ -1,0 +1,77 @@
+@include('html/_head.html',{
+headTitle:"Alert triage"
+})
+
+<body>
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main alert">
+      <div class="container">
+        <section class="hero hero--alert">
+          @include('html/_hero.html',{
+          slogan:"<span class='slogan'>Focus on the alerts that matter</span>",
+          title:"<h1 class='title'>Alert Triage</h1>",
+          contentBlock:"<p class='text'>With Spyderbat your alerts no longer exist in isolation. Instantly connect every activity leading to and following your alerts, including other alerts.</p>",
+          btnText:"Start free",
+          btnAdd:"<a class='btn btn--book' href='#'>Book a demo</a>",
+          imgHero:""
+          })
+
+          <ul class="item-list item-list--alert">
+            @include('html/alert/_item-grow.html',{
+            addClass:"item-box",
+            modClass:"empty",
+            })
+
+            @include('html/alert/_item-alert.html',{
+            addClass:"item-box",
+            modClass:"empty",
+            })
+
+            @include('html/alert/_item-breaches.html',{
+            addClass:"item-box",
+            modClass:"empty",
+            })
+          </ul>
+        </section>
+
+        <div class="scroll-block bottom">
+          Scroll down to see more
+        </div>
+
+        <section class="slider-alert bottom">
+          <ul class="slider">
+            @loop('html/blocks/_slider-item-small.html',[{
+            title:"Avoid false positives",
+            text:"Integrate your existing alert centers (e.g. SIEM, NGFW, etc.) to immediately see your alerts in context.",
+            addClass:"item-box",
+            animation:"<lottie-player class='slider-platform__player' autoplay loop mode='normal' src='img/animation/alert-slide-f.json' width='220' height='355'></lottie-player>"
+            }])
+
+            <li class="slider__progress">
+              <ul class="progress">
+                <li class="progress__item progress__item--active">
+                  1
+                </li>
+
+                <li class="progress__item">
+                  2
+                </li>
+              </ul>
+          </ul>
+        </section>
+
+      </div>
+
+    </main>
+
+    @include('html/_footer.html')
+
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

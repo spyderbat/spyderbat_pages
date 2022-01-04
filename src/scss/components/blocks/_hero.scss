@@ -120,7 +120,7 @@
   }
 
   &--avoid {
-    margin-bottom: rem(145);
+    margin-bottom: rem(128);
     padding-top: rem(73);
 
     .hero__content {
@@ -132,7 +132,26 @@
     align-items: center;
 
     .hero__content {
+      padding-top: 0;
       max-width: 460px;
+    }
+  }
+
+  &--aviod {
+    align-items: center;
+
+    .hero__content {
+      padding-top: 0;
+      max-width: 480px;
+    }
+  }
+
+  &--alert {
+    margin-bottom: rem(137);
+    padding-top: rem(75);
+
+    .hero__content {
+      max-width: 425px;
     }
   }
 }

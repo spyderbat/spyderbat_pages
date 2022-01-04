@@ -7,6 +7,7 @@
   line-height: 1.4;
   letter-spacing: 0;
   color: var(--color-white);
+  transition: box-shadow 0.2s ease-in-out;
 
   &:focus {
     color: var(--color-yellow-700);
@@ -45,6 +46,22 @@
     &.disabled {
       color: var(--color-gray-700);
       background-color: var(--color-gray-500);
+    }
+  }
+
+  &--book {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -12px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/sprite.svg#arrow-next");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
 }

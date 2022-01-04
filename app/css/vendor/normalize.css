@@ -202,7 +202,6 @@ a:active {
 a,
 button,
 input {
-  transition: all 0.3s ease;
   cursor: pointer;
 }
 
@@ -243,6 +242,7 @@ textarea {
 }
 
 textarea {
+  font-family: "Satoshi", sans-serif;
   resize: none;
 }
 

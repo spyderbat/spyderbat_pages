@@ -26,10 +26,6 @@ body {
   padding: 0 15px;
   width: 100%;
   max-width: 1295px;
-
-  @include for-width(-tablet) {
-    padding: 0 rem(32);
-  }
 }
 
 .logo {

@@ -34,3 +34,21 @@
     }
   }
 }
+
+.slider-alert {
+  .slider__item {
+    padding: rem(95) rem(50) rem(90) rem(75);
+  }
+
+  .text {
+    max-width: 355px;
+  }
+
+  .progress {
+    bottom: rem(93);
+  }
+
+  .slider-platform__player {
+    height: 355px;
+  }
+}

@@ -1,0 +1,100 @@
+@include('html/_head.html',{
+headTitle:"Contact us"
+})
+
+<body>
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main">
+      <div class="container">
+        <section class="contact">
+
+          <h1 class="title">
+            Contact us
+          </h1>
+
+          <p class="text">
+            Have a question for Spyderbat or want to see a personalized demo of attack tracing & intercept?
+          </p>
+
+          <form class="contact__form" action="#">
+            <div class="contact__area">
+              <label class="sr-only" for="name">
+                Enter your name
+              </label>
+
+              <input class="field item-box" type="text" placeholder="Name" id="name">
+            </div>
+
+            <div class="contact__area">
+              <label class="sr-only" for="company">
+                Enter company
+              </label>
+
+              <input class="field item-box" type="text" placeholder="Company" id="company">
+            </div>
+
+            <div class="contact__area">
+              <label class="sr-only" for="email">
+                Enter your email
+              </label>
+
+              <input class="field item-box" type="email" placeholder="Email" id="email">
+            </div>
+
+            <div class="contact__area">
+              <label class="sr-only" for="phone">
+                Enter your phone
+              </label>
+
+              <input class="field item-box" type="tel" placeholder="Phone" id="phone">
+            </div>
+
+            <div class="contact__area">
+              <label class="sr-only" for="message">
+                Enter your message
+              </label>
+
+              <textarea class="field field--message item-box" name="message" placeholder="How can we help you?" id="message"></textarea>
+            </div>
+
+            <button class="contact__form-btn btn btn--colored" type="submit">
+              Submit
+            </button>
+          </form>
+
+        </section>
+
+        <div class="modal">
+          <div class="modal__success item-box">
+            <button class="modal__close-icon btn-close" type="button">
+              <span class="sr-only">
+                close icon
+              </span>
+            </button>
+            <h2 class="title">
+              Thank you!
+            </h2>
+
+            <p class="text">
+              We will reply to you as soon as possible
+            </p>
+
+            <button class="modal__close btn btn-close btn--colored" type="submit">
+              ok
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @include('html/_footer.html')
+
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

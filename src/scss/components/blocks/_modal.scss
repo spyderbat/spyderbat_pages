@@ -1,0 +1,60 @@
+.modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transform: opacity 0.3s linear, visibility 0.3s linear;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: var(--color-black);
+    opacity: 0.7;
+  }
+
+  &__success {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 11;
+    margin: 0 auto;
+    padding: rem(80) rem(15) 0;
+    width: 100%;
+    max-width: 620px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  &__close {
+    margin-bottom: rem(83);
+    width: 100%;
+    max-width: 310px;
+    text-transform: uppercase;
+  }
+
+  &__close-icon {
+    position: absolute;
+    right: rem(24);
+    top: rem(24);
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/sprite.svg#close-modal");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &--open {
+    opacity: 1;
+    visibility: visible;
+  }
+}

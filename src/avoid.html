@@ -17,6 +17,23 @@ headTitle:"Avoid Ransomware"
           btnAdd:"",
           imgHero:""
           })
+
+          <ul class="item-list item-list--avoid">
+            @include('html/avoid/_item-half.html',{
+            addClass:"item-box",
+            modClass:"shield-off"
+          })
+
+            @include('html/avoid/_item-cost.html',{
+            addClass:"item-box",
+            modClass:"dollar"
+          })
+
+            @include('html/avoid/_item-period.html',{
+            addClass:"item-box",
+            modClass:"empty"
+          })
+          </ul>
         </section>
 
         <div class="scroll-block bottom">
@@ -47,14 +64,14 @@ headTitle:"Avoid Ransomware"
           </ul>
         </section>
 
-        <section class="hero hero--book bottom">
+        <section class="hero hero--aviod bottom">
 
           @include('html/_hero.html',{
           slogan:"<span class='slogan'>Ready to See Spyderbat in Action?</span>",
           title:"<h2 class='title-sec'>Organizations can protect themselves from Ransomware</h2>",
           contentBlock:"<p class='text'>Avoid Ransomware with Spyderbat</p>",
           btnText:"Try Spyderbat",
-          btnAdd:"<a class='book__btn btn' href='#'>Book a demo</a>",
+          btnAdd:"<a class='btn btn--book' href='#'>Book a demo</a>",
           imgHero:"<lottie-player class='hero__img' autoplay loop mode='normal' src='img/animation/avoid-book.json' width='630' height='550'></lottie-player>"
           })
 
