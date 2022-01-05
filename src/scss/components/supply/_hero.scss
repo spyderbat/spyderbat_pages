@@ -1,0 +1,24 @@
+.supply {
+  margin-bottom: rem(340);
+  padding-top: rem(20);
+
+  &__content {
+    margin: 0 auto rem(60);
+    width: 100%;
+    max-width: 620px;
+    text-align: center;
+  }
+
+  &__form {
+    @include flex-all-sb;
+  }
+
+  &__field {
+    max-width: 435px;
+  }
+
+  &__picture {
+    width: 100%;
+    max-width: 1270px;
+  }
+}

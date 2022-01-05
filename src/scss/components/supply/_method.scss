@@ -1,0 +1,22 @@
+.method {
+  &__inner {
+    margin: 0 auto rem(58);
+    width: 100%;
+    max-width: 640px;
+    text-align: center;
+
+    .text {
+      padding: 0 20px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 585px 590px;
+
+    .text {
+      line-height: 1.9;
+    }
+  }
+}

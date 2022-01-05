@@ -120,11 +120,23 @@
   }
 
   &--avoid {
-    margin-bottom: rem(128);
-    padding-top: rem(73);
+    align-items: center;
+    margin-bottom: rem(140);
+    padding-top: rem(100);
 
     .hero__content {
+      padding-top: 0;
       max-width: 380px;
+    }
+  }
+
+  &--organization {
+    align-items: center;
+    padding-top: rem(0);
+
+    .hero__content {
+      padding-top: 0;
+      max-width: 500px;
     }
   }
 
@@ -134,15 +146,6 @@
     .hero__content {
       padding-top: 0;
       max-width: 460px;
-    }
-  }
-
-  &--aviod {
-    align-items: center;
-
-    .hero__content {
-      padding-top: 0;
-      max-width: 480px;
     }
   }
 

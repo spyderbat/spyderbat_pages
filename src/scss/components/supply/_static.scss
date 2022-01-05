@@ -1,0 +1,40 @@
+.statistic {
+  margin-bottom: rem(360);
+
+  &__inner {
+    @include flex-s-sb;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 580px;
+
+    .text {
+      line-height: 1.85;
+    }
+  }
+
+  &__list {
+    grid-template-columns: repeat(2, 260px);
+    text-align: center;
+    gap: rem(24);
+  }
+
+  .item-list__item {
+    padding: rem(70) rem(20);
+
+    .item-title {
+      margin-bottom: 8px;
+      font-size: 36px;
+      line-height: 1.3;
+    }
+
+    .text {
+      font-size: 16px;
+    }
+
+    &:last-child {
+      padding: rem(35) rem(20);
+    }
+  }
+}
