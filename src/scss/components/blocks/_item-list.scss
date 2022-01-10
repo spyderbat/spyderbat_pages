@@ -15,8 +15,8 @@
       width: 32px;
       height: 32px;
       background-image: url("../img/sprite.svg#secure");
-      background-position: 0 0;
-      background-size: contain;
+      background-position: center;
+      background-size: cover;
       background-repeat: no-repeat;
     }
 
@@ -148,6 +148,36 @@
         margin: 0 auto;
         width: 80px;
         background-image: url("../img/sprite.svg#dollar");
+      }
+    }
+
+    &--tool {
+      &::before {
+        left: 0;
+        right: 0;
+        top: rem(30);
+        margin: 0 auto;
+        background-image: url("../img/sprite.svg#tool");
+      }
+    }
+
+    &--globe {
+      &::before {
+        left: 0;
+        right: 0;
+        top: rem(30);
+        margin: 0 auto;
+        background-image: url("../img/sprite.svg#globe");
+      }
+    }
+
+    &--unlock {
+      &::before {
+        left: 0;
+        right: 0;
+        top: rem(30);
+        margin: 0 auto;
+        background-image: url("../img/sprite.svg#unlock");
       }
     }
   }

@@ -16,7 +16,22 @@
     grid-template-columns: 585px 590px;
 
     .text {
+      margin-bottom: 0;
       line-height: 1.9;
     }
+  }
+
+  &__item {
+    &--double {
+      .text {
+        &:not(:last-child) {
+          margin-bottom: rem(30);
+        }
+      }
+    }
+  }
+
+  &.bottom {
+    margin-bottom: rem(185);
   }
 }

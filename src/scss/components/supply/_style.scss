@@ -1,3 +1,17 @@
 @import "hero";
 @import "static";
 @import "method";
+@import "detect";
+@import "slider-list";
+
+.supply-text {
+  margin: 0 auto rem(200);
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+
+  .text {
+    padding: 0 rem(30);
+    line-height: 1.9;
+  }
+}

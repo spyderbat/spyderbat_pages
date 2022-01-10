@@ -1,0 +1,44 @@
+.detect {
+  &__inner {
+    margin: 0 auto rem(58);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+
+    .text {
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  .item-list {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+    gap: 0 rem(75);
+
+    &__item {
+      padding: rem(80) rem(20) rem(10);
+      text-align: center;
+
+      &:not(:last-child) {
+        &::after {
+          content: "";
+          position: absolute;
+          right: -77px;
+          top: 50%;
+          width: 75px;
+          height: 10px;
+          background-image: url("../img/sprite.svg#line-between");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          transform: translateY(-30%);
+        }
+      }
+    }
+  }
+}

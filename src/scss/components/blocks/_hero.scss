@@ -157,4 +157,19 @@
       max-width: 425px;
     }
   }
+
+  &--supply {
+    align-items: center;
+    margin-top: -10px;
+    margin-right: -10px;
+    padding-bottom: rem(65);
+
+    .hero__content {
+      max-width: 465px;
+
+      .text {
+        margin-right: rem(20);
+      }
+    }
+  }
 }

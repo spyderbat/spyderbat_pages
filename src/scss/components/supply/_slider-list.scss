@@ -1,0 +1,32 @@
+.customer {
+  padding-top: rem(60);
+
+  .slider {
+    &__item {
+      padding: rem(20) 0 0;
+    }
+
+    &__item-list {
+      margin-bottom: rem(40);
+      padding-left: rem(40);
+      width: 100%;
+      max-width: 490px;
+      font-size: 18px;
+    }
+
+    &__item-point {
+      &:not(:last-child) {
+        margin-bottom: rem(20);
+      }
+    }
+
+    &__item-picture {
+      transform: translate(-7%, -20%);
+    }
+
+    .progress {
+      left: 0;
+      bottom: rem(15);
+    }
+  }
+}
