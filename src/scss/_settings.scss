@@ -19,6 +19,10 @@ body {
 
 .bottom {
   margin-bottom: rem(200);
+
+  @include for-width(-tablet) {
+    margin-bottom: 30px;
+  }
 }
 
 .container {
@@ -26,6 +30,10 @@ body {
   padding: 0 15px;
   width: 100%;
   max-width: 1295px;
+
+  @include for-width(-tablet) {
+    padding: 0 rem(30);
+  }
 }
 
 .logo {
@@ -75,11 +83,48 @@ body {
   &::before {
     content: "";
     position: absolute;
+    right: 0;
+    top: -3%;
     z-index: -1;
-    border-radius: 50%;
-    width: 690px;
-    height: 100%;
+    width: 920px;
+    height: 920px;
     background: linear-gradient(247.71deg, rgba(174, 200, 255, 0.3) 0%, rgba(5, 68, 208, 0.3) 40.26%, rgba(255, 255, 255, 0) 122.71%);
     filter: blur(130.494px);
+  }
+
+  &--animation {
+    &::before {
+      left: 0;
+      right: 0;
+      bottom: 3%;
+      margin: 0 auto;
+      width: 684px;
+      height: 684px;
+      background: linear-gradient(247.71deg, rgba(174, 200, 255, 0.3) 0%, rgba(5, 68, 208, 0.3) 40.26%, rgba(255, 255, 255, 0) 122.71%);
+      filter: blur(227.494px);
+    }
+  }
+
+  &--title {
+    &::before {
+      left: 0;
+      right: 0;
+      top: -15%;
+      margin: 0 auto;
+      width: 422px;
+      height: 422px;
+      background: linear-gradient(247.71deg, rgba(174, 200, 255, 0.25) 0%, rgba(5, 68, 208, 0.25) 40.26%, rgba(255, 255, 255, 0) 122.71%);
+      filter: blur(122.494px);
+    }
+  }
+
+  &--slider {
+    &::before {
+      left: 0;
+      width: 690px;
+      height: 690px;
+      background: linear-gradient(247.71deg, rgba(174, 200, 255, 0.25) 0%, rgba(5, 68, 208, 0.25) 40.26%, rgba(255, 255, 255, 0) 122.71%);
+      filter: blur(127.494px);
+    }
   }
 }

@@ -11,16 +11,50 @@
 
     >.text {
       margin-bottom: rem(22);
-      max-width: 570px;
+      max-width: 600px;
+    }
+
+    @include for-width(-tablet) {
+      margin-bottom: rem(42);
+      max-width: 540px;
     }
   }
 
   &__animation {
     margin-right: rem(-45);
+
+    @include for-width(-desktop-lg) {
+      margin-right: 0;
+    }
+
+    @include for-width(-desktop-sm) {
+      margin-right: rem(20);
+    }
+
+    @include for-width(-tablet) {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 490px;
+    }
   }
 
   &__content-btn {
     margin-bottom: rem(60);
+
+    @include for-width(-tablet) {
+      margin-bottom: rem(50);
+      padding: rem(19) rem(50);
+    }
+  }
+
+  &__content-list {
+    @include for-width(-tablet) {
+      gap: rem(37) rem(120);
+    }
+  }
+
+  @include for-width(-tablet) {
+    margin-bottom: rem(22);
   }
 
   &--reverse {
@@ -29,20 +63,54 @@
 
     .platform__content {
       padding-top: rem(50);
+      width: 100%;
       max-width: 610px;
 
       >.text {
         max-width: 530px;
+
+        @include for-width(-tablet) {
+          max-width: 100%;
+        }
       }
     }
 
     .item-list {
       grid-template-columns: rem(230) rem(250);
       gap: rem(60) rem(115);
+
+      @include for-width(-desktop-lg) {
+        gap: rem(40) rem(75);
+      }
+
+      @include for-width(-tablet) {
+        gap: rem(20) rem(130);
+      }
     }
 
     .platform__picture {
       margin: rem(-15) rem(-43);
+
+      @include for-width(-desktop-lg) {
+        margin: 0 rem(50) 0 0;
+      }
+
+      @include for-width(-tablet) {
+        margin: 0 auto;
+        max-width: 450px;
+      }
     }
+
+    @include for-width(-tablet) {
+      margin-bottom: rem(105);
+    }
+  }
+
+  @include for-width(-desktop-lg) {
+    align-items: center;
+  }
+
+  @include for-width(-tablet) {
+    display: block;
   }
 }

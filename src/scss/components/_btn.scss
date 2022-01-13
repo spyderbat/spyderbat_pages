@@ -64,4 +64,8 @@
       background-repeat: no-repeat;
     }
   }
+
+  @include for-width(-tablet) {
+    padding: rem(19) rem(35);
+  }
 }

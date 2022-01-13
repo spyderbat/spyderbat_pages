@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body class="circle-bg">
   <div class="site-container">
     <header class="header">
 
@@ -115,7 +115,7 @@
 </div>
 
 <div class="hero__picture">
-  <img class='hero__img' src='img/home/hero.png' alt='Spyderbat on laptop' width='1033' height='506'>
+  <img class='hero__img' src='img/home/hero.png' alt='Spyderbat on laptop' width='1033' height='506'><lottie-player class='hero__player' autoplay speed='2.5' mode='normal' src='img/animation/home-hero.json' width='690' height='690'>
 </div>
 
         </section>
@@ -180,8 +180,8 @@
   </ul>
 </div>
 
-<div class="platform__animation">
-  <lottie-player autoplay loop mode="normal" src="img/animation/platform.json" width="640" height="790">
+<div class="platform__animation circle-bg circle-bg--animation">
+  <lottie-player autoplay speed="2" mode="normal" src="img/animation/platform.json" width="640" height="790">
   </lottie-player>
 </div>
 
@@ -244,13 +244,13 @@
   </ul>
 </div>
 
-<div class="platform__picture">
+<div class="platform__picture circle-bg circle-bg--animation">
   <img class="platform__img" src="img/home/flag.png" alt="Flag challenges (DFC)" width="620" height="620">
 </div>
 
         </section>
 
-        <section class="problem page-list bottom">
+        <section class="problem page-list bottom circle-bg circle-bg--title">
           <h2 class="page-list__title title-sec">
   Problems addressed by the Spyderbat Platform
 </h2>
@@ -289,10 +289,10 @@
         </section>
 
         <section class="slider-home bottom">
-          <ol class="slider-home__list">
-  <li class="slider-home__item">
+          <ul class="slider-home__list swiper-wrapper circle-bg circle-bg--slider">
+  <li class="slider-home__item swiper-slide ">
 
-    <div class="slider-home__anim">
+    <div class="slider-home__anim ">
       <lottie-player class="slider-home__player" autoplay loop mode="normal" src="img/animation/slider-home-ft.json" width="690" height="690">
       </lottie-player>
     </div>
@@ -322,7 +322,128 @@
       </div>
     </div>
   </li>
-</ol>
+
+  <li class="slider-home__item swiper-slide">
+
+    <div class="slider-home__anim">
+      <lottie-player class="slider-home__player" autoplay loop mode="normal" src="img/animation/intercept.json" width="690" height="690">
+      </lottie-player>
+    </div>
+
+    <div class="slider-home__content">
+
+      <h2 class="slider-home__title title-sec">
+        Why Spyderbat
+      </h2>
+
+      <p class="text">
+        Spyderbat solves the challenges of manual
+        investigations
+      </p>
+
+      <div class="slider-home__box item-box">
+        <h3 class="item-title">
+          Intercept
+        </h3>
+
+        <p class="text">
+          Automate steps to completely intercept security threats and misconfigurations with accurate and complete visibility
+          to root cause.
+        </p>
+      </div>
+    </div>
+  </li>
+
+  <li class="slider-home__item swiper-slide">
+
+    <div class="slider-home__anim">
+      <lottie-player class="slider-home__player" autoplay loop mode="normal" src="img/animation/blend.json" width="690" height="690">
+      </lottie-player>
+    </div>
+
+    <div class="slider-home__content">
+
+      <h2 class="slider-home__title title-sec">
+        Why Spyderbat
+      </h2>
+
+      <p class="text">
+        Spyderbat solves the challenges of manual
+        investigations
+      </p>
+
+      <div class="slider-home__box item-box">
+        <h3 class="item-title">
+          Blend
+        </h3>
+
+        <p class="text">
+          Blend into your existing workflows and current technologies, such as SIEM, native cloud services, and others, with the freedom to personalize, extend, and innovate.
+        </p>
+      </div>
+    </div>
+  </li>
+
+  <li class="slider-home__item swiper-slide">
+
+    <div class="slider-home__anim">
+      <lottie-player class="slider-home__player" autoplay loop mode="normal" src="img/animation/fusion.json" width="690" height="690">
+      </lottie-player>
+    </div>
+
+    <div class="slider-home__content">
+
+      <h2 class="slider-home__title title-sec">
+        Why Spyderbat
+      </h2>
+
+      <p class="text">
+        Spyderbat solves the challenges of manual
+        investigations
+      </p>
+
+      <div class="slider-home__box item-box">
+        <h3 class="item-title">
+          Security fusion
+        </h3>
+
+        <p class="text">
+          Fuse your existing security alerts in real-time to Spyderbat’s ground-truth causal graph, instantly illuminating attack paths and dismissing false positives.
+        </p>
+      </div>
+    </div>
+  </li>
+
+  <li class="slider-home__item swiper-slide">
+
+    <div class="slider-home__anim">
+      <lottie-player class="slider-home__player" autoplay loop mode="normal" src="img/animation/observability.json" width="690" height="690">
+      </lottie-player>
+    </div>
+
+    <div class="slider-home__content">
+
+      <h2 class="slider-home__title title-sec">
+        Why Spyderbat
+      </h2>
+
+      <p class="text">
+        Spyderbat solves the challenges of manual
+        investigations
+      </p>
+
+      <div class="slider-home__box item-box">
+        <h3 class="item-title">
+          Observability
+        </h3>
+
+        <p class="text">
+          Spyderbat continuously assembles all activities with their causal connections into a living graph,within and across ephemeral systems, fast moving workloads, and extended periods of time.
+        </p>
+      </div>
+    </div>
+  </li>
+</ul>
 
         </section>
 

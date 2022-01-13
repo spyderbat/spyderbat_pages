@@ -4,14 +4,48 @@
   &__content {
     padding-top: rem(30);
     width: 100%;
-    max-width: 438px;
+    max-width: 455px;
 
     .text {
       span {
         position: absolute;
         padding-left: 4px;
+
+        @include for-width(-tablet) {
+          position: relative;
+        }
+      }
+
+      @include for-width(-tablet) {
+        margin: 0 auto rem(26);
+        max-width: 455px;
+        text-align: center;
       }
     }
+
+    @include for-width(-tablet) {
+      margin: 0 auto;
+      max-width: 495px;
+      text-align: center;
+    }
+  }
+
+  &__picture {
+    position: relative;
+
+    @include for-width(-tablet) {
+      max-width: 640px;
+    }
+  }
+
+  &__player {
+    position: absolute;
+    left: 0;
+    right: -15%;
+    top: 17%;
+    margin: 0 auto;
+    width: 450px;
+    height: 60%;
   }
 
   &__btns {
@@ -36,6 +70,10 @@
 
       &:first-child {
         margin-right: rem(18);
+
+        @include for-width(-tablet) {
+          margin-right: 0;
+        }
       }
     }
 
@@ -46,6 +84,12 @@
       fill: transparent;
       stroke: currentColor;
     }
+
+    @include for-width(-tablet) {
+      justify-content: end;
+      margin-right: 45px;
+      margin-bottom: rem(120);
+    }
   }
 
   &--home {
@@ -53,6 +97,10 @@
 
     .hero__picture {
       margin-right: -17%;
+
+      @include for-width(-tablet) {
+        margin: 0 auto;
+      }
     }
   }
 
@@ -171,5 +219,29 @@
         margin-right: rem(20);
       }
     }
+  }
+
+  &--runtime-top {
+    margin-bottom: rem(120);
+    padding-top: rem(50);
+
+    .hero__content {
+      max-width: 600px;
+
+      .text {
+        line-height: 1.9;
+      }
+    }
+  }
+
+  &--runtime-bottom {
+    .hero__content {
+      max-width: 510px;
+    }
+  }
+
+  @include for-width(-tablet) {
+    display: block;
+    margin-bottom: rem(145);
   }
 }

@@ -2,7 +2,7 @@
 headTitle:"Home page"
 })
 
-<body>
+<body class="circle-bg">
   <div class="site-container">
     @include('html/_header.html')
 
@@ -16,7 +16,7 @@ headTitle:"Home page"
           contentBlock:"<p class='text'>Secure your Linux VM and Container environments with observability, detection,investigation, and response capabilities integrating with your whole development <span> lifecycle.</span></p>",
           btnText:"Book a demo",
           btnAdd:"<a class='btn' href='#'>Watch the video<svg><use xlink:href='img/sprite.svg#play-circle'></use></svg></a>",
-          imgHero:"<img class='hero__img' src='img/home/hero.png' alt='Spyderbat on laptop' width='1033' height='506'>"
+          imgHero:"<img class='hero__img' src='img/home/hero.png' alt='Spyderbat on laptop' width='1033' height='506'><lottie-player class='hero__player' autoplay speed='2.5' mode='normal' src='img/animation/home-hero.json' width='690' height='690'>"
           })
         </section>
 
@@ -32,7 +32,7 @@ headTitle:"Home page"
           @include('html/home/_platform-reverse.html')
         </section>
 
-        <section class="problem page-list bottom">
+        <section class="problem page-list bottom circle-bg circle-bg--title">
           @include('html/home/_problem.html')
         </section>
 

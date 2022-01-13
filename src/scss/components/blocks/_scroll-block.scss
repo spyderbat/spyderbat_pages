@@ -29,4 +29,8 @@
   &--bottom {
     margin-bottom: rem(70);
   }
+
+  @include for-width(-tablet) {
+    display: none;
+  }
 }
