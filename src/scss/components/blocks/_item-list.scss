@@ -40,6 +40,10 @@
       &::before {
         background-image: url("../img/sprite.svg#validate");
       }
+
+      @include for-width(-mobile-md) {
+        order: 3;
+      }
     }
 
     &--observability {
@@ -51,6 +55,10 @@
     &--result {
       &::before {
         background-image: url("../img/sprite.svg#fast");
+      }
+
+      @include for-width(-mobile-md) {
+        order: 4;
       }
     }
 
@@ -65,17 +73,29 @@
       &::before {
         background-image: url("../img/sprite.svg#scenarios");
       }
+
+      @include for-width(-mobile-md) {
+        order: 2;
+      }
     }
 
     &--fresh {
       &::before {
         background-image: url("../img/sprite.svg#fresh");
       }
+
+      @include for-width(-mobile-md) {
+        order: 1;
+      }
     }
 
     &--skills {
       &::before {
         background-image: url("../img/sprite.svg#skills");
+      }
+
+      @include for-width(-mobile-md) {
+        order: 4;
       }
     }
 

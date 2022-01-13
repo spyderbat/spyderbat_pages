@@ -1,1 +1,515 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="shortcut icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16"><link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32"><link rel="shortcut icon" type="image/png" href="img/favicon-180x170.png" sizes="180x170"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="theme-color" content="#111111"><title>Spyderbat | Home page</title><link rel="stylesheet" href="css/vendor.css"><link rel="stylesheet" href="css/main.css"></head><body><div class="site-container"><header class="header"><div class="container"><nav class="nav"><a class="logo" href="/"><img class="logo__img" src="img/logo.svg" alt="Spyderbat logo" width="185" height="30"></a><ul class="nav__sing"><li><a href="#">Products <svg><use xlink:href="img/sprite.svg#arrow-down-circle"></use></svg></a></li><li><a href="#">Solutions <svg><use xlink:href="img/sprite.svg#arrow-down-circle"></use></svg></a></li><li><a href="#">Company <svg><use xlink:href="img/sprite.svg#arrow-down-circle"></use></svg></a></li><li><a href="#">Pricing</a></li><li><a href="#">Blog</a></li><li><a href="#">Resources</a></li></ul><ul class="nav__sing-list"><li class="nav__sing-item"><a class="nav__sing-link" href="#">Sign in</a></li><li class="nav__sing-item"><a class="nav__sing-link nav__sing-link--active" href="#">Sign up</a></li></ul></nav></div></header><main class="main"><div class="container"><section class="supply"><div class="supply__content"><h1 class="title">Protecting against Supply Chain Attacks</h1><p class="text text--supply">Supply chain attacks are a fast growing method for infiltration. In a supply chain attack, bad actors attempt to infiltrate an organization by exploiting vulnerabilities in its supply chain network.</p><form class="supply__form" action="#"><label class="sr-only" for="supply-email">Write your email</label> <input class="supply__field field item-box" type="email" name="email" id="supply-email" placeholder="Email"> <button class="btn btn--colored" type="submit">Download eBook</button></form></div><div class="supply__picture"><img class="supply__img" src="img/platform/platform-graph.png" alt="Spyderbat graph" width="1270" height="465"></div></section><section class="statistic"><div class="statistic__inner"><div class="statistic__content"><h2 class="title-sec">Statistics</h2><p class="text">While the attack is indirect, bad actors are attracted to attempt supply chain attacks to gain immediate access to a broader set of end-users. For example, when remote management vendor, Kaseya, was breached in July 2021, bad actors were able to immediately spread ransomware to more than 1,500 of their customers.</p><p class="text">The number of software supply chain attacks is significantly increasing. In Sonatype’s 2021 State of Software Supply Chain recognizes a 650% year-over-year increase in supply chain attacks from 2015 to 2021. According to the Identity Theft Resource Center (ITRC), there were 19 supply chain attacks just in Q4 2020.</p></div><ul class="statistic__list item-list"><li class="item-list__item item-list__item--empty item-box"><h3 class="item-title">60%</h3><p class="text">year of year increase in attempted intrusions</p></li><li class="item-list__item item-list__item--empty item-box"><h3 class="item-title">650%</h3><p class="text">year over year increase in software supply chain attacks</p></li><li class="item-list__item item-list__item--empty item-box"><h3 class="item-title">1,500</h3><p class="text">the number of customers estimated to have been impacted by the Kaseya supply chain attack</p></li></ul></div></section><section class="method bottom"><div class="method__inner"><h2 class="title-sec">How do supply chain attacks work?</h2><p class="text">Supply chain attacks are multi-staged attacks leveraging a variety of attack techniques to reach desired goals. By indirectly infiltrating supply chain vendors, bad actors seek to gain access to the networks of their end-users or customers. Two varieties of a supply chain attack are:</p></div><ul class="method__list"><li class="method__item"><h3 class="item-title">Method 1: Partner Network Access</h3><p class="text">In this supply chain attack, bad actors gain access to a partner network, such as a managed service provider (MSP), to then gain access to the MSP’s clients’ networks. For example, in the 2013 Target breach, bad actor’s initially gained access to Target’s HVAC partner’s network. This network is used to monitor the HVAC systems at Target stores. By gaining access to this less secure partner network, the bad actors were able to find their way to the Point-of-Sale (POS) networks to install RAM scraping software on POS units to steal credit card information.</p></li><li class="method__item method__item--double"><h3 class="item-title">Method 2: Embedded Malware</h3><p class="text">In this supply chain attack, bad actors infiltrate supply chain vendors to discover source code repositories or update systems to inject their own malicious software. In today’s networking environments, both software applications and hardware appliances regularly ‘phone home’ to retrieve and perform updates. Often these updates are automated. It is not uncommon for upgrades to fetch data for other libraries, including third-party sources. Often upgrades run with root or administrator privileges, and execute a variety of scripts throughout the update process.</p><p class="text">For example, in the SolarWinds breach, bad actors successfully added a malicious DLL (Microsoft Data Link Library) file to a SolarWinds update. Once installed on a customer’s system and activated after a random wait period, the DLL performs command-and-control, retrieving and executing commands from a third party system managed by the Bad Actor.</p></li></ul></section><section class="detect bottom"><div class="detect__inner"><h2 class="title-sec">How the chain of attacks is usually detected</h2><p class="text">While performing all of these methods reduces risk of a successful attack, it will not guarantee an attack can be prevented. For many organizations, it is difficult at best to sustainably accomplish all three methods.</p></div><ul class="detect__list item-list"><li class="item-list__item item-list__item--tool item-box"><h3 class="item-title">Inventory and monitor third-party tools</h3></li><li class="item-list__item item-list__item--globe item-box"><h3 class="item-title">Monitor remote access granted to suppliers</h3></li><li class="item-list__item item-list__item--unlock item-box"><h3 class="item-title">Monitor third-party providers</h3></li></ul></section><section class="customer bottom"><div class="customer__inner"><h2 class="title-sec">Customer case study</h2><ul class="slider"><li class="slider__item"><div class="slider__item-box"><h3 class="item-title">Challenge</h3><ul class="slider__item-list"><li class="slider__item-point">Lack of perimeter breach detection for Linux instances exposed to the public internet</li><li class="slider__item-point">Increased supply chain and compliance risks with inability to monitor third-party vendor products using Linux, like AWS</li><li class="slider__item-point">High operational costs for staff with Linux programming experience</li></ul><a class="slider__link btn btn--colored" href="#">Full case study</a></div><div class="slider__item-picture"><img class="slider__item-img" src="img/customer-flag.png" alt="Customer case study image" height="570" width="505"></div></li><li class="slider__progress"><ul class="progress"><li class="progress__item progress__item--active">1</li><li class="progress__item">2</li><li class="progress__item">3</li></ul></li></ul></div></section><div class="supply-text"><h2 class="title-sec">Spyderbat captures the causal relationships across every process, network connection, and file access performed by the update</h2><p class="text">Once attack techniques are detected, Spyderbat allows for an immediate recognition of the source back to the third-party update even if months prior. The attack’s full footprint is revealed since any/all activity between the previous software update and the current detection is captured, even if the bad actor/malware uses random weight periods in between activities.</p><p class="text">Because Spyderbat does not rely on log data analysis, the attack trace is captured even if logging systems were disabled (or never enabled to begin with). This allows for full mitigation of the threat including new installed backdoors, created user accounts, etc.</p></div><section class="hero hero--supply bottom"><div class="hero__content"><span class="slogan">Ready to See Spyderbat in Action?</span><h2 class="title-sec">Protecting against supply chain attacks</h2><p class="text">Spyderbat works proactively to generate this system-wide causal graph rather than relying on a trigger by an alert or detection.</p><div class="hero__btns"><a class="btn btn--colored" href="#">Try Spyderbat </a><a class="btn btn--book" href="#">Book a demo</a></div></div><div class="hero__picture"><lottie-player class="hero__img" autoplay speed="3" mode="normal" mode="bounce" src="img/animation/search-attack.json" width="655" height="430"></lottie-player></div></section></div></main><footer class="footer"><div class="container"><div class="footer__inner"><ul class="footer__list"><li class="footer__item"><h3 class="item-title">Spyderbat products</h3><a class="text" href="#">Attack Tracing & Intercept </a><a class="text" href="#">Defend the Flag </a><a class="text" href="#">Pricing</a></li><li class="footer__item"><h3 class="item-title">Solutions</h3><a class="text" href="#">Alert Triage </a><a class="text" href="#">Security Investigations </a><a class="text" href="#">Observability</a></li><li class="footer__item"><h3 class="item-title">Use cases</h3><a class="text">Avoid Ransomware </a><a class="text" href="#">Supply Chain Attacks</a></li><li class="footer__item"><h3 class="item-title">Company</h3><a class="text" href="#">Meet us </a><a class="text" href="#">Careers </a><a class="text" href="#">Blog </a><a class="text" href="#">News </a><a class="text" href="#">Resources </a><a class="text" href="#">Contact us</a></li></ul><div class="footer__item footer__item--social"><p class="text text--footer">Follow us in social networks</p><ul class="footer__socials"><li class="footer__social"><a class="footer__social-link" href="#"><span class="sr-only">Visit LinkedIn </span><svg class="footer__social-icon"><use xlink:href="img/sprite.svg#linkedin"></use></svg></a></li><li class="footer__social"><a class="footer__social-link" href="#"><span class="sr-only">Visit Twitter </span><svg class="footer__social-icon"><use xlink:href="img/sprite.svg#twitter"></use></svg></a></li></ul></div></div></div><div class="footer__rights"><div class="container"><div class="footer__rights-inner"><p class="footer__rights-text text">© SPYDERBAT, Inc., All Rights Reserved</p><p class="footer__rights-text footer__rights-text--design text">Designed by Nextpage <svg class="footer__rights-icon"><use xlink:href="img/sprite.svg#nextpage"></use></svg></p></div></div></div></footer></div><script src="js/vendor.js" defer="defer"></script><script src="js/main.js" defer="defer"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+  <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+  <link rel="shortcut icon" type="image/png" href="img/favicon-180x170.png" sizes="180x170">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Spyderbat | Home page</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="header">
+    <nav class="nav">
+
+      <a class="logo" href="/">
+        <img class="logo__img" src="img/logo.svg" alt="Spyderbat logo" width="185" height="30">
+      </a>
+
+      <button class="burger">
+        <span class="sr-only">
+          Open menu
+        </span>
+      </button>
+
+
+      <div class="nav__inner">
+        <ul class="nav__sing">
+          <li>
+            <a href="#">
+              Products
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down-circle"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Solutions
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down-circle"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Company
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down-circle"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Pricing
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Blog
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Resources
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav__sing-list">
+          <li class="nav__sing-item">
+            <a class="nav__sing-link" href="#">
+              Sign in
+            </a>
+          </li>
+
+          <li class="nav__sing-item">
+            <a class="nav__sing-link nav__sing-link--active" href="#">
+              Sign up
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</header>
+
+
+    <main class="main">
+      <div class="container">
+
+        <section class="supply">
+          <div class="supply__content">
+  <h1 class="title">
+    Protecting against Supply Chain Attacks
+  </h1>
+
+  <p class="text text--supply">
+    Supply chain attacks are a fast growing method for infiltration. In a supply chain attack, bad actors attempt to infiltrate an organization by exploiting vulnerabilities in its supply chain network.
+  </p>
+
+  <form class="supply__form" action="#">
+    <label class="sr-only" for="supply-email">
+      Write your email
+    </label>
+
+    <input class="supply__field  field item-box" type="email" name="email" id="supply-email" placeholder="Email">
+
+    <button class="btn btn--colored" type="submit">
+      Download eBook
+    </button>
+  </form>
+
+</div>
+
+
+<div class="supply__picture">
+  <img class="supply__img" src="img/platform/platform-graph.png" alt="Spyderbat graph" width="1270" height="465">
+</div>
+
+        </section>
+
+        <section class="statistic">
+          <div class="statistic__inner">
+
+  <div class="statistic__content">
+    <h2 class="title-sec">
+      Statistics
+    </h2>
+
+    <p class="text">
+      While the attack is indirect, bad actors are attracted to attempt supply chain attacks to gain immediate access to a broader set of end-users. For example, when remote management vendor, Kaseya, was breached in July 2021, bad actors were able to immediately spread ransomware to more than 1,500 of their customers.
+    </p>
+
+    <p class="text">
+      The number of software supply chain attacks is significantly increasing. In Sonatype’s 2021 State of Software Supply Chain recognizes a 650% year-over-year increase in supply chain attacks from 2015 to 2021. According to the Identity Theft Resource Center (ITRC), there were 19 supply chain attacks just in Q4 2020.
+    </p>
+  </div>
+
+    <ul class="statistic__list item-list">
+      <li class="item-list__item item-list__item--empty item-box">
+  <h3 class="item-title">
+    60%
+  </h3>
+
+  <p class="text">
+    year of year increase in attempted intrusions
+  </p>
+</li>
+<li class="item-list__item item-list__item--empty item-box">
+  <h3 class="item-title">
+    650%
+  </h3>
+
+  <p class="text">
+    year over year increase in software supply chain attacks
+  </p>
+</li>
+<li class="item-list__item item-list__item--empty item-box">
+  <h3 class="item-title">
+    1,500
+  </h3>
+
+  <p class="text">
+    the number of customers estimated to have been impacted by the Kaseya supply chain attack
+  </p>
+</li>
+
+    </ul>
+
+</div>
+
+        </section>
+
+        <section class="method bottom">
+          <div class="method__inner">
+  <h2 class="title-sec">
+    How do supply chain attacks work?
+  </h2>
+
+  <p class="text">
+    Supply chain attacks are multi-staged attacks leveraging a variety of attack techniques to reach desired goals. By indirectly infiltrating supply chain vendors, bad actors seek to gain access to the networks of their end-users or customers. Two varieties of a supply chain attack are:
+  </p>
+</div>
+
+<ul class="method__list">
+  <li class="method__item">
+    <h3 class="item-title">
+      Method 1: Partner Network Access
+    </h3>
+
+    <p class="text">
+      In this supply chain attack, bad actors gain access to a partner network, such as a managed service provider (MSP), to then gain access to the MSP’s clients’ networks. For example, in the 2013 Target breach, bad actor’s initially gained access to Target’s HVAC partner’s network. This network is used to monitor the HVAC systems at Target stores. By gaining access to this less secure partner network, the bad actors were able to find their way to the Point-of-Sale (POS) networks to install RAM scraping software on POS units to steal credit card information.
+    </p>
+  </li>
+
+  <li class="method__item method__item--double">
+    <h3 class="item-title">
+      Method 2: Embedded Malware
+    </h3>
+
+    <p class="text">
+      In this supply chain attack, bad actors infiltrate supply chain vendors to discover source code repositories or update systems to inject their own malicious software. In today’s networking environments, both software applications and hardware appliances regularly ‘phone home’ to retrieve and perform updates. Often these updates are automated. It is not uncommon for upgrades to fetch data for other libraries, including third-party sources. Often upgrades run with root or administrator privileges, and execute a variety of scripts throughout the update process.
+    </p>
+
+    <p class="text">
+      For example, in the SolarWinds breach, bad actors successfully added a malicious DLL (Microsoft Data Link Library) file to a SolarWinds update. Once installed on a customer’s system and activated after a random wait period, the DLL performs command-and-control, retrieving and executing commands from a third party system managed by the Bad Actor.
+    </p>
+  </li>
+</ul>
+
+        </section>
+
+        <section class="detect bottom">
+          <div class="detect__inner">
+  <h2 class="title-sec">
+    How the chain of attacks is usually detected
+  </h2>
+
+  <p class="text">
+    While performing all of these methods reduces risk of a successful attack, it will not guarantee an attack can be prevented. For many organizations, it is difficult at best to sustainably accomplish all three methods.
+  </p>
+</div>
+
+
+<ul class="detect__list item-list">
+  <li class="item-list__item item-list__item--tool item-box">
+    <h3 class="item-title">
+      Inventory and monitor third-party tools
+    </h3>
+  </li>
+
+  <li class="item-list__item item-list__item--globe item-box">
+    <h3 class="item-title">
+      Monitor remote access granted to suppliers
+    </h3>
+  </li>
+
+  <li class="item-list__item item-list__item--unlock item-box">
+    <h3 class="item-title">
+      Monitor third-party providers
+    </h3>
+  </li>
+</ul>
+
+        </section>
+
+        <section class="customer bottom">
+          <div class="customer__inner">
+  <h2 class="title-sec">
+    Customer case study
+  </h2>
+
+  <ul class="slider">
+
+    <li class="slider__item">
+
+      <div class="slider__item-box">
+        <h3 class="item-title">
+          Challenge
+        </h3>
+
+        <ul class="slider__item-list">
+          <li class="slider__item-point">
+            Lack of perimeter breach detection for Linux instances exposed to the public internet
+          </li>
+
+          <li class="slider__item-point">
+            Increased supply chain and compliance risks with inability to monitor third-party vendor products using Linux, like AWS
+          </li>
+
+          <li class="slider__item-point">
+            High operational costs for staff with Linux programming experience
+          </li>
+        </ul>
+
+        <a class="slider__link btn btn--colored" href="#">
+          Full case study
+        </a>
+      </div>
+
+      <div class="slider__item-picture">
+        <img class="slider__item-img" src="img/customer-flag.png" alt="Customer case study image" height="570" width="505">
+      </div>
+    </li>
+
+
+
+    <li class="slider__progress">
+      <ul class="progress">
+        <li class="progress__item progress__item--active">
+          1
+        </li>
+
+        <li class="progress__item">
+          2
+        </li>
+
+        <li class="progress__item">
+          3
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        </section>
+
+        <div class="supply-text">
+          <h2 class="title-sec">
+            Spyderbat captures the causal relationships across every process, network connection, and file access performed by the update
+          </h2>
+
+          <p class="text">
+            Once attack techniques are detected, Spyderbat allows for an immediate recognition of the source back to the third-party update even if months prior. The attack’s full footprint is revealed since any/all activity between the previous software update and the current detection is captured, even if the bad actor/malware uses random weight periods in between activities.
+          </p>
+
+          <p class="text">
+            Because Spyderbat does not rely on log data analysis, the attack trace is captured even if logging systems were disabled (or never enabled to begin with). This allows for full mitigation of the threat including new installed backdoors, created user accounts, etc.
+          </p>
+        </div>
+
+        <section class="hero hero--supply bottom">
+
+          <div class="hero__content">
+
+  <span class='slogan'>Ready to See Spyderbat in Action?</span>
+
+  <h2 class='title-sec'>Protecting against supply chain attacks</h2>
+
+  <p class='text'>Spyderbat works proactively to generate this system-wide causal graph rather than relying on a trigger by an alert or detection.</p>
+
+  <div class="hero__btns">
+    <a class="btn btn--colored" href="#">
+      Try Spyderbat
+    </a>
+
+    <a class='btn btn--book' href='#'>Book a demo</a>
+  </div>
+</div>
+
+<div class="hero__picture circle-bg">
+  <lottie-player class='hero__img' autoplay speed='3' mode='normal' mode='bounce'  src='img/animation/search-attack.json' width='655' height='430'></lottie-player>
+</div>
+
+        </section>
+
+
+      </div>
+
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+
+      <ul class="footer__list">
+        <li class="footer__item">
+
+          <h3 class="item-title">
+            Spyderbat products
+          </h3>
+
+          <a class="text" href="#">
+            Attack Tracing & Intercept
+          </a>
+
+          <a class="text" href="#">
+            Defend the Flag
+          </a>
+
+          <a class="text" href="#">
+            Pricing
+          </a>
+
+        </li>
+
+        <li class="footer__item">
+          <h3 class="item-title">
+            Solutions
+          </h3>
+
+          <a class="text" href="#">
+            Alert Triage
+          </a>
+
+          <a class="text" href="#">
+            Security Investigations
+          </a>
+
+          <a class="text" href="#">
+            Observability
+          </a>
+        </li>
+
+        <li class="footer__item">
+          <h3 class="item-title">
+            Use cases
+          </h3>
+
+          <a class="text">
+            Avoid Ransomware
+          </a>
+
+          <a class="text" href="#">
+            Supply Chain Attacks
+          </a>
+        </li>
+
+        <li class="footer__item">
+          <h3 class="item-title">
+            Company
+          </h3>
+
+          <a class="text" href="#">
+            Meet us
+          </a>
+
+          <a class="text" href="#">
+            Careers
+          </a>
+
+          <a class="text" href="#">
+            Blog
+          </a>
+
+          <a class="text" href="#">
+            News
+          </a>
+
+          <a class="text" href="#">
+            Resources
+          </a>
+
+          <a class="text" href="#">
+            Contact us
+          </a>
+
+        </li>
+      </ul>
+
+      <div class="footer__item  footer__item--social">
+
+        <p class="text text--footer">
+          Follow us in social networks
+        </p>
+
+        <ul class="footer__socials">
+          <li class="footer__social">
+            <a class="footer__social-link" href="#">
+              <span class="sr-only">
+                Visit LinkedIn
+              </span>
+
+              <svg class="footer__social-icon">
+                <use xlink:href="img/sprite.svg#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="footer__social">
+            <a class="footer__social-link" href="#">
+              <span class="sr-only">
+                Visit Twitter
+              </span>
+
+              <svg class="footer__social-icon">
+                <use xlink:href="img/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer__rights">
+    <div class="container">
+      <div class="footer__rights-inner">
+        <p class="footer__rights-text text">
+          © SPYDERBAT, Inc., All Rights Reserved
+        </p>
+
+        <p class="footer__rights-text footer__rights-text--design text">
+          Designed by Nextpage
+          <svg class="footer__rights-icon">
+            <use xlink:href="img/sprite.svg#nextpage"></use>
+          </svg>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script src="js/vendor.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+
+</html>
+
+

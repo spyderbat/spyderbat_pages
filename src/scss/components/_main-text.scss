@@ -66,4 +66,8 @@
     margin: 0 auto rem(33);
     max-width: 460px;
   }
+
+  @include for-width(-mobile-md) {
+    line-height: 1.7;
+  }
 }

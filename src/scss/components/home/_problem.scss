@@ -25,12 +25,22 @@
       }
 
       @include for-width(-tablet) {
-        padding: rem(85) rem(65) rem(20);
+        padding: rem(85) rem(65) rem(15);
+      }
+
+      @include for-width(-mobile-md) {
+        padding: rem(85) rem(25) rem(26);
       }
     }
 
     .item-title {
       margin-bottom: rem(15);
+    }
+  }
+
+  .page-list__title {
+    @include for-width(-tablet) {
+      margin-bottom: rem(50);
     }
   }
 

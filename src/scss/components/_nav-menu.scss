@@ -1,7 +1,63 @@
 .nav {
-  @include flex-v-center;
+  @include flex-all-sb;
 
   position: relative;
+  padding: rem(40) rem(30);
+  transition: background-color 0.3s linear;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(247.71deg, rgba(174, 200, 255, 0.5) 0%, rgba(5, 68, 208, 0.4) 40.26%, rgba(255, 255, 255, 0.1) 122.71%);
+    opacity: 0;
+    visibility: hidden;
+    filter: blur(135.494px);
+    transition: all 0.3s linear;
+  }
+
+  .burger {
+    --burger-width: 27px;
+    --burger-height: 12px;
+    --burger-line-height: 3px;
+
+    @include burger;
+
+    position: absolute;
+    right: rem(30);
+    display: none;
+
+    @include for-width(-tablet) {
+      display: block;
+    }
+
+    @include for-width(-mobile-l) {
+      right: rem(16);
+    }
+  }
+
+  &__inner {
+    @include flex-v-center;
+
+    @include for-width(-tablet) {
+      position: fixed;
+      left: 0;
+      top: rem(70);
+      z-index: -1;
+      display: block;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--color-black);
+      transform: translateY(-100%);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    &--open {
+      transform: translateY(0);
+    }
+  }
 
   &__sing {
     @include flex;
@@ -12,7 +68,12 @@
       @include for-width(-tablet) {
         order: 3;
         margin: 0 auto;
-        padding-top: rem(10);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: rem(24) rem(30) rem(40);
+      }
+
+      @include for-width(-mobile-l) {
+        padding: rem(24) rem(21) rem(40);
       }
     }
 
@@ -22,6 +83,16 @@
 
         @include for-width(-desktop-med) {
           margin-right: rem(40);
+        }
+
+        @include for-width(-tablet) {
+          margin-right: 0;
+          margin-bottom: rem(24);
+        }
+
+        @include for-width(-mobile-l) {
+          margin-right: 0;
+          margin-bottom: rem(19);
         }
       }
     }
@@ -57,6 +128,14 @@
           transform: rotate(180deg);
         }
       }
+
+      @include for-width(-tablet) {
+        font-size: 20px;
+      }
+    }
+
+    @include for-width(-tablet) {
+      display: block;
     }
   }
 
@@ -72,7 +151,38 @@
         @include for-width(-desktop-med) {
           margin-right: rem(10);
         }
+
+        @include for-width(-mobile-md) {
+          margin-right: 0;
+        }
       }
+
+      &:last-child {
+        @include for-width(-mobile-md) {
+          margin-bottom: rem(12);
+        }
+      }
+
+      @include for-width(-tablet) {
+        width: 50%;
+        text-align: center;
+      }
+
+      @include for-width(-mobile-md) {
+        width: 100%;
+      }
+    }
+
+    @include for-width(-tablet) {
+      padding: rem(42) rem(30);
+    }
+
+    @include for-width(-mobile-l) {
+      padding: rem(42) rem(21);
+    }
+
+    @include for-width(-mobile-md) {
+      flex-wrap: wrap-reverse;
     }
   }
 
@@ -142,7 +252,21 @@
     }
   }
 
+  &--scroll {
+    background-color: var(--color-black);
+
+    &:before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
   @include for-width(-tablet) {
     flex-wrap: wrap;
+    padding: rem(30);
+  }
+
+  @include for-width(-mobile-l) {
+    padding: rem(26) rem(16);
   }
 }

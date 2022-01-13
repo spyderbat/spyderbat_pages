@@ -1,4 +1,7 @@
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
   margin-bottom: rem(37);
-  padding: rem(40) 0;
+  width: 100%;
 }

@@ -54,6 +54,12 @@
       width: rem(440);
       height: rem(440);
     }
+
+    @include for-width(-mobile-md) {
+      margin: 0 auto rem(65);
+      width: rem(290);
+      height: rem(290);
+    }
   }
 
   &__player {
@@ -92,6 +98,15 @@
         max-width: 600px;
         font-size: 18px;
       }
+
+      @include for-width(-mobile-l) {
+        max-width: 600px;
+        font-size: 14px;
+      }
+    }
+
+    @include for-width(-mobile-l) {
+      padding: rem(28) rem(20) rem(30) rem(35);
     }
   }
 
@@ -100,5 +115,9 @@
       counter-increment: list;
       content: counter(list, decimal-leading-zero) ". ";
     }
+  }
+
+  @include for-width(-mobile-l) {
+    margin-bottom: rem(45);
   }
 }

@@ -40,6 +40,11 @@
         margin-bottom: rem(15);
         font-size: 16px;
       }
+
+      @include for-width(-mobile-l) {
+        margin-bottom: rem(24);
+        font-size: 14px;
+      }
     }
 
     .text {
@@ -50,6 +55,10 @@
 
         @include for-width(-tablet) {
           margin-bottom: 3px;
+        }
+
+        @include for-width(-mobile-l) {
+          margin-bottom: rem(12);
         }
       }
 
@@ -70,6 +79,18 @@
       justify-content: space-between;
       padding-bottom: rem(16);
     }
+
+    @include for-width(-mobile-l) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding-bottom: rem(30);
+      gap: rem(40) rem(45);
+    }
+
+    @include for-width(-mobile-s) {
+      gap: rem(30) 0;
+    }
+
   }
 
   &__item {
@@ -89,8 +110,12 @@
       white-space: nowrap;
 
       @include for-width(-tablet) {
-        font-size: 14px;
         margin-bottom: rem(13);
+        font-size: 14px;
+      }
+
+      @include for-width(-mobile-l) {
+        font-size: 12px;
       }
     }
 
@@ -214,5 +239,9 @@
 
   @include for-width(-tablet) {
     padding-top: rem(33);
+  }
+
+  @include for-width(-mobile-l) {
+    padding-top: rem(44);
   }
 }

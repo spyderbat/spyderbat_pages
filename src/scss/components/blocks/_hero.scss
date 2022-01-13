@@ -21,12 +21,22 @@
         max-width: 455px;
         text-align: center;
       }
+
+      @include for-width(-mobile-md) {
+        line-height: 1.7;
+        text-align: left;
+      }
     }
 
     @include for-width(-tablet) {
       margin: 0 auto;
+      padding-top: 0;
       max-width: 495px;
       text-align: center;
+    }
+
+    @include for-width(-mobile-md) {
+      text-align: left;
     }
   }
 
@@ -75,6 +85,11 @@
           margin-right: 0;
         }
       }
+
+      @include for-width(-mobile-md) {
+        justify-content: center;
+        width: 100%;
+      }
     }
 
     svg {
@@ -89,6 +104,11 @@
       justify-content: end;
       margin-right: 45px;
       margin-bottom: rem(120);
+    }
+
+    @include for-width(-mobile-md) {
+      flex-wrap: wrap;
+      margin: 0 0 rem(24) 0;
     }
   }
 
@@ -243,5 +263,9 @@
   @include for-width(-tablet) {
     display: block;
     margin-bottom: rem(145);
+  }
+
+  @include for-width(-mobile-md) {
+    margin-bottom: rem(95);
   }
 }
