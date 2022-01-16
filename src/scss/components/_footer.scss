@@ -1,6 +1,6 @@
 .footer {
   border-top: 1px solid var(--color-gray-800);
-  padding: rem(62) 0 0;
+  padding: rem(60) 0 0;
 
   &__inner {
     @include flex-s-sb;
@@ -36,12 +36,12 @@
     .item-title {
       margin-bottom: rem(25);
 
-      @include for-width(-tablet) {
+      @include for-width(-mobile-l) {
         margin-bottom: rem(15);
         font-size: 16px;
       }
 
-      @include for-width(-mobile-l) {
+      @include for-width(-mobile-md) {
         margin-bottom: rem(24);
         font-size: 14px;
       }
@@ -82,15 +82,19 @@
 
     @include for-width(-mobile-l) {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      column-gap: initial;
+      justify-content: space-evenly;
+      grid-template-columns: repeat(2, rem(190));
       padding-bottom: rem(30);
-      gap: rem(40) rem(45);
+      row-gap: rem(40);
     }
 
-    @include for-width(-mobile-s) {
-      gap: rem(30) 0;
+    @include for-width(-mobile-sl) {
+      column-gap: rem(35);
+      justify-content: inherit;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: rem(35);
     }
-
   }
 
   &__item {
@@ -104,17 +108,21 @@
       @include for-width(-tablet) {
         margin-right: rem(35);
       }
+
+      @include for-width(-mobile-s) {
+        margin-right: 0;
+      }
     }
 
     .text {
       white-space: nowrap;
 
-      @include for-width(-tablet) {
+      @include for-width(-mobile-l) {
         margin-bottom: rem(13);
         font-size: 14px;
       }
 
-      @include for-width(-mobile-l) {
+      @include for-width(-mobile-md) {
         font-size: 12px;
       }
     }
@@ -150,6 +158,10 @@
 
     @include for-width(-tablet) {
       margin-right: rem(45);
+    }
+
+    @include for-width(-mobile-s) {
+      margin-right: 0;
     }
   }
 

@@ -6,6 +6,7 @@
   padding: rem(19) rem(20);
   line-height: 1.4;
   letter-spacing: 0;
+  white-space: nowrap;
   color: var(--color-white);
   transition: box-shadow 0.2s ease-in-out;
 
@@ -55,13 +56,17 @@
     &::before {
       content: "";
       position: absolute;
-      right: -12px;
-      width: 24px;
-      height: 24px;
+      right: -10px;
+      width: 16px;
+      height: 16px;
       background-image: url("../img/sprite.svg#arrow-next");
       background-position: center;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
+
+      @include for-width(-mobile-sl) {
+        right: 0;
+      }
     }
   }
 

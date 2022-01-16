@@ -7,6 +7,7 @@
   &__item {
     @include flex-all-center;
 
+    justify-content: start;
     list-style-type: none;
 
     @include for-width(-tablet) {
@@ -23,8 +24,11 @@
     }
 
     +.text {
-      position: absolute;
-      top: 10%;
+      @include for-width(-tablet) {
+        position: absolute;
+        top: 12%;
+        max-width: 240px
+      }
     }
   }
 
@@ -51,6 +55,9 @@
 
     @include for-width(-tablet) {
       margin: 0 auto rem(65);
+    }
+
+    @include for-width(-mobile-l) {
       width: rem(440);
       height: rem(440);
     }
@@ -69,6 +76,14 @@
     width: 100%;
     height: auto;
     max-width: 590px;
+
+    @include for-width(-desktop-med) {
+      width: 90%;
+    }
+
+    @include for-width(-mobile-l) {
+      width: 87%;
+    }
   }
 
   &__content {
@@ -113,7 +128,7 @@
   .item-title {
     &::before {
       counter-increment: list;
-      content: counter(list, decimal-leading-zero) ". ";
+      content: "0"counter(list, decimal-leading) ". ";
     }
   }
 

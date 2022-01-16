@@ -1,18 +1,22 @@
 @import "platform";
 @import "assurance";
 
-.slider-platform { 
-  padding-bottom: rem(73);
-}
-
 .download-list {
   margin-bottom: rem(40);
-  padding-left: rem(40);
+  padding-right: rem(24);
   width: 100%;
-  max-width: 400px;
 
   &__item {
-    margin-bottom: rem(15);
+    position: relative;
+    padding-left: rem(40);
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  @include for-width(-tablet) {
+    margin: 0 auto rem(60);
   }
 }
 
@@ -28,8 +32,12 @@
       height: 24px;
       background-image: url("../img/sprite.svg#download");
       background-position: center;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
+    }
+
+    &.btn {
+      width: fit-content;
     }
   }
 }

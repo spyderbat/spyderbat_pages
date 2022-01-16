@@ -64,7 +64,13 @@
       }
 
       span {
-        font-weight: 700;
+        &:not(:first-child) {
+          opacity: 0.8;
+        }
+
+        &:first-child {
+          font-weight: 700;
+        }
       }
     }
 
@@ -74,6 +80,7 @@
 
       li {
         position: relative;
+        opacity: 0.8;
 
         &::before {
           content: "";

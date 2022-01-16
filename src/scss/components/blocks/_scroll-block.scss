@@ -30,6 +30,11 @@
     margin-bottom: rem(70);
   }
 
+  &--architecture {
+    margin-bottom: rem(70);
+    transform: translateY(-135%);
+  }
+
   @include for-width(-tablet) {
     display: none;
   }

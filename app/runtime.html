@@ -128,6 +128,7 @@
   <div class="circle">
     <svg>
       <circle class="circle__full" cx="50" cy="50" r="47"></circle>
+      <circle class="circle__progress circle__progress--grow" cx="50" cy="50" r="47"></circle>
     </svg>
   </div>
 
@@ -146,6 +147,8 @@
   <div class="circle">
     <svg>
       <circle class="circle__full" cx="50" cy="50" r="47"></circle>
+      <circle class="circle__progress" cx="50" cy="50" r="47"></circle>
+
     </svg>
   </div>
 
@@ -166,38 +169,140 @@
         </div>
 
         <section class="slider-runtime bottom">
-          <ul class="slider">
-            <li class="slider__item  item-list">
-  <div class="slider__item-inner slider__item-inner--content">
-    <h2 class="slider__item-title title-sec">
-      Avoid Ransomware with Spyderbat
-    </h2>
+          <div class="slider-runtime__inner">
+            <h2 class="slider-title title-sec">
+              Avoid Ransomware with Spyderbat
+            </h2>
 
-    <p class="text">
-     With Spyderbat, trace and secure changes at runtime, not just at build time.
-    </p>
+            <p class="text">
+              With Spyderbat, trace and secure changes at runtime, not just at build time.
+            </p>
 
+            <ul class="progress progress--runtime">
+            </ul>
+          </div>
 
-  </div>
+          <div class="slider runtime__slider">
+            
+            <ul class="slider__inner slider__inner--runtime swiper-wrapper">
 
-  <div class="slider__item-inner slider__item-inner--anim">
-    
-  </div>
+              <li class="swiper-slide">
+  <h3 class="item-title">
+    Validate and secure at run time
+  </h3>
+
+  <ul class="item-list  item-list--time">
+    <li class="item-list__item item-list__item--runset ">
+
+  
+
+  <p class="text">
+    Get detailed visibility into runtime behaviorof Linux systems and applications
+  </p>
+</li>
+<li class="item-list__item item-list__item--server ">
+
+  
+
+  <p class="text">
+    Compare 3rd party and custom apps to their expected behavior
+  </p>
+</li>
+<li class="item-list__item item-list__item--shuffle ">
+
+  
+
+  <p class="text">
+    Understand changes in behavior from prior releases or deployments
+  </p>
+</li>
+<li class="item-list__item item-list__item--false ">
+
+  
+
+  <p class="text">
+    Enforce runtime policy (e.g. no sshd, no open ports) and notify on violations
+  </p>
+</li>
+
+  </ul>
+</li>
+
+              
+              <li class="swiper-slide">
+  <h3 class="item-title">
+    Rapidly root cause misconfigurations
+  </h3>
+
+  <ul class="item-list ">
+    <li class="item-list__item item-list__item--runset ">
+
+  
+
+  <p class="text">
+    Rapidly diagnose misconfigurations from internal teams, partners or 3rd party vendors
+  </p>
+</li>
+<li class="item-list__item item-list__item--server ">
+
+  
+
+  <p class="text">
+    Enable DevOps & Security teams to collaboratively validate system and application runtime changes
+  </p>
+</li>
+<li class="item-list__item item-list__item--false ">
+
+  
+
+  <p class="text">
+    Understand who changed what when
+  </p>
+</li>
+
+  </ul>
 </li>
 
 
-            <li class="slider__progress">
-              <ul class="progress">
-                <li class="progress__item progress__item--active">
-                  1
-                </li>
+              <li class="swiper-slide">
+  <h3 class="item-title">
+    At cloud native speed
+  </h3>
 
-                <li class="progress__item">
-                  2
-                </li>
-              </ul>
-            </li>
-          </ul>
+  <ul class="item-list ">
+    <li class="item-list__item item-list__item--runset ">
+
+  
+
+  <p class="text">
+    Get full, stateful trace capture within and across ephemeral Cloud, Container and Linux based systems within seconds
+  </p>
+</li>
+<li class="item-list__item item-list__item--server ">
+
+  
+
+  <p class="text">
+    Completely audit all system activity over time to track down and validate changes
+  </p>
+</li>
+<li class="item-list__item item-list__item--shuffle ">
+
+  
+
+  <p class="text">
+    See application operations whether they live for hours, minutes or seconds
+  </p>
+</li>
+
+  </ul>
+</li>
+
+
+            </ul>
+          </div>
+
+
         </section>
 
         <section class="hero hero--runtime-bottom bottom">
@@ -220,7 +325,7 @@
 </div>
 
 <div class="hero__picture circle-bg">
-  <lottie-player class='hero__img' autoplay speed='3' mode='normal' mode='bounce' src='img/animation/search-attack.json' width='655' height='430'></lottie-player>
+  <img class='hero__img' src='img/runtime-img.png' alt='Spyderbat on laptop' width='964' height='506'>
 </div>
 
         </section>

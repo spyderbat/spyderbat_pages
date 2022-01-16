@@ -1,11 +1,11 @@
 .progress {
   @include flex;
 
-  position: absolute;
-  left: rem(78);
-  bottom: rem(50);
+  position: relative;
+  z-index: 1;
+  transform: translateY(-50px);
 
-  &__item {
+  .swiper-pagination-bullet {
     @include h3;
 
     position: relative;
@@ -15,6 +15,8 @@
     font-family: "Space-Grotesk", sans-serif;
     color: var(--color-white);
     opacity: 0.5;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     &:not(:last-child) {
       margin-right: rem(98);
@@ -24,15 +26,85 @@
         position: absolute;
         left: 100%;
         top: 50%;
-        width: rem(98);
+        width: rem(100);
         height: 1px;
         background-color: var(--color-blue-300);
+
+        @include for-width(-mobile-sl) {
+          width: rem(53);
+        }
+      }
+
+      @include for-width(-mobile-sl) {
+        margin-right: rem(50);
       }
     }
 
-    &--active {
+    &-active {
       background-color: var(--color-blue-700);
       opacity: 1;
+    }
+
+    @include for-width(-tablet) {
+      padding: rem(20) rem(24);
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    @include for-width(-mobile-sl) {
+      padding: rem(10) rem(14);
+      font-size: 14px;
+      line-height: 1;
+    }
+  }
+
+  &--avoid {
+    transform: translateY(-27px);
+  }
+
+  &--runtime.progress {
+    transform: translateY(55px);
+
+    @include for-width(-tablet) {
+      top: 19%;
+    }
+
+    @include for-width(-mobile-l) {
+      top: 16%;
+    }
+
+    @include for-width(-mobile-sl) {
+      top: 13%;
+    }
+
+    @include for-width(-mobile-sm) {
+      top: 16%;
+    }
+  }
+
+  @include for-width(-tablet) {
+    position: absolute;
+    top: 3%;
+    transform: translateY(0);
+  }
+
+  &--alert {
+    position: absolute;
+    bottom: rem(38);
+
+    @include for-width(-tablet) {
+      position: absolute;
+      top: 37%;
+      bottom: auto;
+      transform: translateY(0);
+    }
+
+    @include for-width(-mobile-l) {
+      top: 30%;
+    }
+
+    @include for-width(-mobile-sl) {
+      top: 37%;
     }
   }
 }

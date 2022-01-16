@@ -2,7 +2,7 @@
   @include flex-all-sb;
 
   position: relative;
-  padding: rem(40) rem(30);
+  padding: rem(40) rem(90) rem(25);
   transition: background-color 0.3s linear;
 
   &::before {
@@ -14,7 +14,7 @@
     opacity: 0;
     visibility: hidden;
     filter: blur(135.494px);
-    transition: all 0.3s linear;
+    transition: all 0.15s linear;
   }
 
   .burger {
@@ -39,6 +39,9 @@
 
   &__inner {
     @include flex-v-center;
+
+    width: 100%;
+    max-width: calc(1222px - rem(185));
 
     @include for-width(-tablet) {
       position: fixed;
@@ -261,12 +264,13 @@
     }
   }
 
-  @include for-width(-tablet) {
-    flex-wrap: wrap;
-    padding: rem(30);
+  @include for-width(-desktop-med) {
+    padding: rem(40) rem(30);
   }
 
-  @include for-width(-mobile-l) {
+  @include for-width(-tablet) {
+    flex-wrap: wrap;
     padding: rem(26) rem(16);
+    background-color: var(--color-black);
   }
 }

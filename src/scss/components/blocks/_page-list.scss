@@ -13,13 +13,27 @@
 
     &--platform {
       margin-bottom: rem(60);
+
+      .item-title {
+        margin-bottom: rem(18);
+      }
+
+      &.page-list__list {
+        @include for-width(-tablet) {
+          margin-bottom: rem(50);
+        }
+
+        @include for-width(-mobile-l) {
+          margin-bottom: 0;
+        }
+      }
     }
 
     @include for-width(-tablet) {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(3, 1fr);
       margin: 0 auto;
-      max-width: 400px;
+      max-width: 600px;
       gap: rem(25) 0;
     }
   }

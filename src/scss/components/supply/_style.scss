@@ -4,14 +4,23 @@
 @import "detect";
 @import "slider-list";
 
-.supply-text {
+.supply-content {
   margin: 0 auto rem(200);
   width: 100%;
   max-width: 800px;
   text-align: center;
 
-  .text {
-    padding: 0 rem(30);
+  &__title {
+    margin-bottom: rem(24);
+  }
+
+  &__text {
+    margin: 0 auto;
+    max-width: 720px;
     line-height: 1.9;
+
+    &:not(:last-child) {
+      margin-bottom: rem(35);
+    }
   }
 }

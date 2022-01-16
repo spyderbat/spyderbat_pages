@@ -68,12 +68,12 @@
       position: absolute;
       right: -77%;
       top: 26%;
-      z-index: 10;
+      z-index: 3;
       width: 120px;
       height: 33px;
       background-image: url("../img/sprite.svg#pie-line");
       background-position: center;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
     }
 
@@ -86,7 +86,7 @@
       height: 33px;
       background-image: url("../img/sprite.svg#pie-line");
       background-position: center;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       transform: scale(-1, 1);
     }

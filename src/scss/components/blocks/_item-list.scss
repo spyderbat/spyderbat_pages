@@ -1,7 +1,7 @@
 .item-list {
   display: grid;
   grid-template-columns: repeat(2, 238px);
-  gap: rem(60) rem(132);
+  gap: rem(67) rem(132);
 
   &__item {
     position: relative;
@@ -131,6 +131,26 @@
       }
     }
 
+    &--false {
+      top: 7px;
+
+      &::before {
+        background-image: url("../img/sprite.svg#alert-circle");
+      }
+
+      &.item-list__item {
+        .text {
+          max-width: 260px;
+        }
+      }
+    }
+
+    &--search {
+      &::before {
+        background-image: url("../img/sprite.svg#search");
+      }
+    }
+
     &--accurate {
       &::before {
         background-image: url("../img/sprite.svg#accurate");
@@ -219,6 +239,36 @@
         top: rem(60);
         margin: 0 auto;
         background-image: url("../img/sprite.svg#branch");
+      }
+    }
+
+    &--movement {
+      &::before {
+        background-image: url("../img/sprite.svg#git-merge");
+      }
+    }
+
+    &--persistence {
+      &::before {
+        background-image: url("../img/sprite.svg#x-circle");
+      }
+    }
+
+    &--runset {
+      &::before {
+        background-image: url("../img/sprite.svg#run-set");
+      }
+    }
+
+    &--server {
+      &::before {
+        background-image: url("../img/sprite.svg#server");
+      }
+    }
+
+    &--shuffle {
+      &::before {
+        background-image: url("../img/sprite.svg#shuffle");
       }
     }
   }
@@ -345,7 +395,15 @@
         .item-list__text {
           margin: 0 auto;
           max-width: 190px;
+
+          @include for-width(-mobile-l) {
+            max-width: 100%;
+          }
         }
+      }
+
+      @include for-width(-tablet) {
+        padding: rem(20) rem(10);
       }
     }
 
@@ -375,6 +433,7 @@
   }
 
   &--runtime {
+    justify-content: center;
     grid-template-columns: repeat(2, 260px);
     padding-top: rem(55);
     gap: 0 rem(24);
@@ -392,5 +451,46 @@
       font-size: 36px;
       line-height: 1.2;
     }
+
+    &.item-list {
+      @include for-width(-mobile-md) {
+        grid-template-columns: repeat(1, 320px);
+        gap: rem(24) 0;
+      }
+
+      @include for-width(-mobile-sl) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+
+  &--sol.item-list {
+    @include for-width(-desktop-med) {
+      grid-template-columns: repeat(3, 245px);
+      gap: rem(20);
+    }
+
+    @include for-width(-desktop-sm) {
+      grid-template-columns: repeat(1, 450px);
+      margin: 0 auto;
+      gap: rem(20);
+    }
+
+    @include for-width(-tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include for-width(-mobile-l) {
+      justify-content: center;
+      grid-template-columns: repeat(1, 450px);
+    }
+
+    @include for-width(-mobile-sl) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @include for-width(-desktop-med) {
+    gap: rem(40) rem(50);
   }
 }

@@ -1,12 +1,12 @@
-$mqs: ("mobile-sm": 320,
-  "mobile-s": 375,
+$mqs: ("mobile-sm": 335,
+  "mobile-s": 376,
   "mobile-sl": 475,
   "mobile-md": 576,
   "mobile-l": 768,
   "tablet": 993,
   "desktop-sm": 1101,
   "desktop-med": 1281,
-  "desktop-lg": 1441,
+  "desktop-lg": 1440,
   "desktop-xl": 1921);
 
 @mixin for-width($size, $size2: null) {

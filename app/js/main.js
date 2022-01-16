@@ -67,10 +67,59 @@ var swiper = new Swiper('.slider-home', {
 });
 "use strict";
 
+var newsBtns = Array.from(document.querySelectorAll('.newsroom__nav-btn'));
+
+if (newsBtns.length > 0) {
+  newsBtns.forEach(function (element) {
+    element.addEventListener('click', function (e) {
+      var dataBtn = e.target.dataset.news;
+      if (!e.target.hasAttribute('data-news')) return;
+      document.querySelectorAll('.newsroom__nav-btn').forEach(function (element) {
+        element.classList.remove('newsroom__nav-btn--active');
+      });
+      Array.from(document.querySelectorAll(".newsroom-list")).forEach(function (element) {
+        element.classList.remove('newsroom-list--show');
+      });
+      document.querySelectorAll("[data-room=\"".concat(dataBtn, "\"]")).forEach(function (element) {
+        element.classList.add('newsroom-list--show');
+      });
+      e.target.classList.add('newsroom__nav-btn--active');
+    });
+  });
+}
+"use strict";
+
 var headerMenuScroll = document.querySelector('.nav');
 window.addEventListener('scroll', function () {
+  downHeader();
+});
+downHeader();
+
+function downHeader() {
   if (window.pageYOffset > 0) return headerMenuScroll.classList.add('nav--scroll');
   headerMenuScroll.classList.remove('nav--scroll');
+}
+"use strict";
+
+var swiper = new Swiper('.slider', {
+  fadeEffect: {
+    crossFade: true
+  },
+  virtualTranslate: true,
+  speed: 600,
+  autoplayDisableOnInteraction: true,
+  slidersPerView: 1,
+  effect: "fade",
+  spaceBetween: 40,
+  rewind: false,
+  bounds: true,
+  pagination: {
+    el: ".progress",
+    clickable: true,
+    renderBullet: function renderBullet(index, className) {
+      return '<li class="' + className + '">' + (index + 1) + "</li>";
+    }
+  }
 });
 "use strict";
 
