@@ -2668,6 +2668,11 @@ body {
     transform: translateY(0);
   }
 }
+@media (max-width: calc(62.0625em - 0.0625em)) {
+  .progress--platform {
+    top: 33%;
+  }
+}
 .progress--alert {
   position: absolute;
   bottom: 2.375rem;
@@ -2687,7 +2692,7 @@ body {
 }
 @media (max-width: calc(29.6875em - 0.0625em)) {
   .progress--alert {
-    top: 37%;
+    top: 34%;
   }
 }
 
