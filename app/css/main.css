@@ -4223,15 +4223,13 @@ body {
 }
 .newsroom-list__title {
   margin-bottom: 0;
+  font-family: "Space-Grotesk", sans-serif;
+  letter-spacing: -0.01em;
 }
 .newsroom-list__logo {
   margin-bottom: 0.625rem;
   width: 100%;
   max-width: 190px;
-}
-.newsroom-list--cut .title-sec {
-  width: 100%;
-  max-width: 920px;
 }
 .newsroom-list--show {
   position: relative;

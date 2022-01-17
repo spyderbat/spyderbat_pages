@@ -24,19 +24,14 @@
 
   &__title {
     margin-bottom: 0;
+    font-family: "Space-Grotesk", sans-serif;
+    letter-spacing: -0.01em;
   }
 
   &__logo {
     margin-bottom: rem(10);
     width: 100%;
     max-width: 190px;
-  }
-
-  &--cut {
-    .title-sec {
-      width: 100%;
-      max-width: 920px;
-    }
   }
 
   &--show {
