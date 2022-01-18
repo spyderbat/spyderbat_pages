@@ -205,6 +205,14 @@ input {
   cursor: pointer;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: transparent;
+}
+
 button {
   -webkit-appearance: none;
   -moz-appearance: none;

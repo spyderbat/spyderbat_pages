@@ -10,7 +10,7 @@
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>Spyderbat | Home page</title>
+  <title>Spyderbat | Alert triage</title>
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -97,142 +97,160 @@
 </header>
 
 
-    <main class="main  newsroom bottom circle-bg circle-bg--center">
+    <main class="main alert">
       <div class="container">
+        <section class="hero hero--alert">
+          <div class="hero__content">
 
-        <h1 class="newsroom__title title title--center">
-          Newsroom
-        </h1>
+  <span class='slogan'>Focus on the alerts that matter</span>
 
-        <div class="newsroom__nav">
+  <h1 class='title'>Alert Triage</h1>
 
-          <ul class="newsroom__nav-list">
-            <li class="newsroom__nav-item">
+  <p class='text'>With Spyderbat your alerts no longer exist in isolation. Instantly connect every activity leading to and following your alerts, including other alerts.</p>
 
-              <button class="newsroom__nav-btn newsroom__nav-btn--active" type="button" data-news="coverage">
-                Press coverage
-              </button>
+  <div class="hero__btns">
+    <a class="btn btn--colored" href="#">
+      Start free
+    </a>
 
-            </li>
+    <a class='btn btn--book' href='#'>Book a demo</a>
+  </div>
+</div>
 
-            <li class="newsroom__nav-item ">
+<div class="hero__picture circle-bg">
+  
+</div>
 
-              <button class="newsroom__nav-btn" type="button" data-news="releases">
-                Press releases
-              </button>
 
-            </li>
+          <ul class="item-list item-list--alert item-list--sol circle-bg circle-bg--avoid">
+            <li class="item-list__item item-box item-list__item--empty">
+
+  <h2 class="item-list__title">
+    Alert volume is increasing
+  </h2>
+
+  <div class="circle">
+    <span class="item-title">
+      56%
+    </span>
+
+    <svg>
+      <circle class="circle__full" cx="50" cy="50" r="47"></circle>
+      <circle class="circle__progress circle__progress--grow" cx="50" cy="50" r="47"></circle>
+    </svg>
+  </div>
+
+  <p class="item-list__text">
+    growth in alerts investigated daily
+  </p>
+</li>
+
+
+            <li class="item-list__item item-box item-list__item--empty">
+
+  <h2 class="item-list__title">
+    Along with false positives
+  </h2>
+
+  <div class="circle circle--pie">
+    <span class="circle__pie-text circle__pie-text--before">
+      True positives
+    </span>
+
+    <span class="circle__pie-text circle__pie-text--after">
+      False positives
+    </span>
+    <svg>
+      <circle r="49" cx="50" cy="50" class="pie" />
+    </svg>
+  </div>
+
+  <div class="item-list__circle item-list__circle--alert">
+  </div>
+
+  <p class="item-list__text">
+    more than half of alerts on a daily basis are false positives
+  </p>
+</li>
+
+
+            <li class="item-list__item item-box item-list__item--empty">
+
+  <h2 class="item-list__title">
+    Leading to breaches
+  </h2>
+
+  <div class="circle">
+    <span class="item-title">
+      87%
+    </span>
+    
+    <svg>
+      <circle class="circle__full" cx="50" cy="50" r="47"></circle>
+      <circle class="circle__progress circle__progress--breach" cx="50" cy="50" r="47"></circle>
+    </svg>
+  </div>
+
+
+
+  <p class="item-list__text">
+    of analysts worry about missing an incident due to alert volume
+  </p>
+</li>
+
           </ul>
+        </section>
 
-          <button class="newsroom__btn" type="button">
-            The latest
-
-            <svg class="newsroom__icon">
-              <use xlink:href="img/sprite.svg#across-filter"></use>
-            </svg>
-          </button>
-
+        <div class="scroll-block bottom">
+          Scroll down to see more
         </div>
 
-        <div class="newsroom__news">
-          <ul class="newsroom-list newsroom-list--show" data-room="coverage">
-            <li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
+        <section class="slider-alert item-box bottom">
 
-  <img class='newsroom-list__logo' src='img/newsroom/austin.svg' alt='Logo of company' width='200' height='80'>
+          <div class="slider slider--alert">
+            <ul class="slider__inner slider__inner--alert swiper-wrapper">
+              <li class="slider__item  item-list swiper-slide">
+  <div class="slider__item-inner slider__item-inner--content">
+    <h2 class="slider__item-title title-sec">
+      Avoid false positives
+    </h2>
 
-  <h2 class="newsroom-list__title title-sec">
-    Spyderbat makes Austin Chamber's a-list
-  </h2>
+    <p class="text">
+     Integrate your existing alert centers (e.g. SIEM, NGFW, etc.) to immediately see your alerts in context.
+    </p>
+
+
+  </div>
+
+  <div class="slider__item-inner slider__item-inner--anim">
+    <lottie-player class='slider-platform__player circle-bg' autoplay speed='3' mode='normal' src='img/animation/alert-slide-f.json' width='220' height='355'></lottie-player>
+  </div>
 </li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
+<li class="slider__item  item-list swiper-slide">
+  <div class="slider__item-inner slider__item-inner--content">
+    <h2 class="slider__item-title title-sec">
+      Avoid false positives
+    </h2>
 
-  <img class='newsroom-list__logo' src='img/newsroom/startup.svg' alt='Logo of company' width='200' height='80'>
+    <p class="text">
+     Investigate all connected alerts simultaneously. Alerts causally connected in a trace
+    </p>
 
-  <h2 class="newsroom-list__title title-sec">
-    101 best cyber security startups to follow in 2021
-  </h2>
-</li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
 
-  <img class='newsroom-list__logo' src='img/newsroom/inno.svg' alt='Logo of company' width='200' height='80'>
+  </div>
 
-  <h2 class="newsroom-list__title title-sec">
-    Spyderbat named 'a company on fire' by Austin Inno
-  </h2>
-</li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
-
-  <img class='newsroom-list__logo' src='img/newsroom/american.svg' alt='Logo of company' width='200' height='80'>
-
-  <h2 class="newsroom-list__title title-sec">
-    Spyderbat raises $4.2M to develop cybersecurity system
-  </h2>
-</li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
-
-  <img class='newsroom-list__logo' src='img/newsroom/bultin.svg' alt='Logo of company' width='200' height='80'>
-
-  <h2 class="newsroom-list__title title-sec">
-    Austin cybersecurity startup Spyderbat raises $4.2 million
-  </h2>
+  <div class="slider__item-inner slider__item-inner--anim">
+    <lottie-player class='slider-platform__player circle-bg' autoplay speed='3' mode='normal' src='img/animation/alert-slide-s.json' width='220' height='355'></lottie-player>
+  </div>
 </li>
 
-          </ul>
+            </ul>
 
-          <ul class="newsroom-list newsroom-list--cut" data-room="releases">
-            <li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">August 24, 2021</time>
+            <ul class="progress progress--alert">
+            </ul>
+          </div>
+        </section>
 
-  
-
-  <h2 class="newsroom-list__title title-sec">
-    Spyderbat announces Defend The Flag Challenges
-  </h2>
-</li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
-
-  
-
-  <h2 class="newsroom-list__title title-sec">
-    Spyderbat announces full suite of Attack Tracing and Intercept Products
-  </h2>
-</li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">January 26, 2021</time>
-
-  
-
-  <h2 class="newsroom-list__title title-sec">
-    Renowned cybersecurity author and analyst Richard Stiennon Joins Spyderbat as advisor
-  </h2>
-</li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
-
-  
-
-  <h2 class="newsroom-list__title title-sec">
-    Spyderbat bolsters team in their mission to redefine cybersecurity operations
-  </h2>
-</li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
-
-  
-
-  <h2 class="newsroom-list__title title-sec">
-    Cybersecurity startup Spyderbat raises $4.2M to usher in new era of security operations
-  </h2>
-</li>
-
-          </ul>
-        </div>
       </div>
 
     </main>

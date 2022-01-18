@@ -10,7 +10,7 @@
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>Spyderbat | Home page</title>
+  <title>Spyderbat | Page not found</title>
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -97,144 +97,107 @@
 </header>
 
 
-    <main class="main  newsroom bottom circle-bg circle-bg--center">
+    <main class="main ">
       <div class="container">
 
-        <h1 class="newsroom__title title title--center">
-          Newsroom
-        </h1>
-
-        <div class="newsroom__nav">
-
-          <ul class="newsroom__nav-list">
-            <li class="newsroom__nav-item">
-
-              <button class="newsroom__nav-btn newsroom__nav-btn--active" type="button" data-news="coverage">
-                Press coverage
-              </button>
-
-            </li>
-
-            <li class="newsroom__nav-item ">
-
-              <button class="newsroom__nav-btn" type="button" data-news="releases">
-                Press releases
-              </button>
-
-            </li>
-          </ul>
-
-          <button class="newsroom__btn" type="button">
-            The latest
-
-            <svg class="newsroom__icon">
-              <use xlink:href="img/sprite.svg#across-filter"></use>
+        <article class="single">
+          <a class="single__back" href="#">
+            <svg class="single__icon">
+              <use xlink:href="img/sprite.svg#back"></use>
             </svg>
-          </button>
+            blog
+          </a>
 
-        </div>
+          <div class="single__content">
 
-        <div class="newsroom__news">
-          <ul class="newsroom-list newsroom-list--show" data-room="coverage">
-            <li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
+            <h1 class="title single__title">
+              How to perform an unattended Spyderbat Nano Agent installation on AWS
+            </h1>
 
-  <img class='newsroom-list__logo' src='img/newsroom/austin.svg' alt='Logo of company' width='200' height='80'>
+            <div class="single__wrapper">
+              <ul class="article-additional article-additional--single">
+                <li class="article-additional__item">
+                  Attack Tracing and Intercept
+                </li>
 
-  <h2 class="newsroom-list__title title-sec">
-    Spyderbat makes Austin Chamber's a-list
-  </h2>
-</li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
+                <li class="article-additional__item">
+                  3 days ago
+                </li>
 
-  <img class='newsroom-list__logo' src='img/newsroom/startup.svg' alt='Logo of company' width='200' height='80'>
+                <li class="article-additional__item">
+                  3 min read
+                </li>
 
-  <h2 class="newsroom-list__title title-sec">
-    101 best cyber security startups to follow in 2021
-  </h2>
-</li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
+                <li class="article-additional__item">
+                  9 views
+                </li>
 
-  <img class='newsroom-list__logo' src='img/newsroom/inno.svg' alt='Logo of company' width='200' height='80'>
+                <li class="article-additional__item">
+                  0 comments
+                </li>
 
-  <h2 class="newsroom-list__title title-sec">
-    Spyderbat named 'a company on fire' by Austin Inno
-  </h2>
-</li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
+              </ul>
 
-  <img class='newsroom-list__logo' src='img/newsroom/american.svg' alt='Logo of company' width='200' height='80'>
+              <button class="blog-article__share" type="button">
+                <svg class="blog-article__icon">
+                  <use xlink:href="img/sprite.svg#share-icon"></use>
+                </svg>
+              </button>
+            </div>
 
-  <h2 class="newsroom-list__title title-sec">
-    Spyderbat raises $4.2M to develop cybersecurity system
-  </h2>
-</li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
+            <h2 class="item-title">
+              Introduction
+            </h2>
 
-  <img class='newsroom-list__logo' src='img/newsroom/bultin.svg' alt='Logo of company' width='200' height='80'>
+            <p>
+              In this walkthrough, we’ll show how you can install the Spyderbat Nano Agent automatically when an AWS EC2 instance is created - this can be useful particularly for ephemeral instances, such as when leveraging AWS auto scaling groups for example. We’ll walk through creating an EC2 instance in the AWS console using the instance launch wizard, and leverage the ability to pass in user data at instance creation time - for more information about user data and cloud-init, see AWS docs <a href="#">here</a>. For installing the Spyderbat Nano Agent in an attended fashion, see the walkthrough guide <a href="#">here</a>.
+            </p>
 
-  <h2 class="newsroom-list__title title-sec">
-    Austin cybersecurity startup Spyderbat raises $4.2 million
-  </h2>
-</li>
+            <h2 class="item-title">
+              Step by step guide
+            </h2>
 
-          </ul>
+            <p>
+              1) The 1st step is to retrieve the command to install the agent for your organization - click on the “New Source” button in the sources section of the product for your organization
+            </p>
 
-          <ul class="newsroom-list newsroom-list--cut" data-room="releases">
-            <li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">August 24, 2021</time>
+            <img src="img/article/step-guide.png" alt="Step by step guide" width="835" height="320">
 
-  
+            <p>
+              2) Once you click on this button, you should be launched into the agent installation wizard where you will be presented with a link to install the agent, let’s copy the “wget” version of the install command and save that to the notepad.
+            </p>
 
-  <h2 class="newsroom-list__title title-sec">
-    Spyderbat announces Defend The Flag Challenges
-  </h2>
-</li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
+            <img src="img/article/step-guide-sec.png" alt="Step by step guide" width="835" height="320">
 
-  
+            <p 3) Now go to the <a href="#">AWS EC2 management console</a>.
+            </p>
 
-  <h2 class="newsroom-list__title title-sec">
-    Spyderbat announces full suite of Attack Tracing and Intercept Products
-  </h2>
-</li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">January 26, 2021</time>
+            <p>
+              4) Go to Instances and use the Launch Instances wizard to request one or more instances.
+            </p>
 
-  
+            <p>
+              5) Choose the desired AMI for the new instances and click Select.
+            </p>
 
-  <h2 class="newsroom-list__title title-sec">
-    Renowned cybersecurity author and analyst Richard Stiennon Joins Spyderbat as advisor
-  </h2>
-</li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
+            <p>
+              6) Choose the desired instance type. Then click Configure Instance Details.
+            </p>
 
-  
+            <p>
+              7) At the bottom of the “Configure Instance Details” screen, you will see an “Advanced Details” section with an input box for “User data”
+            </p>
 
-  <h2 class="newsroom-list__title title-sec">
-    Spyderbat bolsters team in their mission to redefine cybersecurity operations
-  </h2>
-</li>
-<li class="newsroom-list__item">
-  <time class="newsroom-list__time" datetime="2021-10-01">October 1, 2021</time>
+            <img src="img/article/step-guide-third.png" alt="Step by step guide" width="360" height="330">
 
-  
+            <p>
+              8) In the user data field, we will enter a shell script to run the install command we copied to our notepad, similar to the below (for RedHat family distributions):
+            </p>
+          </div>
 
-  <h2 class="newsroom-list__title title-sec">
-    Cybersecurity startup Spyderbat raises $4.2M to usher in new era of security operations
-  </h2>
-</li>
+        </article>
 
-          </ul>
-        </div>
       </div>
-
     </main>
 
     <footer class="footer">

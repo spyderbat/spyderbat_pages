@@ -1,0 +1,82 @@
+.blog {
+  &__nav {
+    @include flex-all-sb;
+
+    margin-bottom: rem(80);
+
+    @include for-width(-mobile-l) {
+      display: block;
+    }
+  }
+
+  &__title-sec {
+    padding-top: 0;
+  }
+
+  &__text {
+    margin-bottom: rem(80);
+  }
+
+  &__nav-item {
+    position: relative;
+    width: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      mask-image: url("../img/sprite.svg#search");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 24px;
+      height: 24px;
+      background-color: var(--color-white);
+      transform: translateY(-50%);
+    }
+
+    &:not(:last-child) {
+      margin-right: rem(40);
+
+      @include for-width(-mobile-l) {
+        margin-right: 0;
+        margin-bottom: rem(25);
+      }
+    }
+
+    &--search {
+      &::before {
+        left: 18px;
+        mask-image: url("../img/sprite.svg#search");
+        width: 24px;
+        height: 24px;
+      }
+
+      .field {
+        padding-right: rem(15);
+        padding-left: rem(50);
+      }
+    }
+
+    &--select {
+      &::before {
+        right: 25px;
+        z-index: 5;
+        mask-image: url("../img/sprite.svg#select");
+        width: 16px;
+        height: 8px;
+      }
+
+      .field {
+        line-height: 1.2;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__picture-empty {
+    margin: 0 auto rem(100);
+    width: 100%;
+    max-width: 200px;
+  }
+}

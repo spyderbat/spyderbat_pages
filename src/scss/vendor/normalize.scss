@@ -202,6 +202,14 @@ input {
   cursor: pointer;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: transparent;
+}
+
 button {
   appearance: none;
   overflow: visible;
@@ -323,7 +331,7 @@ address {
 }
 
 .swiper-autoheight .swiper-wrapper {
-  align-items:start;
+  align-items: start;
   transition-property: transform, height
 }
 

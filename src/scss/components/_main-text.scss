@@ -7,6 +7,12 @@
   &::first-letter {
     text-transform: capitalize;
   }
+
+  &--center {
+    margin-bottom: rem(39);
+    padding-top: rem(26);
+    text-align: center;
+  }
 }
 
 .title-sec {
@@ -65,6 +71,10 @@
   &--supply {
     margin: 0 auto rem(33);
     max-width: 460px;
+  }
+
+  &--center {
+    text-align: center;
   }
 
   @include for-width(-mobile-md) {

@@ -1,0 +1,59 @@
+.single {
+  margin: 0 auto;
+  padding-top: rem(26);
+  max-width: 835px;
+
+  &__back {
+    @include flex-v-center;
+
+    position: absolute;
+    left: 14px;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: var(--color-blue-700);
+  }
+
+  &__icon {
+    @include flex-all-center;
+
+    margin-right: rem(16);
+    border: 1px solid var(--color-blue-300);
+    border-radius: var(--radius-sec);
+    padding: rem(17);
+    width: 52px;
+    height: 52px;
+    stroke: currentColor;
+    stroke-width: 2px;
+    transform: rotate(90deg);
+  }
+
+  &__title {
+    margin-bottom: rem(40);
+  }
+
+  &__wrapper {
+    @include flex-all-sb;
+  }
+
+  &__content {
+    .item-title {
+      margin-bottom: rem(20);
+    }
+
+    p {
+      padding-right: rem(13);
+    }
+
+    a {
+      font-weight: 500;
+      text-decoration: underline;
+      color: var(--color-blue-700);
+    }
+
+    img {
+      margin: 0 auto rem(29);
+      width: auto;
+      height: auto;
+    }
+  }
+}
