@@ -1,0 +1,36 @@
+@include('html/_head.html',{
+headTitle:"Page not found"
+})
+
+<body class="error-page">
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main main--error">
+      <div class="container">
+        <section class="hero">
+
+          <div class="hero__inner">
+            <h1 class="title">
+              404
+            </h1>
+
+            <p class="text">
+              Something went wrong and we could not find the page you were looking for...
+            </p>
+
+            <div class="hero__btns">
+              <a class="btn btn--colored" href="#">
+                Apply
+              </a>
+            </div>
+          </div>
+
+          <div class="error-page__img circle-bg">
+            <img class="error-page__img-picture" src="img/error-page.png" alt="Page not found" width="530" height="565">
+          </div>
+        </section>
+      </div>
+    </main>
+
+    @include('html/_footer.html')

@@ -1,0 +1,39 @@
+<div class="statistic__inner">
+
+  <div class="statistic__content">
+    <h2 class="title-sec">
+      Statistics
+    </h2>
+
+    <p class="text">
+      While the attack is indirect, bad actors are attracted to attempt supply chain attacks to gain immediate access to a broader set of end-users. For example, when remote management vendor, Kaseya, was breached in July 2021, bad actors were able to immediately spread ransomware to more than 1,500 of their customers.
+    </p>
+
+    <p class="text">
+      The number of software supply chain attacks is significantly increasing. In Sonatype’s 2021 State of Software Supply Chain recognizes a 650% year-over-year increase in supply chain attacks from 2015 to 2021. According to the Identity Theft Resource Center (ITRC), there were 19 supply chain attacks just in Q4 2020.
+    </p>
+  </div>
+
+    <ul class="statistic__list item-list">
+      @loop("../blocks/_item-list.html",[{
+      tag:"li",
+      addClass:"item-box",
+      modClass:"empty",
+      itemTitle:"<h3 class='item-title'>60%</h3>",
+      itemText:"year of year increase in attempted intrusions"
+      },{
+      tag:"li",
+      addClass:"item-box",
+      modClass:"empty",
+      itemTitle:"<h3 class='item-title'>650%</h3>",
+      itemText:"year over year increase in software supply chain attacks"
+      },{
+      tag:"li",
+      addClass:"item-box",
+      modClass:"empty",
+      itemTitle:"<h3 class='item-title'>1,500</h3>",
+      itemText:"the number of customers estimated to have been impacted by the Kaseya supply chain attack"
+      }])
+    </ul>
+
+</div>

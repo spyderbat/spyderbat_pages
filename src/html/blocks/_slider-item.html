@@ -1,0 +1,19 @@
+<li class="slider__item  item-list swiper-slide">
+  <div class="slider__item-inner slider__item-inner--content">
+
+    @include('_item-list.html',{
+    tag:"div",
+    addClass:"@addClass",
+    modClass:"@modClass",
+    itemTitle:"@itemTitle",
+    itemText:"@itemText"
+    })
+
+  </div>
+
+
+
+  <div class="slider__item-inner slider__item-inner--anim">
+    @animation
+  </div>
+</li>

@@ -1,0 +1,25 @@
+<h2 class="page-list__title title-sec">
+  Problems addressed by the Spyderbat Platform
+</h2>
+
+<ul class="page-list__list item-list">
+  @loop("../blocks/_item-list.html",[{
+  tag:"li",
+  addClass:"item-box",
+  modClass:"misconf",
+  itemTitle:"<h3 class='item-title'>misconfigurations</h3>",
+  itemText:"Whether inadvertent or malicious, partners and employees introduce vulnerabilities leading to data loss. Tracking these issues to root cause is tedious, time- consuming, and often inconclusive."
+  },{
+  tag:"li",
+  addClass:"item-box",
+  modClass:"attacks",
+  itemTitle:"<h3 class='item-title'>external attacks</h3>",
+  itemText:"Red herring alerts, chased down multiple ambiguous investigation paths within rapidly changing and short-lived work loads, waste time and conceal real, early threat indicators."
+  },{
+  tag:"li",
+  addClass:"item-box",
+  modClass:"outages",
+  itemTitle:"<h3 class='item-title'>service outages</h3>",
+  itemText:"Layers of virtualization and fast-moving workflows obstruct manual investigations when time is of the essence. "
+  },])
+</ul>

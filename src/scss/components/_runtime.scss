@@ -1,0 +1,15 @@
+.slider-runtime {
+  .slider {
+    &__item {
+      padding: 0;
+
+      .text {
+        max-width: 100%;
+      }
+    }
+
+    &__item-inner {
+      max-width: 350px;
+    }
+  }
+}

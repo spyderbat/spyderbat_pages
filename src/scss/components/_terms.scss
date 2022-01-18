@@ -1,0 +1,122 @@
+.terms {
+  counter-reset: h3;
+  margin: 0 auto;
+  padding-top: rem(24);
+  width: 100%;
+  max-width: 835px;
+
+  h1 {
+    @include h1;
+
+    margin-bottom: 16px;
+    letter-spacing: 0.03em;
+  }
+
+  h2 {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: var(--color-white);
+  }
+
+  h3 {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--color-white);
+  }
+
+  p {
+    margin-bottom: rem(38);
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0;
+    color: var(--color-white);
+    opacity: 0.8;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  ol {
+    counter-reset: num;
+    margin-bottom: rem(40);
+    letter-spacing: 0;
+
+    >li {
+      counter-increment: num;
+      display: inline-block;
+      margin-bottom: 16px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.2;
+      color: var(--color-white);
+      opacity: 1;
+
+      &::before {
+        content: counter(num) ". ";
+
+        @include for-width(-mobile-s) {
+          font-size: 17px;
+        }
+      }
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+
+    li {
+      position: relative;
+      margin-bottom: rem(15);
+      padding-left: rem(25);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 2;
+      color: var(--color-white);
+      opacity: 0.8;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 15px;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        background-color: var(--color-blue-700);
+      }
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  ol ol {
+    counter-reset: item;
+
+    >li {
+      counter-increment: item;
+      margin-bottom: rem(20);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 2;
+      color: var(--color-white);
+      opacity: 0.8;
+
+      &::before {
+        content: counter(num) "."counter(item) " ";
+      }
+    }
+  }
+}

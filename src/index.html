@@ -1,0 +1,46 @@
+@include('html/_head.html',{
+headTitle:"Home page"
+})
+
+<body>
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main">
+      <div class="container">
+        <section class="hero hero--home">
+
+          @include('html/_hero.html',{
+          slogan:"<span class='slogan'>cut to the chase</span>",
+          title:"<h1 class='title'>Linux Runtime Security</h1>",
+          contentBlock:"<p class='text'>Secure your Linux VM and Container environments with observability, detection,investigation, and response capabilities integrating with your whole development <span> lifecycle.</span></p>",
+          btnText:"Book a demo",
+          btnAdd:"<a class='btn' href='#'>Watch the video<svg><use xlink:href='img/sprite.svg#play-circle'></use></svg></a>",
+          imgHero:"<img class='hero__img' src='img/home/hero.png' alt='Spyderbat on laptop' width='1033' height='506'><lottie-player class='hero__player' autoplay speed='2.5' mode='normal' src='img/animation/home-hero.json' width='690' height='690'></lottie-player>"})
+        </section>
+
+        <div class="scroll-block bottom">
+          Scroll down to see more
+        </div>
+
+        <section class="platform bottom">
+          @include('html/home/_platform.html')
+        </section>
+
+        <section class="platform platform--reverse bottom">
+          @include('html/home/_platform-reverse.html')
+        </section>
+
+        <section class="problem page-list bottom circle-bg circle-bg--title">
+          @include('html/home/_problem.html')
+        </section>
+
+        <section class="slider-home bottom">
+          @include('html/home/_slider.html')
+        </section>
+
+      </div>
+
+    </main>
+
+    @include('html/_footer.html')

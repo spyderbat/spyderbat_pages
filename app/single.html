@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+  <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+  <link rel="shortcut icon" type="image/png" href="img/favicon-180x170.png" sizes="180x170">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Spyderbat | Page not found</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="header">
+    <nav class="nav">
+
+      <a class="logo" href="/">
+        <img class="logo__img" src="img/logo.svg" alt="Spyderbat logo" width="185" height="30">
+      </a>
+
+      <button class="burger">
+        <span class="sr-only">
+          Open menu
+        </span>
+      </button>
+
+
+      <div class="nav__inner">
+        <ul class="nav__sing">
+          <li>
+            <a href="#">
+              Products
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down-circle"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Solutions
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down-circle"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Company
+              <svg>
+                <use xlink:href="img/sprite.svg#arrow-down-circle"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Pricing
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Blog
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Resources
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav__sing-list">
+          <li class="nav__sing-item">
+            <a class="nav__sing-link" href="#">
+              Sign in
+            </a>
+          </li>
+
+          <li class="nav__sing-item">
+            <a class="nav__sing-link nav__sing-link--active" href="#">
+              Sign up
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</header>
+
+
+    <main class="main ">
+      <div class="container">
+
+        <article class="single">
+          <a class="single__back" href="#">
+            <svg class="single__icon">
+              <use xlink:href="img/sprite.svg#back"></use>
+            </svg>
+            blog
+          </a>
+
+          <div class="single__content">
+
+            <h1 class="title single__title">
+              How to perform an unattended Spyderbat Nano Agent installation on AWS
+            </h1>
+
+            <div class="single__wrapper">
+              <ul class="article-additional article-additional--single">
+                <li class="article-additional__item">
+                  Attack Tracing and Intercept
+                </li>
+
+                <li class="article-additional__item">
+                  3 days ago
+                </li>
+
+                <li class="article-additional__item">
+                  3 min read
+                </li>
+
+                <li class="article-additional__item">
+                  9 views
+                </li>
+
+                <li class="article-additional__item">
+                  0 comments
+                </li>
+
+              </ul>
+
+              <button class="blog-article__share" type="button">
+                <svg class="blog-article__icon">
+                  <use xlink:href="img/sprite.svg#share-icon"></use>
+                </svg>
+              </button>
+            </div>
+
+            <h2 class="item-title">
+              Introduction
+            </h2>
+
+            <p>
+              In this walkthrough, we’ll show how you can install the Spyderbat Nano Agent automatically when an AWS EC2 instance is created - this can be useful particularly for ephemeral instances, such as when leveraging AWS auto scaling groups for example. We’ll walk through creating an EC2 instance in the AWS console using the instance launch wizard, and leverage the ability to pass in user data at instance creation time - for more information about user data and cloud-init, see AWS docs <a href="#">here</a>. For installing the Spyderbat Nano Agent in an attended fashion, see the walkthrough guide <a href="#">here</a>.
+            </p>
+
+            <h2 class="item-title">
+              Step by step guide
+            </h2>
+
+            <p>
+              1) The 1st step is to retrieve the command to install the agent for your organization - click on the “New Source” button in the sources section of the product for your organization
+            </p>
+
+            <img src="img/article/step-guide.png" alt="Step by step guide" width="835" height="320">
+
+            <p>
+              2) Once you click on this button, you should be launched into the agent installation wizard where you will be presented with a link to install the agent, let’s copy the “wget” version of the install command and save that to the notepad.
+            </p>
+
+            <img src="img/article/step-guide-sec.png" alt="Step by step guide" width="835" height="320">
+
+            <p 3) Now go to the <a href="#">AWS EC2 management console</a>.
+            </p>
+
+            <p>
+              4) Go to Instances and use the Launch Instances wizard to request one or more instances.
+            </p>
+
+            <p>
+              5) Choose the desired AMI for the new instances and click Select.
+            </p>
+
+            <p>
+              6) Choose the desired instance type. Then click Configure Instance Details.
+            </p>
+
+            <p>
+              7) At the bottom of the “Configure Instance Details” screen, you will see an “Advanced Details” section with an input box for “User data”
+            </p>
+
+            <img src="img/article/step-guide-third.png" alt="Step by step guide" width="360" height="330">
+
+            <p>
+              8) In the user data field, we will enter a shell script to run the install command we copied to our notepad, similar to the below (for RedHat family distributions):
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+
+      <ul class="footer__list">
+        <li class="footer__item">
+
+          <h3 class="item-title">
+            Spyderbat products
+          </h3>
+
+          <a class="text" href="#">
+            Attack Tracing & Intercept
+          </a>
+
+          <a class="text" href="#">
+            Defend the Flag
+          </a>
+
+          <a class="text" href="#">
+            Pricing
+          </a>
+
+        </li>
+
+        <li class="footer__item">
+          <h3 class="item-title">
+            Solutions
+          </h3>
+
+          <a class="text" href="#">
+            Alert Triage
+          </a>
+
+          <a class="text" href="#">
+            Security Investigations
+          </a>
+
+          <a class="text" href="#">
+            Observability
+          </a>
+        </li>
+
+        <li class="footer__item">
+          <h3 class="item-title">
+            Use cases
+          </h3>
+
+          <a class="text">
+            Avoid Ransomware
+          </a>
+
+          <a class="text" href="#">
+            Supply Chain Attacks
+          </a>
+        </li>
+
+        <li class="footer__item">
+          <h3 class="item-title">
+            Company
+          </h3>
+
+          <a class="text" href="#">
+            Meet us
+          </a>
+
+          <a class="text" href="#">
+            Careers
+          </a>
+
+          <a class="text" href="#">
+            Blog
+          </a>
+
+          <a class="text" href="#">
+            News
+          </a>
+
+          <a class="text" href="#">
+            Resources
+          </a>
+
+          <a class="text" href="#">
+            Contact us
+          </a>
+
+        </li>
+      </ul>
+
+      <div class="footer__item  footer__item--social">
+
+        <p class="text text--footer">
+          Follow us in social networks
+        </p>
+
+        <ul class="footer__socials">
+          <li class="footer__social">
+            <a class="footer__social-link" href="#">
+              <span class="sr-only">
+                Visit LinkedIn
+              </span>
+
+              <svg class="footer__social-icon">
+                <use xlink:href="img/sprite.svg#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="footer__social">
+            <a class="footer__social-link" href="#">
+              <span class="sr-only">
+                Visit Twitter
+              </span>
+
+              <svg class="footer__social-icon">
+                <use xlink:href="img/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer__rights">
+    <div class="container">
+      <div class="footer__rights-inner">
+        <p class="footer__rights-text text">
+          © SPYDERBAT, Inc., All Rights Reserved
+        </p>
+
+        <p class="footer__rights-text footer__rights-text--design text">
+          Designed by Nextpage
+          <svg class="footer__rights-icon">
+            <use xlink:href="img/sprite.svg#nextpage"></use>
+          </svg>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script src="js/vendor.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+
+</html>
+

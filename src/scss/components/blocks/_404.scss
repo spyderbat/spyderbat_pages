@@ -1,0 +1,81 @@
+.error-page {
+  &::before {
+    display: none;
+  }
+
+  .title {
+    margin-bottom: 0;
+    font-size: rem(96);
+    letter-spacing: 0;
+  }
+
+  .text {
+    margin-bottom: rem(25);
+
+    &--footer {
+      margin-bottom: rem(10);
+    }
+  }
+
+  .footer__rights-text {
+    margin-bottom: 0;
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(135);
+    padding: 0;
+
+    &__inner {
+      width: 100%;
+      max-width: rem(385);
+      transform: translateY(-35px);
+
+      @include for-width(-tablet) {
+        margin: 0 auto rem(20);
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__img {
+    margin-right: rem(60);
+    transform: translate(-25px, 46px);
+
+    &.circle-bg {
+      &::before {
+        right: -30%;
+        top: -10%;
+        width: 100%;
+        height: rem(600);
+        max-width: rem(600);
+        background: linear-gradient(247.71deg, rgba(174, 200, 255, 0.7) 0%, rgba(5, 68, 208, 0.7) 40.26%, rgba(255, 255, 255, 0) 122.71%);
+        filter: blur(197.561px);
+      }
+    }
+
+    @include for-width(-tablet) {
+      margin-right: 0;
+      transform: translate(0, 0);
+    }
+
+    @include for-width(-mobile-l) {
+      display: none;
+    }
+  }
+
+  .hero__btns {
+    .btn {
+      @include for-width(-mobile-l) {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    @include for-width(-tablet) {
+      justify-content: start;
+      margin: 0;
+    }
+  }
+}

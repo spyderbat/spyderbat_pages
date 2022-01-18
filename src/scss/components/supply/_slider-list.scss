@@ -1,0 +1,91 @@
+.customer-slider {
+  margin-bottom: rem(115);
+  padding-top: rem(55);
+
+  .slider {
+
+    &__inner {
+      margin-top: 0;
+    }
+
+    &__item {
+      padding: rem(24) 0 0;
+      width: 100%;
+    }
+
+    &__item-list {
+      margin-bottom: rem(40);
+      width: 100%;
+      max-width: 490px;
+      font-size: 18px;
+    }
+
+    &__item-point {
+      padding-left: rem(40);
+
+      &:not(:last-child) {
+        margin-bottom: rem(20);
+      }
+    }
+
+    &__item-box {
+      margin-right: rem(20);
+
+      @include for-width(-tablet) {
+        margin-right: 0;
+        margin-bottom: rem(150);
+      }
+
+      @include for-width(-mobile-sl) {
+        margin-bottom: rem(120);
+
+      }
+    }
+
+    &__item-picture {
+      width: 100%;
+      max-width: 500px;
+      transform: translate(-7%, -20%);
+
+      &.circle-bg {
+        &::before {
+          top: auto;
+          width: rem(680);
+          height: rem(680);
+        }
+      }
+
+      @include for-width(-desktop-med) {
+        margin: 0 auto;
+        max-width: 440px;
+        transform: translate(0, -20%);
+      }
+
+      @include for-width(-tablet) {
+        transform: translate(0, 0);
+      }
+    }
+
+    .progress {
+      left: 0;
+      bottom: rem(15);
+
+      @include for-width(-tablet) {
+        top: 45%;
+        bottom: auto;
+      }
+
+      @include for-width(-mobile-sl) {
+        top: 46%;
+      }
+
+      @include for-width(-mobile-s) {
+        top: 54%;
+      }
+
+      @include for-width(-mobile-sm) {
+        top: 58%;
+      }
+    }
+  }
+}

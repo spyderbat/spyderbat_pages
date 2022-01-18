@@ -1,0 +1,138 @@
+.slider-home {
+  &__list {
+    counter-reset: list;
+    padding-bottom: rem(5);
+  }
+
+  &__item {
+    @include flex-all-center;
+
+    justify-content: start;
+    list-style-type: none;
+
+    @include for-width(-tablet) {
+      display: block;
+      margin: 0 auto;
+      padding-top: rem(150);
+    }
+  }
+
+  &__title {
+    @include for-width(-tablet) {
+      position: absolute;
+      top: rem(25);
+    }
+
+    +.text {
+      @include for-width(-tablet) {
+        position: absolute;
+        top: 12%;
+        max-width: 240px
+      }
+    }
+  }
+
+  &__anim {
+    @include flex-all-center;
+
+    margin-top: rem(5);
+    margin-right: rem(75);
+    border: 2px solid rgba(55, 148, 208, 0.4);
+    border-radius: 50%;
+    width: rem(680);
+    height: rem(680);
+
+    @include for-width(-desktop-med) {
+      width: rem(580);
+      height: rem(580);
+    }
+
+    @include for-width(-desktop-sm) {
+      margin-right: rem(30);
+      width: rem(520);
+      height: rem(520);
+    }
+
+    @include for-width(-tablet) {
+      margin: 0 auto rem(65);
+    }
+
+    @include for-width(-mobile-l) {
+      width: rem(440);
+      height: rem(440);
+    }
+
+    @include for-width(-mobile-md) {
+      margin: 0 auto rem(65);
+      width: rem(290);
+      height: rem(290);
+    }
+  }
+
+  &__player {
+    @include flex-all-center;
+
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    max-width: 590px;
+
+    @include for-width(-desktop-med) {
+      width: 90%;
+    }
+
+    @include for-width(-mobile-l) {
+      width: 87%;
+    }
+  }
+
+  &__content {
+    padding-top: rem(45);
+    width: 100%;
+    max-width: 405px;
+
+    @include for-width(-tablet) {
+      padding-top: 0;
+      max-width: 100%;
+    }
+  }
+
+  &__box {
+    padding: rem(35) rem(20) rem(35) rem(35);
+
+    .item-title {
+      @include for-width(-tablet) {
+        margin-bottom: rem(18);
+      }
+    }
+
+    .text {
+      margin: 0;
+
+      @include for-width(-tablet) {
+        max-width: 600px;
+        font-size: 18px;
+      }
+
+      @include for-width(-mobile-l) {
+        max-width: 600px;
+        font-size: 14px;
+      }
+    }
+
+    @include for-width(-mobile-l) {
+      padding: rem(28) rem(20) rem(30) rem(35);
+    }
+  }
+
+  .item-title {
+    &::before {
+      counter-increment: list;
+      content: "0"counter(list, decimal-leading) ". ";
+    }
+  }
+
+  @include for-width(-mobile-l) {
+    margin-bottom: rem(45);
+  }
+}

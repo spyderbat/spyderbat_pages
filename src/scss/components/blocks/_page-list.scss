@@ -1,0 +1,40 @@
+.page-list {
+  &__title {
+    margin: 0 auto rem(56);
+    width: 100%;
+    max-width: 490px;
+    text-align: center;
+  }
+
+  &__list {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 0 rem(30);
+
+    &--platform {
+      margin-bottom: rem(60);
+
+      .item-title {
+        margin-bottom: rem(18);
+      }
+
+      &.page-list__list {
+        @include for-width(-tablet) {
+          margin-bottom: rem(50);
+        }
+
+        @include for-width(-mobile-l) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    @include for-width(-tablet) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      margin: 0 auto;
+      max-width: 600px;
+      gap: rem(25) 0;
+    }
+  }
+}

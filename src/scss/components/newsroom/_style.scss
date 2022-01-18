@@ -1,0 +1,80 @@
+.newsroom {
+  &__title {
+    text-align: center;
+  }
+
+  &__nav {
+    @include flex-all-sb;
+
+    border-bottom: 1px solid var(--color-blue-300);
+
+    @include for-width(-mobile-md) {
+      display: block;
+      border-bottom-color: transparent;
+    }
+  }
+
+  &__nav-list {
+    @include flex-s;
+
+    @include for-width(-mobile-md) {
+      justify-content: space-between;
+      margin-bottom: rem(20);
+      border-bottom: 1px solid var(--color-blue-300);
+      width: 100%;
+    }
+  }
+
+  &__nav-item {
+    @include h3;
+
+    color: var(--color-blue-700);
+
+    &:not(:last-child) {
+      margin-right: rem(40);
+
+      @include for-width(-mobile-sl) {
+        margin-right: rem(10);
+      }
+    }
+
+    @include for-width(-mobile-sl) {
+      font-size: 19px;
+    }
+  }
+
+  &__nav-btn {
+    border-bottom: 4px solid var(--color-blue-700);
+    padding-bottom: rem(22);
+    font-family: "Space-Grotesk", sans-serif;
+    color: inherit;
+    opacity: 0.3;
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  &__btn {
+    @include subtitle;
+    @include flex-all-center;
+
+    color: var(--color-white);
+
+    @include for-width(-mobile-md) {
+      margin-left: auto;
+    }
+  }
+
+  &__icon {
+    margin-left: rem(14);
+    width: 24px;
+    height: 24px;
+  }
+
+  &__news {
+    position: relative;
+  }
+}
+
+@import "news-list";

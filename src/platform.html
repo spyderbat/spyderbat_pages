@@ -1,0 +1,67 @@
+@include('html/_head.html',{
+headTitle:"The Spyderbat Platform"
+})
+
+<body>
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main">
+      <div class="container">
+        <section class="hero hero--platform">
+          @include('html/_hero.html',{
+          slogan:"",
+          title:"<h1 class='title'>The Spyderbat Platform</h1>",
+          contentBlock:"<p class='text'>Secure your Linux runtime environments with immediate and complete visibility to root issues.</p>",
+          btnText:"Start free",
+          btnAdd:"",
+          imgHero:"<img class='hero__img' src='img/platform/platform.png' alt='Spyderbat Platform' width='1033' height='506'>"
+          })
+        </section>
+
+        <div class="scroll-block bottom">
+          Scroll down to see more
+        </div>
+
+        <section class="platform-page page-list bottom">
+          @include('html/platform/_page-list.html')
+        </section>
+
+        <section class="assurance bottom">
+          @include('html/platform/_assurance.html')
+        </section>
+
+        <section class="slider-platform bottom">
+          <div class="item-box slider-platform__inner">
+            <h2 class="slider-title title-sec">
+              A new way to secure Linux
+            </h2>
+
+            <div class="slider">
+
+              @include('html/platform/_slider-platform.html')
+              <ul class="progress progress--platform">
+
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="hero hero--download bottom">
+
+          @include('html/_hero.html',{
+          slogan:"<span class='slogan'>Read The Whitepaper and find answers</span>",
+          title:"<h2 class='title-sec'>Fast and accurate investigation automation</h2>",
+          contentBlock:"<ul class='download-list'><li class='download-list__item list-check text'>Forward by industry analyst Richard Stiennon</li><li class='download-list__item list-check text'>What is the detection of response to chasm?</li><li class='download-list__item list-check text'>How does the Operations Plane establish all causal connections?</li><li class='download-list__item list-check text'>How does a living graph of causal activity speed up investigations?</li></ul>",
+          btnText:"Start free",
+          btnAdd:"<a class='download__btn btn' href='#'>Download the White Paper</a>",
+          imgHero:"<lottie-player class='hero__img' autoplay mode='normal' speed='3' src='img/animation/platform-animation.json' width='655' height='430'></lottie-player>"
+          })
+
+        </section>
+
+      </div>
+
+    </main>
+
+    @include('html/_footer.html')
