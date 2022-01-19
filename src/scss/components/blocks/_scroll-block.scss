@@ -24,6 +24,7 @@
     width: 2px;
     height: 57%;
     background-color: var(--color-blue-700);
+    animation: animateScroll 2s infinite ease;
   }
 
   &--bottom {
@@ -35,9 +36,17 @@
     transform: translateY(-135%);
   }
 
-
-
   @include for-width(-tablet) {
     display: none;
+  }
+}
+
+@keyframes animateScroll {
+  0% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0;
   }
 }
