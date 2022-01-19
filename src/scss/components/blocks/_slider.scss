@@ -87,6 +87,10 @@
       position: absolute;
       height: 540px;
       transform: translate(-17%, -33%);
+
+      @include for-width(-mobile-s) {
+        height: 470px;
+      }
     }
   }
 

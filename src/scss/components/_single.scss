@@ -136,10 +136,14 @@
     stroke: currentColor;
     stroke-width: 2px;
     transform: rotate(90deg);
+
+    @include for-width(-mobile-md) {
+      margin: 0;
+    }
   }
 
   &--prev {
-    @include for-width(-desktop-sm) {
+    @include for-width(-desktop-med) {
       transform: translateY(-100%);
     }
   }

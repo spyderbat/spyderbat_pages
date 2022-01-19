@@ -2,6 +2,10 @@
   .slider {
     &__inner {
       margin: 0 0 rem(110);
+
+      @include for-width(-mobile-md) {
+        margin-bottom: rem(70);
+      }
     }
 
     &__item {
@@ -68,6 +72,15 @@
           margin: 0 auto;
           max-width: rem(650);
         }
+
+        @include for-width(-mobile-sl) {
+          top: 0;
+          transform: translateY(-75px)
+        }
+      }
+
+      @include for-width(-tablet) {
+        max-height: fit-content;
       }
     }
 
@@ -96,19 +109,23 @@
       }
 
       @include for-width(-tablet) {
-        top: 30%;
+        top: 25%;
       }
 
       @include for-width(-mobile-md) {
-        top: 30%;
+        top: 31%;
       }
 
       @include for-width(-mobile-sl) {
-        top: 35%;
+        top: 32%;
       }
 
       @include for-width(-mobile-s) {
-        top: 40%;
+        top: 35%;
+      }
+
+      @include for-width(-mobile-sm) {
+        top: 38%;
       }
     }
   }

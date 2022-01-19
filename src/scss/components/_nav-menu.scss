@@ -2,22 +2,7 @@
   @include flex-all-sb;
 
   position: relative;
-  padding: rem(40) rem(90) rem(25);
-  transition: background-color 0.3s linear;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(247.71deg, rgba(174, 200, 255, 0.5) 0%, rgba(5, 68, 208, 0.4) 40.26%, rgba(255, 255, 255, 0.1) 122.71%);
-    opacity: 0;
-    visibility: hidden;
-    filter: blur(135.494px);
-    transition: all 0.1s ease-in-out;
-  }
+  padding: rem(40) 0 rem(24);
 
   .burger {
     --burger-width: 27px;
@@ -259,22 +244,8 @@
     }
   }
 
-  &--scroll {
-    background-color: var(--color-black);
-
-    &:before {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-
-  @include for-width(-desktop-med) {
-    padding: rem(40) rem(30);
-  }
-
   @include for-width(-tablet) {
     flex-wrap: wrap;
     padding: rem(26) rem(16);
-    background-color: var(--color-black);
   }
 }

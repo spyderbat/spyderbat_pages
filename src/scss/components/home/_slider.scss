@@ -13,7 +13,7 @@
     @include for-width(-tablet) {
       display: block;
       margin: 0 auto;
-      padding-top: rem(150);
+      padding-top: rem(170);
     }
   }
 
@@ -26,8 +26,7 @@
     +.text {
       @include for-width(-tablet) {
         position: absolute;
-        top: 12%;
-        max-width: 240px
+        top: 10%;
       }
     }
   }
