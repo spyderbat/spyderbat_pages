@@ -1477,9 +1477,29 @@ body {
   position: relative;
   border: 1px solid var(--color-blue-700);
   border-radius: var(--radius-sec);
+  transition: border-color 0.2s ease-in-out;
 }
 .footer__social:not(:last-child) {
   margin-right: 1.5rem;
+}
+.footer__social:focus {
+  border-color: var(--color-yellow-700);
+}
+.footer__social:focus svg {
+  stroke: var(--color-yellow-700);
+}
+.footer__social:hover {
+  border-color: var(--color-yellow-700);
+}
+.footer__social:hover svg {
+  stroke: var(--color-yellow-700);
+}
+.footer__social:active svg {
+  stroke: var(--color-yellow-700);
+}
+.footer__social.disabled {
+  fill: var(--color-gray-700);
+  cursor: auto;
 }
 @media (max-width: calc(62.0625em - 0.0625em)) {
   .footer__social {
@@ -1500,6 +1520,8 @@ body {
 .footer__social-icon {
   width: 32px;
   height: 32px;
+  stroke: var(--color-blue-700);
+  transition: stroke 0.2s ease-in-out;
 }
 .footer__rights {
   border-top: 1px solid var(--color-gray-800);
