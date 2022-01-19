@@ -1,0 +1,31 @@
+.single-nav {
+  @include flex-all-sb;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: rem(20);
+
+      @include for-width(-mobile-md) {
+        margin-right: 0;
+        margin-bottom: rem(30);
+      }
+    }
+
+    span {
+      width: 100%;
+      max-width: 270px;
+
+      @include for-width(-mobile-md) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .single-link {
+    position: relative;
+  }
+
+  @include for-width(-mobile-md) {
+    display: block;
+  }
+}

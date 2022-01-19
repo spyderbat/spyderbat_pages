@@ -1,112 +1,192 @@
 @include('html/_head.html',{
-headTitle:"Page not found"
+headTitle:"Single article"
 })
 
 <body>
   <div class="site-container">
     @include('html/_header.html')
 
-    <main class="main ">
+    <main class="main bottom circle-bg circle-bg--center">
       <div class="container">
 
-        <article class="single">
-          <a class="single__back" href="#">
-            <svg class="single__icon">
-              <use xlink:href="img/sprite.svg#back"></use>
-            </svg>
+        <a class="single-link single-link--prev" href="#">
+          <svg class="single-link__icon">
+            <use xlink:href="img/sprite.svg#back"></use>
+          </svg>
+
+          <span>
             blog
-          </a>
+          </span>
+        </a>
 
-          <div class="single__content">
+        <div class="container__inner">
+          <article class="single">
+            <div class="single__content">
 
-            <h1 class="title single__title">
-              How to perform an unattended Spyderbat Nano Agent installation on AWS
-            </h1>
+              <h1 class="title single__title">
+                How to perform an unattended Spyderbat Nano Agent installation on AWS
+              </h1>
 
-            <div class="single__wrapper">
-              <ul class="article-additional article-additional--single">
-                <li class="article-additional__item">
-                  Attack Tracing and Intercept
-                </li>
+              <div class="single__wrapper">
+                <ul class="article-additional article-additional--single">
+                  <li class="article-additional__item">
+                    Attack Tracing and Intercept
+                  </li>
 
-                <li class="article-additional__item">
-                  3 days ago
-                </li>
+                  <li class="article-additional__item">
+                    3 days ago
+                  </li>
 
-                <li class="article-additional__item">
-                  3 min read
-                </li>
+                  <li class="article-additional__item">
+                    3 min read
+                  </li>
 
-                <li class="article-additional__item">
-                  9 views
-                </li>
+                  <li class="article-additional__item">
+                    9 views
+                  </li>
 
-                <li class="article-additional__item">
-                  0 comments
-                </li>
+                  <li class="article-additional__item">
+                    0 comments
+                  </li>
 
-              </ul>
+                </ul>
 
-              <button class="blog-article__share" type="button">
-                <svg class="blog-article__icon">
-                  <use xlink:href="img/sprite.svg#share-icon"></use>
-                </svg>
-              </button>
+                <button class="blog-article__share" type="button">
+                  <svg class="blog-article__icon">
+                    <use xlink:href="img/sprite.svg#share-icon"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <h2 class="item-title">
+                Introduction
+              </h2>
+
+              <p>
+                In this walkthrough, we’ll show how you can install the Spyderbat Nano Agent automatically when an AWS EC2 instance is created - this can be useful particularly for ephemeral instances, such as when leveraging AWS auto scaling groups for example. We’ll walk through creating an EC2 instance in the AWS console using the instance launch wizard, and leverage the ability to pass in user data at instance creation time - for more information about user data and cloud-init, see AWS docs <a href="#">here</a>. For installing the Spyderbat Nano Agent in an attended fashion, see the walkthrough guide <a href="#">here</a>.
+              </p>
+
+              <h2 class="item-title">
+                Step by step guide
+              </h2>
+
+              <p>
+                1) The 1st step is to retrieve the command to install the agent for your organization - click on the “New Source” button in the sources section of the product for your organization
+              </p>
+
+              <img src="img/article/step-guide.png" alt="Step by step guide" width="835" height="320">
+
+              <p>
+                2) Once you click on this button, you should be launched into the agent installation wizard where you will be presented with a link to install the agent, let’s copy the “wget” version of the install command and save that to the notepad.
+              </p>
+
+              <img src="img/article/step-guide-sec.png" alt="Step by step guide" width="835" height="320">
+
+              <p> 3) Now go to the <a href="#">AWS EC2 management console</a>.
+              </p>
+
+              <p>
+                4) Go to Instances and use the Launch Instances wizard to request one or more instances.
+              </p>
+
+              <p>
+                5) Choose the desired AMI for the new instances and click Select.
+              </p>
+
+              <p>
+                6) Choose the desired instance type. Then click Configure Instance Details.
+              </p>
+
+              <p>
+                7) At the bottom of the “Configure Instance Details” screen, you will see an “Advanced Details” section with an input box for “User data”
+              </p>
+
+              <img src="img/article/step-guide-third.png" alt="Step by step guide" width="360" height="330">
+
+              <p>
+                8) In the user data field, we will enter a shell script to run the install command we copied to our notepad, similar to the below (for RedHat family distributions):
+              </p>
+
+              <code>
+                <p>#!/bin/bash</p>
+                <p>yum install - y wget lsof</p>
+                <p>wget -- quiet - O -</p>
+                <p>https://orc.spyderbat.com/v1/reg/OMJBdOBVZvzFGEMLgQSt/script | /bin/sh</p>
+              </code>
+
+              <p>
+                The 1st line indicates this is a bash shell script, the second line ensures the ‘wget’ and ‘lsof’ utilities are installed, and the 3rd line is the install command you copied from the installation wizard. Note that we have omitted “sudo -E” from the command we copied since the user data script is run as root when the instance boots. For Debian family based distributions, the following can be used:
+              </p>
+
+              <code>
+                <p>#!/bin/bash</p>
+                <p>yum install - y wget lsof</p>
+                <p>wget -- quiet - O -</p>
+                <p>https://orc.spyderbat.com/v1/reg/OMJBdOBVZvzFGEMLgQSt/script | /bin/sh</p>
+              </code>
+
+              <p>
+                9) Continue with the steps in the install wizard, or jump to Review and Launch if you are done.
+              </p>
+
+              <p>
+                10) When the instance is created in AWS, it should now download and install the agent as part of the boot sequence (for reference, the cloud-init output log file is created at /var/log/cloud-init-output.log on the created instance) - note you should ensure the instance(s) that are created have outbound access on port 443 to https://orc.spyderbat.com.
+              </p>
+
+              <p>
+                11) Check the “sources” section of the Spyderbat and you should now see your new instance appear in your list of sources.
+              </p>
+
+              <p>
+                You can leverage the user data in a similar fashion when using other mechanisms to create AWS EC2 instances, for example when specifying a <a href="#">launch template for an Auto Scaling group</a>.
+              </p>
+
+              <a href="#">
+                Click here for more information about Spyderbat's Nano Agent
+              </a>
             </div>
 
-            <h2 class="item-title">
-              Introduction
-            </h2>
+          </article>
 
-            <p>
-              In this walkthrough, we’ll show how you can install the Spyderbat Nano Agent automatically when an AWS EC2 instance is created - this can be useful particularly for ephemeral instances, such as when leveraging AWS auto scaling groups for example. We’ll walk through creating an EC2 instance in the AWS console using the instance launch wizard, and leverage the ability to pass in user data at instance creation time - for more information about user data and cloud-init, see AWS docs <a href="#">here</a>. For installing the Spyderbat Nano Agent in an attended fashion, see the walkthrough guide <a href="#">here</a>.
-            </p>
+          <ul class="tags">
+            @loop('html/blog/_list-tags.html',[{
+            item:"supply chain attacks"
+            },
+            {
+            item:"linux"
+            },
+            {
+            item:"nano-agent"
+            },
+            {
+            item:"guide"
+            },
+            {
+            item:"spyderbat"
+            },
+            {
+            item:"supply chain attacks"
+            },
+            {
+            item:"linux"
+            },
+            {
+            item:"nano-agent"
+            }])
+          </ul>
 
-            <h2 class="item-title">
-              Step by step guide
-            </h2>
+          @include('html/blog/_comments.html')
 
-            <p>
-              1) The 1st step is to retrieve the command to install the agent for your organization - click on the “New Source” button in the sources section of the product for your organization
-            </p>
+          @include('html/blog/_comment-form.html')
 
-            <img src="img/article/step-guide.png" alt="Step by step guide" width="835" height="320">
+          @include('html/blog/_single-nav.html',{
+          textF:"Is Spyderbat an XDR?",
+          textS:"Case study: using Spyderbat to monitor for supply Chain Attacks"
+          })
 
-            <p>
-              2) Once you click on this button, you should be launched into the agent installation wizard where you will be presented with a link to install the agent, let’s copy the “wget” version of the install command and save that to the notepad.
-            </p>
-
-            <img src="img/article/step-guide-sec.png" alt="Step by step guide" width="835" height="320">
-
-            <p 3) Now go to the <a href="#">AWS EC2 management console</a>.
-            </p>
-
-            <p>
-              4) Go to Instances and use the Launch Instances wizard to request one or more instances.
-            </p>
-
-            <p>
-              5) Choose the desired AMI for the new instances and click Select.
-            </p>
-
-            <p>
-              6) Choose the desired instance type. Then click Configure Instance Details.
-            </p>
-
-            <p>
-              7) At the bottom of the “Configure Instance Details” screen, you will see an “Advanced Details” section with an input box for “User data”
-            </p>
-
-            <img src="img/article/step-guide-third.png" alt="Step by step guide" width="360" height="330">
-
-            <p>
-              8) In the user data field, we will enter a shell script to run the install command we copied to our notepad, similar to the below (for RedHat family distributions):
-            </p>
-          </div>
-
-        </article>
-
+        </div>
       </div>
+
     </main>
 
     @include('html/_footer.html')

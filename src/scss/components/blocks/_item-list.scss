@@ -248,9 +248,27 @@
       }
     }
 
+    &--zap {
+      &::before {
+        background-image: url("../img/sprite.svg#zap-off");
+      }
+    }
+
     &--persistence {
       &::before {
         background-image: url("../img/sprite.svg#x-circle");
+      }
+    }
+
+    &--shield {
+      &::before {
+        background-image: url("../img/sprite.svg#shield");
+      }
+    }
+
+    &--repeat {
+      &::before {
+        background-image: url("../img/sprite.svg#repeat");
       }
     }
 
@@ -266,9 +284,21 @@
       }
     }
 
+    &--chart {
+      &::before {
+        background-image: url("../img/sprite.svg#pie-chart");
+      }
+    }
+
     &--shuffle {
       &::before {
         background-image: url("../img/sprite.svg#shuffle");
+      }
+    }
+
+    &--clock {
+      &::before {
+        background-image: url("../img/sprite.svg#clock");
       }
     }
   }

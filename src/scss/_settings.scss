@@ -48,6 +48,11 @@ body {
   width: 100%;
   max-width: 1295px;
 
+  &__inner {
+    margin: 0 auto;
+    max-width: 835px;
+  }
+
   @include for-width(-tablet) {
     padding: 0 rem(30);
   }

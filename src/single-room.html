@@ -1,0 +1,93 @@
+@include('html/_head.html',{
+headTitle:"Single article newsroom"
+})
+
+<body>
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main bottom circle-bg circle-bg--center">
+      <div class="container">
+
+        <a class="single-link single-link--prev" href="#">
+          <svg class="single-link__icon">
+            <use xlink:href="img/sprite.svg#back"></use>
+          </svg>
+
+          <span>
+            Press releases
+          </span>
+        </a>
+
+        <div class="container__inner">
+          <article class="single">
+            <div class="single__content">
+
+              <h1 class="title single__title">
+                Cybersecurity startup Spyderbat raises $4.2M to usher in new era of security operations
+              </h1>
+
+              <div class="single__wrapper">
+                <time class="article-additional" time="2021-08-24">
+                  Aug, 24, 2021
+                </time>
+
+                <button class="blog-article__share" type="button">
+                  <svg class="blog-article__icon">
+                    <use xlink:href="img/sprite.svg#share-icon"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <h2 class="sr-only">
+                Start article
+              </h2>
+
+              <p style="font-style: italic; font-size: 24px;">
+                The Gamified use of Attack Tracing and Intercept takes security analysts to a new level of Alert Investigation
+              </p>
+
+              <p>
+                Spyderbat, Inc., a trailblazer in Attack Tracing and Intercept (ATI), announces Defend The Flag Challenges. Spyderbat aims to improve the skills of blue teams and defenders with quick, fun exercises that expose real threat actor techniques across one or more stages. Spyderbat’s free Defend the Flag Challenges are available now, allowing users to quickly get started wIth nothing to install or setup. Spyderbat encourages participants to join their ‘Spyderbat 100’, the first one hundred participants who achieve a perfect score on their first ten challenges.
+              </p>
+
+              <p>
+                In a separate release Spyderbat announced the availability of their full suite of products to enable security analysts to crush alert triage and investigation. <a href="#">Spyderbat Announces Full Suite of Attack Tracing and Intercept Products</a>.
+              </p>
+
+              <p>
+                “While there are many capture-the-flag events for red teamers,” stated Brian Smith, CTO and co-founder of Spyderbat, “we wanted to create a challenge that captures real attacks and creates a fun experience for blue teamers. We want to partner with our users as we add more capabilities and robustness. The best way to do that is to offer blue teamers something of value.”
+              </p>
+
+              <p>
+                “These are really fun challenges and the tool is quite powerful,” said Glynn, a Senior Information Security Analyst. With each Challenge mapped to MITRE ATT&CK techniques, users learn how to quickly identify actual attack steps to bolster their defender skills. For example, the Defend the Flag Challenge “Gotham - Privilege Access” created from a popular image on <a href="vulnhub.com">vulnhub.com</a>, exposes techniques for credential access, privilege access, and defense evasion. Challenges put participants in the role of the security analyst, working against time to identify the threat actor’s next move and intercept the attack.
+              </p>
+
+              <h3>
+                Ready, set, trace
+              </h3>
+
+              <p>
+                As participants quickly master the Defend The Flag Challenges, they also have full access to Spyderbat’s free Attack Tracing & Intercept Community Edition (second link to product release). Spyderbat’s Community Edition lets users take ATI to defend their own systems by immediately creating their own attack traces.
+              </p>
+
+              <h3>
+                About Spyderbat
+              </h3>
+
+              <p>
+                Spyderbat introduces the industry’s first attack tracing and inception tool to radically change the way organizations handle early threat discovery and investigation. Spyderbat is backed by LiveOak Venture Partners, Benhamou Global Ventures, and cybersecurity veteran John McHale. To learn more, sign up for Spyderbat’s Community Edition, and play Defend the Flag Challenges, visit <a href="https://www.spyderbat.com">https://www.spyderbat.com</a>.
+              </p>
+
+              @include('html/blog/_single-nav.html',{
+              textF:"Spyderbat announces Defend The Flag Challenges",
+              textS:"Spyderbat bolsters team in their mission to redefine cybersecurity operations"
+              })
+
+            </div>
+          </article>
+        </div>
+
+    </main>
+
+    @include('html/_footer.html')

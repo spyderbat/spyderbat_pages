@@ -1,0 +1,201 @@
+@include('html/_head.html',{
+headTitle:"Single article"
+})
+
+<body>
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main bottom circle-bg circle-bg--center">
+      <div class="container">
+
+        <a class="single-link single-link--prev" href="#">
+          <svg class="single-link__icon">
+            <use xlink:href="img/sprite.svg#back"></use>
+          </svg>
+
+          <span>
+            blog
+          </span>
+        </a>
+
+        <div class="container__inner">
+          <article class="single">
+            <div class="single__content">
+
+              <h1 class="title single__title">
+                Case study: using Spyderbat to monitor for Supply Chain Attacks
+              </h1>
+
+              <div class="single__wrapper">
+                <ul class="article-additional article-additional--sec">
+
+                  <li class="article-additional__item">
+                    3 days ago
+                  </li>
+
+                  <li class="article-additional__item">
+                    3 min read
+                  </li>
+
+                  <li class="article-additional__item">
+                    9 views
+                  </li>
+
+                  <li class="article-additional__item">
+                    0 comments
+                  </li>
+
+                </ul>
+
+                <button class="blog-article__share" type="button">
+                  <svg class="blog-article__icon">
+                    <use xlink:href="img/sprite.svg#share-icon"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <img src="img/article/step-guide.png" alt="Step by step guide" width="835" height="320">
+
+              <p style="font-style: italic;">
+                “With Spyderbat, we’re able to monitor Linux for the first time, giving us full visibility into Linux and AWS as a whole. We can search inside the portal for anything happening in our environments, including who logged into a Linux box and what they did. This means that we can trace all activity and fully manage third-party risk to secure our data and meet compliance requirements.”
+              </p>
+
+              <h2 class="item-title">
+                Jeff Barto, Chief Security Officer
+              </h2>
+
+              <h2 class="item-title">
+                A global hedge fund had the following challenges:
+              </h2>
+
+              <p>
+                1) The 1st step is to retrieve the command to install the agent for your organization - click on the “New Source” button in the sources section of the product for your organization
+              </p>
+
+              <h3>
+                Lack of perimeter breach detection in Linux
+              </h3>
+
+              <p>
+                Increasingly, threat actors focus their attacks on cloud or on-premise Linux environments. According to one 2021 report, the top threats facing Linux environments include:
+              </p>
+
+
+              <ul>
+                <li>
+                  Coinminers
+                </li>
+
+                <li>
+                  Web shells
+                </li>
+
+                <li>
+                  Ransomware
+                </li>
+
+                <li>
+                  Trojans
+                </li>
+
+              </ul>
+
+              <p>
+                These environments are a black box for most organizations, leaving them without visibility into network-facing servers, often running SSH or Apache. Threat actors use more advanced methods for obfuscating their attacks against Linux, making detection even more challenging.
+              </p>
+
+              <h3>
+                Inability to monitor third-party risk
+              </h3>
+
+              <p>
+                Third-party vendors, like AWS, run platforms, services, and products on top of Linux. This compounds Linux visibility issues, requiring organizations to rely on third-party vendors for information about potential breaches. Organizations lack the ability to monitor third-party risk appropriately, leaving them open to compliance violations.
+              </p>
+
+
+              <h3>
+                High operational costs
+              </h3>
+
+              <p>
+                Monitoring Linux environments requires having full-time employees with Linux programming backgrounds to monitor these decentralized logs. As these system logs are often broken out according to specific services, they are increasingly burdensome to manage. Even with these resources, the process is time-intensive and lacks full visibility.
+              </p>
+
+              <h2 class="title-sec">
+                Gaining visibility into data breach risks across owned and third-party Linux environments
+              </h2>
+
+              <p>
+                The customer installed Spyderbat across its Linux environment, giving them the ability to engage in detailed attack traces across their Linux and Linux-based third-party vendor environments.
+              </p>
+
+              <h3>
+                Reduced time to investigate incidents with enriched data
+              </h3>
+
+              <p>
+                Spyderbat provides the only solution that ties network traffic and indicators of compromise data to Linux. This capability enables security teams visibility into the full attack path, across all compromised servers and logins. This monitors the Linux environment at both the operating system level and the network level.
+              </p>
+
+              <h3>
+                Reduced supply chain and compliance risk with third-party monitoring
+              </h3>
+
+              <p>
+                Spyderbat enables organizations to take control of the security of their third-party Linux-based products. . With Spyderbat, security teams trace supply chain attacks at an operator level, giving them visibility into servers or applications usually controlled by vendors. This enhances security and compliance posture, eliminating blind spots, cannot and providing organizations with the ability to prove governance and third-party vendor risk management.
+              </p>
+
+
+              <h3>
+                Integrate Linux monitoring into security activities
+              </h3>
+
+              <p>
+                Spyderbat enables organizations to take control of the security of their third-party Linux-based products. . With Spyderbat, security teams trace supply chain attacks at an operator level, giving them visibility into servers or applications usually controlled by vendors. This enhances security and compliance posture, eliminating blind spots, cannot and providing organizations with the ability to prove governance and third-party vendor risk management.
+              </p>
+
+
+              <h3>
+                Reduced operational costs with intuitive interface
+              </h3>
+
+              <p>
+                Spyderbat’s easy-to-read visualizations remove the skills barriers associated with monitoring Linux environments. The easy-to-use, functional interface traces all activity, reducing investigation time and eliminating the need for Linux programming experience.
+              </p>
+
+              <h2 class="title-sec">
+                See our eBook <a href="#">“Protecting Against Supply Chain Attacks"</a> for more on how Spyderbat can be used to protect against software supply chain attacks
+              </h2>
+
+              <a href="#">
+                Click here for more information about Spyderbat's Nano Agent
+              </a>
+            </div>
+
+          </article>
+
+          <ul class="tags">
+            @loop('html/blog/_list-tags.html',[{
+            item:"supply chain attacks"
+            },
+            {
+            item:"linux"
+            }])
+          </ul>
+
+          @include('html/blog/_comments.html')
+
+          @include('html/blog/_comment-form.html')
+
+          @include('html/blog/_single-nav.html',{
+          textF:"Is Spyderbat an XDR?",
+          textS:"Case study: using Spyderbat to monitor for supply Chain Attacks"
+          })
+
+        </div>
+      </div>
+
+    </main>
+
+    @include('html/_footer.html')

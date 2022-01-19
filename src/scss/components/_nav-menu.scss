@@ -8,13 +8,15 @@
   &::before {
     content: "";
     position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(247.71deg, rgba(174, 200, 255, 0.5) 0%, rgba(5, 68, 208, 0.4) 40.26%, rgba(255, 255, 255, 0.1) 122.71%);
     opacity: 0;
     visibility: hidden;
     filter: blur(135.494px);
-    transition: all 0.15s linear;
+    transition: all 0.1s ease-in-out;
   }
 
   .burger {
@@ -40,6 +42,7 @@
   &__inner {
     @include flex-v-center;
 
+    z-index: 1;
     width: 100%;
     max-width: calc(1222px - rem(185));
 
@@ -54,7 +57,7 @@
       height: 100vh;
       background-color: var(--color-black);
       transform: translateY(-100%);
-      transition: transform 0.5s ease-in-out;
+      transition: transform 0.3s ease-in-out;
     }
 
     &--open {
@@ -107,6 +110,7 @@
       font-weight: 400;
       letter-spacing: 0;
       text-transform: capitalize;
+      transition: color 0.2s ease-in-out;
 
       &:focus {
         color: var(--color-blue-700);

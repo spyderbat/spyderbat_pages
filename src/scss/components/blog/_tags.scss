@@ -1,0 +1,26 @@
+.tags {
+  @include flex-s;
+
+  flex-wrap: wrap;
+  margin-bottom: rem(64);
+
+  li {
+    margin-bottom: rem(16);
+
+    &:not(:last-child) {
+      margin-right: rem(16);
+    }
+  }
+
+  a {
+    @include h5;
+
+    display: block;
+    border-radius: var(--radius-sec);
+    padding: rem(10);
+    font-family: "Space-Grotesk", sans-serif;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    background: var(--color-blue-100);
+  }
+}

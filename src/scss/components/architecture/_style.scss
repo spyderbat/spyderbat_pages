@@ -1,5 +1,4 @@
 .architecture {
-
   &__list {
     grid-template-columns: repeat(2, 325px);
     gap: rem(30);
@@ -45,6 +44,12 @@
 
     .item-title {
       margin-bottom: rem(17);
+    }
+  }
+
+  &__picture {
+    @include for-width(-mobile-md) {
+      display: none;
     }
   }
 }

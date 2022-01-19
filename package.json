@@ -47,5 +47,8 @@
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.1.0",
     "swiper": "^7.4.1"
+  },
+  "dependencies": {
+    "first-letter-avatar": "^1.0.1"
   }
 }

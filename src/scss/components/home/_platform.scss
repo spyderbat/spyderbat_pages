@@ -22,10 +22,6 @@
       margin-bottom: rem(42);
       max-width: 540px;
     }
-
-    @include for-width(-tablet) {
-      margin: 0 auto rem(42);
-    }
   }
 
   &__animation {

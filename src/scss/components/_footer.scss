@@ -49,6 +49,24 @@
 
     .text {
       display: block;
+      transition: color 0.2s ease-in-out;
+
+      &:focus {
+        color: var(--color-blue-700);
+      }
+
+      &:hover {
+        color: var(--color-blue-700);
+      }
+
+      &:active {
+        color: var(--color-blue-700);
+      }
+
+      &.disabled {
+        color: var(--color-gray-700);
+        cursor: auto;
+      }
 
       &:not(:last-child) {
         margin-bottom: rem(16);

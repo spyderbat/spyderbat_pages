@@ -1,6 +1,15 @@
 "use strict";
 "use strict";
 
+var avatar = new FirstLetterAvatar({
+  avatarsSelector: ".comment__avatar",
+  namesSelector: ".comment__username",
+  backgroundColor: "#3794d0",
+  letterColor: "#fff",
+  isCircle: true
+}).renderAvatar();
+"use strict";
+
 var burgerBtn = document.querySelector('.burger');
 var menuMobile = document.querySelector('.nav__inner');
 
