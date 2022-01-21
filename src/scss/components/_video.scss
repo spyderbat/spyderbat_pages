@@ -1,0 +1,45 @@
+.video {
+  &__box {
+    margin: 0 auto rem(50);
+    width: 100%;
+    height: 550px;
+    max-width: 970px;
+
+    @include for-width(-tablet) {
+      height: 450px;
+    }
+
+    @include for-width(-mobile-l) {
+      height: 350px;
+    }
+
+    @include for-width(-mobile-md) {
+      height: 300px;
+    }
+
+    @include for-width(-mobile-sl) {
+      height: 250px;
+    }
+
+    @include for-width(-mobile-s) {
+      height: 200px;
+    }
+
+    @include for-width(-mobile-s) {
+      height: 155px;
+    }
+  }
+
+  &__frame {
+    width: 100%;
+    height: 100%;
+
+    .ytp-cued-thumbnail-overlay-image {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+
+    }
+  }
+}

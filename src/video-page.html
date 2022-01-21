@@ -1,0 +1,31 @@
+@include('html/_head.html',{
+headTitle:"Newsroom page"
+})
+
+<body>
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main video bottom circle-bg circle-bg--center">
+      <div class="container">
+
+        <h1 class="video__title title title--center">
+          Stop Worrying About What is Missing
+        </h1>
+
+        <div class="video__box">
+          <iframe class="video__frame" src="https://www.youtube.com/embed/9mvTrPaRBYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <p class="text">
+          While current triage and investigation methods leave security analysts concerned with what is missing, learn how Spyderbat's attack tracing and intercept bridges the detection and response chasm with fast, accurate, and complete details to radically compress time.
+        </p>
+
+        <p class="text">
+          Length: 3 Mins
+        </p>
+      </div>
+
+    </main>
+
+    @include('html/_footer.html')
