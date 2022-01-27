@@ -2,10 +2,17 @@
   &__filters {
     @include flex-s;
 
-    margin-bottom: rem(80);
+    flex-wrap: wrap;
+    margin-bottom: rem(70);
+
+    @include for-width(-mobile-sl) {
+      margin-bottom: rem(30);
+    }
   }
 
   &__filter {
+    margin-bottom: rem(10);
+
     &:not(:last-child) {
       margin-right: rem(20);
     }
@@ -13,5 +20,9 @@
 
   &__filter-btn {
     padding: rem(25);
+
+    @include for-width(-mobile-sl) {
+      padding: rem(15);
+    }
   }
 }

@@ -10,6 +10,10 @@
     width: 100%;
     max-width: 665px;
     text-align: center;
+
+    @include for-width(-mobile-l) {
+      margin-bottom: rem(100);
+    }
   }
 
   &__title {
@@ -25,6 +29,11 @@
     @include flex-s-sb;
 
     margin-bottom: rem(164);
+
+    @include for-width(-mobile-l) {
+      display: block;
+      margin-bottom: rem(120);
+    }
   }
 
   &__team-title {
@@ -38,6 +47,7 @@
   }
 
   &__inner-title {
+    margin-right: rem(20);
     width: 100%;
     max-width: 535px;
   }

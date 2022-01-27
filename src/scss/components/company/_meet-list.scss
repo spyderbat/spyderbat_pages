@@ -1,6 +1,16 @@
 .company {
   &__members {
     @include flex-s;
+
+    @include for-width(-tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(30);
+    }
+
+    @include for-width(-mobile-md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__member {
@@ -11,6 +21,10 @@
 
     &:not(:last-child) {
       margin-right: rem(24);
+
+      @include for-width(-mobile-md) {
+        margin-right: 0;
+      }
     }
 
     .text {
@@ -27,6 +41,10 @@
           visibility: visible;
         }
       }
+    }
+
+    @include for-width(-mobile-md) {
+      max-width: 100%;
     }
   }
 

@@ -523,6 +523,8 @@
     padding-top: rem(190);
 
     .hero__content {
+      position: relative;
+      z-index: 5;
       max-width: 440px;
     }
 
@@ -535,6 +537,10 @@
 
       &.circle-bg::before {
         top: 0;
+      }
+
+      @include for-width(-tablet) {
+        transform: translateY(0);
       }
     }
   }
