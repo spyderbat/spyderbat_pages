@@ -131,6 +131,10 @@
     }
   }
 
+  &.bottom {
+    margin-bottom: 102px;
+  }
+
   @include for-width(-mobile-l) {
     margin-bottom: rem(45);
   }

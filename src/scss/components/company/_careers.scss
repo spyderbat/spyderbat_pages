@@ -1,0 +1,68 @@
+.careers {
+  &__wrapper {
+    margin: 0 auto rem(185);
+    padding-top: rem(30);
+    width: 100%;
+    max-width: 690px;
+    text-align: center;
+
+    @include for-width(-tablet) {
+      margin-bottom: rem(130);
+    }
+
+    @include for-width(-mobile-md) {
+      margin-bottom: rem(80);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(15);
+  }
+
+  &__filter {
+    @include flex-all-sb;
+
+    margin-bottom: rem(40);
+
+    .title-sec {
+      margin: 0;
+
+      @include for-width(-mobile-sl) {
+        margin-bottom: rem(20);
+      }
+    }
+
+    @include for-width(-mobile-sl) {
+      display: block;
+    }
+  }
+
+  &__select {
+    position: relative;
+    width: 100%;
+    max-width: 620px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: rem(23);
+      top: 50%;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      background-color: var(--color-white);
+      transform: translateY(-50%);
+      mask-image: url("../img/sprite.svg#select");
+      width: 17px;
+      height: 9px;
+    }
+  }
+
+  &__field {
+    padding: rem(12) rem(14);
+  }
+
+  &.circle-bg--center::before {
+    top: 0;
+  }
+}

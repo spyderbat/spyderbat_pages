@@ -1,0 +1,71 @@
+.company {
+  &__members {
+    @include flex-s;
+  }
+
+  &__member {
+    position: relative;
+    width: 100%;
+    max-width: 402px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: rem(24);
+    }
+
+    .text {
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    &:hover {
+      .company__member-item {
+
+        &::before,
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &__member-item {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: rem(26);
+    border-radius: var(--radius-main);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      background-image: url("../img/view-member.svg");
+      background-position: center;
+      background-size: rem(150);
+      background-repeat: no-repeat;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease-in-out, visible 0.2s ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: var(--color-member);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease-in-out, visible 0.2s ease-in-out;
+    }
+
+  }
+}

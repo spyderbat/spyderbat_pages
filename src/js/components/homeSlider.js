@@ -14,5 +14,5 @@
       releaseOnEdges: true,
     },
     rewind: false,
-    bounds: true,
+    bounds: true
   });

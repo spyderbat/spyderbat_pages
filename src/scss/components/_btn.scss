@@ -70,6 +70,10 @@
     }
   }
 
+  &--filter {
+    background-color: var(--color-blue-700);
+  }
+
   @include for-width(-tablet) {
     padding: rem(19) rem(35);
   }

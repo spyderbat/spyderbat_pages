@@ -158,4 +158,8 @@ if (formCloseBtn.length > 0) {
     });
   });
 }
+
+window.addEventListener('scroll', function () {
+  console.log(document.querySelector('.slider-home__list').clientTop);
+});
 //# sourceMappingURL=main.js.map

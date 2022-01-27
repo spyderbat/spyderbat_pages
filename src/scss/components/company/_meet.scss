@@ -1,0 +1,61 @@
+.company {
+  &::before {
+    top: 0;
+    filter: blur(300px);
+  }
+
+  &__wrapper {
+    margin: 0 auto rem(200);
+    padding-top: rem(30);
+    width: 100%;
+    max-width: 665px;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: rem(15);
+  }
+
+  &__text {
+    margin: 0 auto;
+    max-width: 470px;
+  }
+
+  &__inner {
+    @include flex-s-sb;
+
+    margin-bottom: rem(164);
+  }
+
+  &__team-title {
+    margin-bottom: rem(20);
+  }
+
+  &__team-text {
+    margin-bottom: rem(40);
+    width: 100%;
+    max-width: 615px;
+  }
+
+  &__inner-title {
+    width: 100%;
+    max-width: 535px;
+  }
+
+  &__list {
+    width: 100%;
+    max-width: 530px;
+  }
+
+  &__item {
+    padding-left: rem(40);
+
+    &:not(:last-child) {
+      margin-bottom: rem(22);
+    }
+  }
+
+  &.bottom {
+    margin-bottom: rem(160);
+  }
+}

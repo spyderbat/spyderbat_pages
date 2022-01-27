@@ -128,10 +128,13 @@
   }
 
   &--home {
-    margin-bottom: rem(30);
+    margin-bottom: rem(74);
+    padding-top: rem(30);
 
     .hero__picture {
-      margin-right: -17%;
+      width: 100%;
+      max-width: 1067px;
+      transform: translateX(15%);
 
       @include for-width(-tablet) {
         margin: 0 auto;
@@ -142,6 +145,7 @@
   &--platform {
     align-items: center;
     margin-bottom: 16px;
+    padding-top: rem(40);
 
     .hero__content {
       margin-bottom: rem(30);
@@ -251,6 +255,7 @@
 
   &--dfc {
     margin-bottom: rem(122);
+    padding-top: rem(110);
 
     @include for-width(-tablet) {
       margin-bottom: rem(70);
@@ -283,7 +288,7 @@
   &--avoid {
     align-items: center;
     margin-bottom: rem(145);
-    padding-top: rem(55);
+    padding-top: rem(100);
 
     .hero__content {
       padding-top: 0;
@@ -358,7 +363,7 @@
 
   &--alert {
     margin-bottom: rem(137);
-    padding-top: rem(35);
+    padding-top: rem(107);
 
     .hero__content {
       max-width: 425px;
@@ -421,7 +426,7 @@
 
   &--runtime-top {
     margin-bottom: rem(120);
-    padding-top: rem(30);
+    padding-top: rem(82);
 
     .hero__content {
       max-width: 575px;
@@ -436,7 +441,7 @@
 
   &--runtime-bottom {
     margin-bottom: rem(13);
-    padding-top: 55px;
+    padding-top: rem(25);
 
     .hero__content {
       max-width: 510px;
@@ -470,7 +475,7 @@
   }
 
   &--architecture {
-    padding-top: 55px;
+    padding-top: rem(137);
 
     .hero__content {
       padding-top: 0;
@@ -488,17 +493,49 @@
 
   &--archit {
     align-items: center;
+    margin-bottom: rem(122);
+
+    .hero__content {
+      margin-right: 0;
+      padding-top: rem(20);
+      max-width: 475px;
+    }
 
     .slogan {
       margin-bottom: rem(13);
     }
 
     .title-sec {
-      margin-bottom: rem(20);
+      margin-bottom: rem(38);
     }
 
     .slider-home__player {
       max-width: 680px;
+    }
+
+    @include for-width(-tablet) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &--company {
+    padding-top: rem(190);
+
+    .hero__content {
+      max-width: 440px;
+    }
+
+    .title-sec {
+      margin-bottom: rem(24);
+    }
+
+    .hero__picture {
+      transform: translateY(-26%);
+
+      &.circle-bg::before {
+        top: 0;
+      }
     }
   }
 

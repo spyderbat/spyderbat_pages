@@ -4,7 +4,7 @@
     max-width: 617px;
 
     .item-title {
-      margin-bottom: rem(65);
+      margin-bottom: rem(57);
     }
 
     .item-list {
@@ -63,6 +63,4 @@
   @include for-width(-desktop-sm) {
     display: block;
   }
-
-
 }

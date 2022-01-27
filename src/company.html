@@ -1,0 +1,40 @@
+@include('html/_head.html',{
+headTitle:"Newsroom page"
+})
+
+<body>
+  <div class="site-container">
+    @include('html/_header.html')
+
+    <main class="main company bottom circle-bg circle-bg--center">
+      <div class="container">
+
+        <div class="company__wrapper">
+          <h1 class="company__title title title--center">
+            Behind a great product, there’s a great team
+          </h1>
+
+          <p class="company__text text">
+            Spyderbat’s mission is to empower security analysts with unprecedented speed and precision to quickly verify emerging threats with attack traces, allowing faster intercept of intruders before the breach.
+          </p>
+        </div>
+
+        @include('html/company/_meet.html')
+
+        @include('html/company/_meet-member.html')
+
+        <section class="hero hero--company">
+          @include('html/_hero.html',{
+          slogan:"",
+          title:"<h2 class='title-sec'>Do you want to be part of an amazing team?</h2>",
+          contentBlock:"<p class='text'>See active vacancies, maybe we are waiting for you!</p>",
+          btnText:"Go to careers",
+          btnAdd:"",
+          imgHero:"<lottie-player class='hero__img' autoplay speed='3' mode='bounce' src='img/animation/meet.json' width='650' height='530'></lottie-player>"
+          })
+        </section>
+      </div>
+
+    </main>
+
+    @include('html/_footer.html')

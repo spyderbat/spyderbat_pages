@@ -99,12 +99,15 @@
       tr:not(.pricing__titles) {
         td {
           @include body;
+
+          padding-left: 0;
         }
       }
 
       .check {
         position: relative;
         padding-left: rem(75);
+        text-align: center;
 
         &::before {
           content: "";
@@ -119,7 +122,7 @@
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
-          transform: translate(-50px, -50%);
+          transform: translate(0, -50%);
         }
 
         &--empty {

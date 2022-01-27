@@ -1,0 +1,17 @@
+.company {
+  &__filters {
+    @include flex-s;
+
+    margin-bottom: rem(80);
+  }
+
+  &__filter {
+    &:not(:last-child) {
+      margin-right: rem(20);
+    }
+  }
+
+  &__filter-btn {
+    padding: rem(25);
+  }
+}

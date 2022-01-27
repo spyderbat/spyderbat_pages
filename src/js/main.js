@@ -27,3 +27,7 @@ if (formCloseBtn.length > 0) {
     })
   });
 }
+
+window.addEventListener('scroll',()=>{
+  console.log(document.querySelector('.slider-home__list').clientTop);
+})
