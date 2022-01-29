@@ -129,7 +129,6 @@
 
   &--home {
     margin-bottom: rem(74);
-    padding-top: rem(30);
 
     .hero__picture {
       width: 100%;
@@ -144,8 +143,14 @@
 
   &--platform {
     align-items: center;
-    margin-bottom: 16px;
-    padding-top: rem(40);
+
+    +.scroll-block {
+      transform: translateY(-50px);
+
+      @include for-width(-tablet) {
+        transform: translateY(0);
+      }
+    }
 
     .hero__content {
       margin-bottom: rem(30);
@@ -255,7 +260,7 @@
 
   &--dfc {
     margin-bottom: rem(122);
-    padding-top: rem(110);
+    padding-top: rem(20);
 
     @include for-width(-tablet) {
       margin-bottom: rem(70);
@@ -288,7 +293,7 @@
   &--avoid {
     align-items: center;
     margin-bottom: rem(145);
-    padding-top: rem(100);
+    padding-top: rem(40);
 
     .hero__content {
       padding-top: 0;
@@ -363,7 +368,6 @@
 
   &--alert {
     margin-bottom: rem(137);
-    padding-top: rem(107);
 
     .hero__content {
       max-width: 425px;
@@ -425,8 +429,8 @@
   }
 
   &--runtime-top {
-    margin-bottom: rem(120);
-    padding-top: rem(82);
+    margin-bottom: rem(90);
+    padding-top: rem(10);
 
     .hero__content {
       max-width: 575px;
@@ -475,7 +479,7 @@
   }
 
   &--architecture {
-    padding-top: rem(137);
+    padding-top: rem(40);
 
     .hero__content {
       padding-top: 0;

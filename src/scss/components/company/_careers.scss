@@ -65,4 +65,29 @@
   &.circle-bg--center::before {
     top: 0;
   }
+
+  .tabs {
+    &__item {
+      position: relative;
+
+      @include for-width(-tablet) {
+        padding-bottom: rem(100);
+      }
+    }
+
+    .btn {
+      @include for-width(-tablet) {
+        position: absolute;
+        bottom: 10px;
+        right: rem(30);
+      }
+
+      @include for-width(-mobile-md) {
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+  }
 }

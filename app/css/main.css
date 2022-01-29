@@ -1783,7 +1783,6 @@ body {
 }
 .hero--home {
   margin-bottom: 4.625rem;
-  padding-top: 1.875rem;
 }
 .hero--home .hero__picture {
   width: 100%;
@@ -1797,8 +1796,14 @@ body {
 }
 .hero--platform {
   align-items: center;
-  margin-bottom: 16px;
-  padding-top: 2.5rem;
+}
+.hero--platform + .scroll-block {
+  transform: translateY(-50px);
+}
+@media (max-width: calc(62.0625em - 0.0625em)) {
+  .hero--platform + .scroll-block {
+    transform: translateY(0);
+  }
 }
 .hero--platform .hero__content {
   margin-bottom: 1.875rem;
@@ -1897,7 +1902,7 @@ body {
 }
 .hero--dfc {
   margin-bottom: 7.625rem;
-  padding-top: 6.875rem;
+  padding-top: 1.25rem;
 }
 @media (max-width: calc(62.0625em - 0.0625em)) {
   .hero--dfc {
@@ -1925,7 +1930,7 @@ body {
 .hero--avoid {
   align-items: center;
   margin-bottom: 9.0625rem;
-  padding-top: 6.25rem;
+  padding-top: 2.5rem;
 }
 .hero--avoid .hero__content {
   padding-top: 0;
@@ -1993,7 +1998,6 @@ body {
 }
 .hero--alert {
   margin-bottom: 8.5625rem;
-  padding-top: 6.6875rem;
 }
 .hero--alert .hero__content {
   max-width: 425px;
@@ -2040,8 +2044,8 @@ body {
   }
 }
 .hero--runtime-top {
-  margin-bottom: 7.5rem;
-  padding-top: 5.125rem;
+  margin-bottom: 5.625rem;
+  padding-top: 0.625rem;
 }
 .hero--runtime-top .hero__content {
   max-width: 575px;
@@ -2085,7 +2089,7 @@ body {
   }
 }
 .hero--architecture {
-  padding-top: 8.5625rem;
+  padding-top: 2.5rem;
 }
 .hero--architecture .hero__content {
   padding-top: 0;
@@ -2234,7 +2238,7 @@ body {
   height: 32px;
   background-image: url("../img/sprite.svg#secure");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 .item-list__item .text {
@@ -5159,6 +5163,9 @@ body {
   line-height: 1.9;
   padding-left: 0;
 }
+.pricing__table tbody tr:not(.pricing__titles) td:first-child {
+  padding-left: 2.5rem;
+}
 .pricing__table tbody .check {
   position: relative;
   padding-left: 4.6875rem;
@@ -5435,6 +5442,29 @@ body {
 }
 .careers.circle-bg--center::before {
   top: 0;
+}
+.careers .tabs__item {
+  position: relative;
+}
+@media (max-width: calc(62.0625em - 0.0625em)) {
+  .careers .tabs__item {
+    padding-bottom: 6.25rem;
+  }
+}
+@media (max-width: calc(62.0625em - 0.0625em)) {
+  .careers .tabs .btn {
+    position: absolute;
+    bottom: 10px;
+    right: 1.875rem;
+  }
+}
+@media (max-width: calc(36em - 0.0625em)) {
+  .careers .tabs .btn {
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 }
 
 .tabs__item {
