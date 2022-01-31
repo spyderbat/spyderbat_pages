@@ -20,6 +20,30 @@
 
   &__filter-btn {
     padding: rem(25);
+    color: var(--color-white);
+    opacity: 0.2;
+    transition: opacity 0.15s ease-in-out;
+
+    &:focus {
+      color: inherit;
+    }
+
+    &:hover {
+      color: inherit;
+      opacity: 1;
+    }
+
+    &:active {
+      color: inherit;
+    }
+
+    &.disabled {
+      color: var(--color-gray-700);
+    }
+
+    &--active {
+      opacity: 1;
+    }
 
     @include for-width(-mobile-sl) {
       padding: rem(15);

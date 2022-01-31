@@ -23,11 +23,6 @@ if (formCloseBtn.length > 0) {
     element.addEventListener('click', () => {
       document.querySelector('.modal').classList.remove('modal--open')
       document.querySelector('body').style.overflow = 'auto';
-
     })
   });
 }
-
-window.addEventListener('scroll',()=>{
-  console.log(document.querySelector('.slider-home__list').clientTop);
-})

@@ -15,7 +15,10 @@ headTitle:"Newsroom page"
           </h1>
 
           <p class="careers__text text">
-            Spyderbat is a new type of company. As a startup, we rely on the talent and ingenuity from everyone. Our success is measured by the value we create for our users. We operate as a fully remote company, using innovative methods for communicating and collaborating. We do not seek to preserve our culture — we seek to improve it. Every person who joins us helps to shape and evolve the culture further.
+            Spyderbat is a new type of company. As a startup, we rely on the talent and ingenuity from everyone. Our
+            success is measured by the value we create for our users. We operate as a fully remote company, using
+            innovative methods for communicating and collaborating. We do not seek to preserve our culture — we seek to
+            improve it. Every person who joins us helps to shape and evolve the culture further.
           </p>
         </div>
 
@@ -40,12 +43,18 @@ headTitle:"Newsroom page"
           </div>
 
           <ul class="tabs">
-            @include("html/company/_vacancy.html",{
-              title:"Sales manager",
-              time:"Full-time",
-              location:"North America",
-              specialist:"Technical"
-            })
+            @loop("html/company/_vacancy.html",[{
+            title:"Sales manager",
+            time:"Full-time",
+            location:"North America",
+            specialist:"Technical",
+            },
+            {
+            title:"HR",
+            time:"Part-time",
+            location:"North America",
+            specialist:"Technical",
+            }])
           </ul>
         </section>
       </div>

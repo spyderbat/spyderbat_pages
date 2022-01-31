@@ -1,22 +1,67 @@
 .tabs {
   &__item {
-    padding: rem(80) rem(38);
+    padding-bottom: rem(80);
+
+    &--open {
+
+      &.tabs__item {
+        padding-bottom: rem(100);
+      }
+
+      .tabs {
+
+        &__list {
+          &::before {
+            transform: translateY(-50%) rotate(180deg);
+          }
+        }
+
+        &__item-inner--description {
+          padding-top: rem(80);
+          opacity: 1;
+          height: 100%;
+          visibility: visible;
+
+          @include for-width(-tablet) {
+            padding-top: rem(40);
+          }
+        }
+      }
+    }
 
     @include for-width(-tablet) {
-      padding: rem(50) rem(25);
+      padding-bottom: rem(40);
     }
   }
 
   &__item-inner {
-    @include flex-s-sb;
 
-    &:not(:last-child) {
-      margin-bottom: rem(80);
+    &--vacancy {
+      @include flex-s-sb;
+
+      padding: rem(80) rem(38) 0;
 
       @include for-width(-tablet) {
-        margin-bottom: rem(50);
+        display: block;
+        padding: rem(40) rem(20) 0;
       }
     }
+
+    &--description {
+      padding: 0 rem(38);
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+      will-change: height;
+
+      @include for-width(-tablet) {
+        padding: 0 rem(20);
+      }
+    }
+  }
+
+  &__item-box {
+    @include flex-s-sb;
 
     @include for-width(-tablet) {
       display: block;
@@ -52,7 +97,28 @@
     width: 100%;
     max-width: 540px;
 
-    .text {
+    &.text {
+      margin: 0;
+    }
+
+    li {
+      padding-left: rem(40);
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 16px;
+        height: 16px;
+        background-image: url("../img/sprite.svg#check");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+      }
+
       &:not(:last-child) {
         margin-bottom: rem(23);
       }
@@ -76,10 +142,6 @@
     }
   }
 
-  &__item-check {
-    padding-left: rem(40);
-  }
-
   &__list {
     @include flex-all-sb;
 
@@ -99,6 +161,7 @@
       height: 9px;
       background-color: var(--color-white);
       transform: translateY(-50%);
+      transition: transform 0.2s linear;
     }
 
     @include for-width(-tablet) {
