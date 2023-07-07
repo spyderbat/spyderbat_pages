@@ -42,7 +42,7 @@
     "gulp-uglify-es": "^3.0.0",
     "node-w3c-validator": "^2.0.2",
     "sass": "^1.45.1",
-    "stylelint": "^14.2.0",
+    "stylelint": "^15.10.1",
     "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.1.0",
